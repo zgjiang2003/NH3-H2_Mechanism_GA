@@ -1,0 +1,883 @@
+Energy 270 (2023) 126927
+Available online 9 February 2023
+0360-5442/© 2023 Elsevier Ltd. All rights reserved.Development of reduced and optimized mechanism for ammonia/ 
+hydrogen mixture based on genetic algorithm 
+Xing Liu, Ying Wang*, Yuanqi Bai, Wenxu Yang 
+School of Energy and Power Engineering, Xi’an Jiaotong University, Xi’an, 710049, PR China   
+ARTICLE INFO  
+Handling Editor: Henrik Lund  
+Keywords: 
+Ammonia/hydrogen mixture 
+Engine simulation 
+Mechanism reduction and optimization 
+Genetic algorithm ABSTRACT  
+As carbon-free and renewable fuels, ammonia and hydrogen are promising fuels to be utilized in combustion 
+devices. For this, the genetic algorithm was employed to reduce and optimize the mechanism for ammonia/ 
+hydrogen mixture, which was aimed to develop a compact and reliable skeletal mechanism for real engine 
+simulation with ammonia as fuel. During the progress of GA reduction, the extracted sub-mechanisms was 
+constrained high fidelity with original mechanism on predicting the combustion characteristics through the 
+definition of penalty functions. Besides, the number of reactions and computer calculation time of the sub- 
+mechanism were simultaneously tracked to reduce the chemical stiffness. The resulting mechanism contained 
+29 species and 63 reactions and was streamlined to be coupled into complex CFD calculation. The reduced 
+mechanism was adjusted to better capture fundamental combustion data and the mechanism optimization was 
+finished automatically through GA operation. To verify the reliability of the optimized mechanism, the experi -
+mental data including ignition delay times, laminar flame speed, JSR species concentration, premixed flame 
+structure and HCCI engine in-cylinder pressure at various conditions was utilized to evaluate the performance of 
+the models. As a result, the optimized mechanism was capable to reproduce those measurements and was 
+credible for engine combustion simulation.   
+1.Introduction 
+The combustion of fossil fuels produces greenhouse gases, mainly 
+CO2, which will accelerate global warming and jeopardize human living 
+space [1]. As carbon-free, renewable and sustainable fuels, the ammonia 
+and hydrogen are considered to be promising to substitute fossil fuels [2, 
+3]. Ammonia has some problems such as low burning rate and unstable 
+combustion, which will be improved with the mixing of hydrogen [4,5]. 
+What ’s more, ammonia is regarded as one of the ideal carriers for 
+hydrogen due to its low reactivity. It was reported that 1 m3 of liquid 
+ammonia had the capacity to store 108 kg of H2 at a temperature of 
+20 •C and pressure of 8.6 atm [6]. Due to the high hydrogen content in 
+ammonia, more heat could be released during ammonia oxidation. It can 
+be used as a chemical storage medium for hydrogen and also release 
+hydrogen by decomposition [7]. Exploring the feasibility of comple -
+mentary application of ammonia-hydrogen mixtures in internal com-
+bustion engines (ICE), gas turbines and other practical power engines 
+attracted a lot of attention [8,9]. 
+To reduce emissions in the transportation industry currently, the 
+compression ignition (CI) engines and spark ignition (SI) engines fueled with ammonia and hydrogen mixture was studied to provide stable and 
+reliable power output. Dimitriou et al. [10] reviewed the research on 
+dual-fuel compression ignition engine operation with ammonia and 
+other highly reactive fuels like diesel. Pochet et al. [11] successfully 
+conducted experiments on the ammonia-hydrogen mixture HCCI en-
+gines with an effective compression ratio of 22:1 and pointed out that 
+the ammonia-hydrogen blending ratio greatly affected the engine output 
+except for the indicated efficiency. Although it was difficult to ignite 
+ammonia alone, the SI engine worked satisfactorily with low and 
+moderate hydrogen addition [12]. Frigo et al. [13] confirmed the ne-
+cessity of blending hydrogen for ignition improvement and an increase 
+in combustion velocity when ammonia was applied in gasoline engines, 
+in addition, the appropriate proportion depended on the situation. 
+The foundation chemistry mechanism of ammonia was laid by Miller 
+et al. [14] and Lindstedt et al. Unlike methane and hydrogen, the clarity 
+of understanding of the chemical kinetic behavior of ammonia remains a 
+great challenge, especially at low temperatures (T D1200 K) and under 
+dilute mixtures. A number of chemical kinetic mechanisms for ammonia, 
+ammonia/hydrocarbon mixture were proposed and verified, e.g. Glar-
+borg et al. [15], Klippenstein et al. [16], Mathieu et al. [17], Me’vel et al. 
+[18], Song et al. [19], Stagni et al. [20], Zhang et al. [21], Otomo et al. 
+*Corresponding author. School of Energy and Power Engineering, Xi’an Jiaotong University, No.28 Xianning west road, Xi’an, 710049, Shaanxi, PR China. 
+E-mail address: yingw@mail.xjtu.edu.cn (Y. Wang).  
+Contents lists available at ScienceDirect 
+Energy 
+u{�~zkw! s{yo|kr o>!ÐÐÐ1ow �o�to~1m{y2w{m k�o2ozo~rÞ!
+https://doi.org/10.1016/j.energy.2023.126927 
+Received 7 March 2022; Received in revised form 20 December 2022; Accepted 9 February 2023   
+
+Energy 270 (2023) 126927
+2[22], NUI 2017 [23], Nakamura 2017 [24]. Stagni et al. [20] conducted 
+ammonia thinning combustion experiments in a jet stirred and flow 
+reactor covering the temperature range of 500–2000 K. It was found that 
+H2NO played an important role in ignition delay control, and the re-
+action NH2OHNO H reduced the predicted laminar flame velocity 
+while promoting NO production at high temperatures. Liao et al. [25] 
+measured the ignition delay times of ammonia added N2O or H2 in a 
+RCM and modified the mechanism of ammonia. It was found that the 
+addition of H2 promoted the production of OH radicals and triggered the 
+first stage of ignition. Otomo et al. [22] improved the mechanism by 
+relevant elementary reactions including NH2, HNO, and N2H2. It was 
+found that reaction HNO OH played the most important role for NO 
+production during lean combustion, and the reaction channel with the 
+largest contribution was HNO H for rich combustion. Zhang et al. [21] 
+investigated ammonia/hydrocarbon mixture oxidation through 
+jet-stirred reactor (JSR) experiments at intermediate temperatures. The 
+study showed the mixing of H2 enhanced the oxidative reactivity of 
+NH3, and the oxidation radicals inhibited the formation of N2O, while 
+the enhanced NO promoted its formation. 
+The mechanism needs to be reduced while providing a reasonable 
+accuracy to pursue a proper and cost-effective numerical simulation, 
+especially direct numerical simulation (DNS) and large eddy simulation 
+(LES) of a real engine. In addition, numerical simulation for combustion 
+behavior in the dual-fuel engine may face a heavy burden when a 
+detailed ammonia mechanism is combined with the mechanism of 
+another active fuel like dimethyl ether. The reduced or skeletal mech -
+anism of ammonia/hydrogen mixture was relatively limited in literature 
+works. Xiao et al. [26] reduced the scale of the ammonia/hydrogen 
+mechanism for 2D gas turbine LES. The mechanism reduction was per-
+formed in Chemkin II software using the directed relation graph (DRG) 
+method. The reduced mechanism developed by Duynslaegher et al. [27] 
+for low-pressure conditions was verified only under species concentra -
+tion. Rocha et al. [28] considered that the current ammonia/hydrogen 
+combustion mechanism had the potential for further simplification with 
+high fidelity. Three reduced mechanisms with 50–70 element reactions 
+were proposed based on the mechanism of Mathieu [17]’s, Okafor [29]’s 
+and Otomo [22]’s. Li et al. [30] concentrated on extracting and reducing 
+the NH3 and NH3/H2 mechanism from the large-scale mechanism with 
+directed relation graph with error propagation (DRGEP) and DRGEP 
+with sensitivity analysis (DRGEPSA) strategy. Still, 28 species and 213 reactions were included in his NH3/H2 combustion mechanism. Cai 
+et al. [31] developed reduced NH3/H2 mechanisms for ignition delay 
+and laminar flame speed prediction with Chemkin-Pro 2019 using a 
+method of direct relation graph with error propagation. The calculated 
+IDTs by his mechanism was compared with experimental data only 
+under high temperature and pure ammonia fueled. From the above 
+papers, compact kinetic mechanism of ammonia/hydrogen required 
+more extensive validation against not only original mechanism but also 
+experimental data. Especially, the evaluation of the ignition delay times 
+(IDTs) at both low- and high-temperature should be considered, which is 
+partially regarded as ICE simulations of practical interest [32]. In 
+addition, the skeletal mechanism with the small number of reaction rate 
+parameters can be optimized to achieve a better mechanism 
+configuration. 
+Attractive approaches to the reduced mechanisms such as the 
+decoupling method, DRG, quasi-steady-state assumption (QSSA), 
+element flux analysis (EF), and sensitivity analysis all require the user to 
+understand the detailed chemistry knowledge. The method of uncer -
+tainty quantification was used for mechanism optimization in order to 
+minimize the deviation between calculation and measurement in Wang 
+[33] ’s study. The mechanism optimization by manual iteration strongly 
+depends on path analysis and experience [34]. Therefore, researchers 
+introduce genetic algorithms (GA) to develop a simple and robust 
+reduction methodology. The optimal solution search process is directed 
+by the overall objective function, and unimportant reactions would be 
+automatically removed in the iterative algorithm. The penalty function 
+is used to constrain CPU calculation time, avoiding stiff and slow 
+converging mechanism set. The method was proved to be effective in 
+previous studies [35–37]. GA can also be exploited in optimizing the 
+reaction rate constants to decrease the gap between model predictions 
+and experimental measurements [32,34,38]. In addition, a traditional 
+algorithm for finding an optimal solution like gradient-based algorithms 
+and the solution mapping method was unsuitable for mechanism tun-
+ning due to the complexity and non-linearity of the chemical mechanism 
+[39]. Chang et al. [34] optimized the skeletal oxidation mechanism of 
+n-pentanol by tuning the Arrhenius pre-exponential factors of C4-Cn 
+sub-mechanism using a multi-objective genetic algorithm. As a result, 
+predictions by the optimized mechanism model were well agreed with 
+the experimental IDTs, laminar flame speed and species concentrations 
+in JSRs. 
+In this study, the ammonia/hydrogen reduced mechanism was 
+developed by genetic algorithm-based method. Penalty functions were 
+designed to guide the removal of uninterested reactions, in which not 
+only the fidelity between the streamlined mechanism and the complete 
+mechanism was considered but also the CPU computational time was 
+limited to reduce the stiffness of the mechanism set. The reduced 
+mechanism for ammonia/hydrogen mixture was also optimized based 
+on GA for better prediction of the ignition delay times and laminar flame 
+speed. Finally, the mechanisms were validated by contrast with exper -
+imental data from fundamental combustion reactors and in-cylinder 
+pressure profiles from the HCCI engine. The main content of this 
+article was presented in Fig. 1. 
+The contribution of this paper to the related field is mainly twofold. 
+First, the genetic algorithm, a simple yet robust method, was tested for 
+reducing and optimizing ammonia/hydrogen mechanism, in which the 
+role of some elementary reactions still was unknown currently. Second, 
+not only developing a compact ammonia/hydrogen simplified mecha -
+nism for engine CFD simulation, but also performing mechanism opti-
+mization to achieve a better mechanism configuration. The extensive 
+validation proved confidence in the reliability of the reduced mecha -
+nism in this paper. Abbreviations 
+GA genetic algorithm 
+CFD computational fluid dynamics 
+SI spark ignition 
+CI compression ignition 
+HCCI homogeneous charge compression ignition 
+FSSA full species sensitivity analysis 
+LUMP lumped methods 
+IDTs ignition delay times 
+RCM rapid compression machine 
+JSR jet-stirred reactor 
+LFS laminar flame speed 
+DNS direct numerical simulation 
+LES large eddy simulation 
+DRG directed relation graph 
+DRGEP directed relation graph with error propagation 
+QSSA quasi-steady-state assumption 
+EF element flux analysis 
+FP floating point 
+Mechanism 1Reduced mechanism 
+Mechanism 2Optimized mechanism  X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+32.Methodology 
+2.1. Genetic algorithm 
+Genetic algorithm is an adaptive heuristic mathematical technique 
+based on biological evolution principles. A set of initial populations are 
+created firstly in the solution space of an optimal problem in GA. Then 
+the behavior of each individual is evaluated by the fitness function, 
+which correlates with the optimization problem and therefore guides 
+genetic operators so that individuals in the next generation of pop-
+ulations behave better. The iterative process between generations is also 
+the search process of the optimal solution, and the process terminates 
+when an established criterion is met or a given number of generations 
+are gained [35]. The advantage of GA includes fast and stochastic search 
+capability, potential parallelism, and search using evaluation function 
+heuristics. 
+The genetic algorithm procedure adopted is shown in Fig. 2 and the 
+search process for the optimal solution in this study consists of the 
+following steps:  
+1. Initialization, where a set of initial individuals (single chromosome 
+in one individual) with reaction information are generated.  
+2. Evaluation, where the performance of individual is evaluated and 
+corresponding fitness is assigned to each individual.  
+3. Selection, where the chromosome of the fittest individual is retained 
+for next-generation (Elitist). The other individuals compete for the 
+opportunity to retain chromosomes for the next generation.  
+4. Crossover, where the chosen chromosomes exchange information to 
+create a new mechanism set for the next generation. 
+Fig. 1.The flow chart of the research method of this article.  
+Fig. 2.Activity chart of the genetic algorithm.  X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+45. Mutation, where a small number of the children ’s genes are changed. 
+For mechanism reduction, this gene operation corresponds to the 
+deletion of chemical reaction, and for mechanism optimization, it 
+means the modification of the reaction rate coefficient. 
+2.2. Implementation details of mechanism reduction 
+The kinetic mechanism reduction method based on genetic algo-
+rithms developed by Sikalo et al. [37] is adopted in this study, and the 
+same operation has appeared in the literature [35,36]. Therefore, a brief 
+description of the implementation method is presented here. The GA is 
+used to eliminate reactions instead of species. It is possible to achieve a 
+more streamlined structure by removing unimportant reaction paths 
+compared with deleting the species. Therefore, each gene corresponds to 
+one reaction and the gene takes the value 0 (meaning reaction absent) or 
+1 (meaning reaction presence). The process of chromosome encoding 
+and decoding can also be ignored in the algorithm by this way. Each 
+chromosome has the length corresponding to the number of reactions in 
+the full mechanism. Each individual represents a kind of 
+sub-mechanism. For initial population, all the chromosomes are set to 
+the same and all genes assigned as the value of 1 represent the original 
+mechanism. This approach is designed to avoid the loss of key reactions 
+in the first generation. The iteration between generations seeks the 
+optimal reaction subset under user-defined evaluation rules. 
+The evaluation function (objective or fitness function) is an essential 
+part of this optimization technique. Different sub-mechanisms are 
+selected as the resulting reduced mechanism under various evaluation 
+function definitions. Three parts including the accuracy, size, and stiff-
+ness of the reduced mechanism are taken into consideration. The ac-
+curacy of sub-mechanism is evaluated by simulating combustion in a 
+homogeneous reactor, where ignition delay time and steady-state tem-
+perature are selected as the properties of interest. Generally speaking, 
+the fewer reactions in the mechanism are, the smaller the calculation 
+cost is, yet not including slow converging mechanisms. That is why the 
+CPU calculation time is also tracked to assess the stiffness of the sub- 
+mechanism. According to Sikalo et al. [37], the ignition delay time 
+error and the steady-state temperature error are defined as Equations (1) 
+and (2) respectively due to the logarithmic expression steep conver -
+gence toward the optimal point. The mechanism size and cost evaluation 
+function are defined as Equations (3) and (4). The global objective 
+function is defined in Equation (5). 
+fτln[
+1σ⃦⃦⃦⃦τr τ0
+τ0⃦⃦⃦⃦]
+(1)  
+Where τr is IDT simulated by sub-mechanism, and τ0 is IDT simulated by 
+full-mechanism. 
+fTsln[
+1σ⃦⃦⃦⃦Tsr Ts0
+Ts0 Tin⃦⃦⃦⃦]
+(2)  
+Where Tsris steady-state temperature estimated by sub-mechanism, 
+Ts0is steady-state temperature estimated by full-mechanism and Tin 
+is initial temperature. 
+fN⌊
+1exp[
+σ[
+1 Nr
+λ×NR]]⌋ 1
+(3)  
+Where Nr is reaction number of sub-mechanism, and NR is reaction 
+number of full-mechanism. 
+fCPU⌊
+1exp[
+σ[
+1 tCPUr
+λ×tCPU0]]⌋ 1
+(4)  
+Where tCPUris CPU cost time of sub-mechanism, and tCPU0is CPU cost 
+time of full-mechanism. 
+fobjecti onfτfTsfNfCPU (5) The performance in different aspects can be improved simulta -
+neously and the weights of each component can be easily adjusted by the 
+GA optimization method. For guaranteeing a good trade-off between 
+concerned terms, the sharpening coefficient σ and shifting coefficient λ 
+require special tunning. Fig. 3 compares the effects of factors on each 
+evaluation function. Parameter values for the objection function terms 
+are shown in Table 1. 
+2.3. Implementation details of mechanism optimization 
+In the application of mechanism reduction above, the sub- 
+mechanism and the original mechanism are required to be as consis -
+tent as possible while predicting the heat release and ignition delay 
+characteristics of ammonia/hydrogen. Apart from ignition delay char-
+acteristics, the flame propagation velocity of hydrogen mixture was also 
+concerned here. In order to decrease the deviation between the calcu -
+lations by the resulting reduced mechanism and measurements in ex-
+periments, the reduced mechanism was improved by tuning Arrhenius 
+pre-exponential factor A based on the genetic algorithm. 
+The goal of the optimization is the A-factor of all reactions in reduced 
+mechanism except for the hydrogen sub-mechanism and the pressure- 
+dependent reactions, including 45 reactions. It is considered that 
+hydrogen oxidation has been studied sufficiently and the current 
+hydrogen mechanism is quite mature [20]. The pressure-dependent re-
+actions are also unchanged for simplicity. The uncertainty factor is set as 
+10, which means the variation range of pre-exponential factors is [ 0.1 ×
+Ai, 10 ×Ai], where Ai is the pre-exponential factor of ith reaction. It is 
+noted that GA with binary encoding method may fail when handling 
+multi-dimensional, high-precision numerical problems due to the 
+excessive search space, called curse of dimensionality. Therefore, Elliott 
+et al. [40] proposed a GA with real code or floating point (FP) genes to 
+deal with the chemical kinetics optimization problems. Since there are 
+dozens of reactions needing modification, the real encoding approach 
+was adopted in this study. Similar to mechanism reduction for initial 
+conditions, the starting point (generation 1) of iteration is the reduced 
+resulting mechanism. The important GA parameters were exhibited in 
+Table 2. 
+Except for ignition delay time error and calculational effort, Equa -
+tions (6) and (7) were also introduced to constrain laminar flame speed 
+(LFS) error and the amplitude variation of the reaction rates. The pa-
+rameters in the objection function were shown in Table 1. Due to the 
+uncertainty in experimental data and the approximation between mea-
+surements and predictions by mechanism, the linear expression was 
+used for LFS accuracy criteria. Wang et al. [41] recommended that it 
+should be kept an optimized mechanism faithful to the original mech -
+anism, and his evaluation equation for Pre-A variation was referred to 
+here. The objection function was defined as follows: 
+fLFSσ⃦⃦⃦⃦uexp
+l upre
+l
+uexp
+l⃦⃦⃦⃦(6)  
+Where uexp
+l is experimental LFS data, and upre
+l is predicted LFS data 
+fA⃦⃦⃦⃦σ×ln[A
+A0]⃦⃦⃦⃦(7)  
+Where A0 is initial Arrhenius pre-exponential factor, and A is adjusted 
+Arrhenius pre-exponential factor. 
+fobjecti onfτfLFSfAfCPU (8)  
+3.Result 
+The reduction operation was based on the comprehensive chemistry 
+mechanism of ammonia/hydrogen developed by Wang et al. [21] in 
+2021, which consisted of 34 species and 263 reactions and was verified 
+widely against various experimental conditions. A wide range of X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+5conditions was contained as optimization targets and the details were 
+shown in Table 3. The homogeneous mixture simulation in case 1–8 was 
+employed when reducing the mechanism. For reaction rate modifica -
+tion, the free propagation flame model was also adopted to improve the 
+performance of the reduced mechanism in case 9–12. All 
+zero-dimensional and one-dimensional combustion numerical calcula -
+tion in this study were finished with Cantera code. 
+3.1. Reduced resulting mechanism 
+As illustrated in Fig. 4, the overall objection function value dropped rapidly with iterations in the first 200 generations. The overall score 
+disparity among the fittest, the worst, and the average of the population 
+was not obvious during evolution, which showed that the direction of 
+evolution was relatively consistent. The four objective function values 
+were turned for balance as much as possible in our study. In the end, the 
+overall values of these three reduced to around 0.04, which included the 
+reactions number penalty items (around 0.014), therefore the final 
+reduced mechanism and the full mechanism had similar capabilities in 
+accurately predicting the ignition delay times and state-state tempera -
+ture under investigation conditions. In the 1000th generation, the 
+overall objection function values of the three showed no significant 
+difference (0.03938, 0.03987, 0.03955, respectively). Based on this, it 
+was considered that GA converged or almost converged and the benefits 
+from continued calculation were very limited. The number of reactions 
+in the best individual only experienced a small change after 500 gen-
+erations. Fig. 5 gave more details about the genes of the fittest in each 
+generation. In this article, the direction of gene mutation was set as two- 
+way, unlike the previous studies [36,37]. On the one hand, the small 
+number of genes (compared to the number of individuals in the 
+Fig. 3.Objective functions terms with different σ and λ.  
+Table 1 
+Coefficient values for the objection function terms.  
+Item  σ λ 
+Reduction Mechanism fτ 1  
+fTs 1  
+fN 6 0.8 
+fCPU 6 4 
+Optimization Mechanism fτ 4  
+fLFS 4  
+fA 0.3  
+fCPU 6 4  
+Table 2 
+Parameter values of genetic algorithm.  
+Item Value for Reduction Value for Optimization 
+Population size 60 30 
+Number of generations 1000 1000 
+Crossover rate 0.2 0.3 
+Mutation rate 0.03 0.06 
+Selection Tournament selection Tournament selection 
+Crossover Single point Single point 
+Mutation Two directional Two directional  Table 3 
+Overview of target environments for reduction and optimization.  
+Case No. X[H2] in fuel P (atm) T (K) phi 
+1 – 1 1540–1850 1 
+2 – 10 1430–1820 1 
+3 0.05 1 1500–1920 1 
+4 0.05 10 1450–1920 1 
+5 0.3 1 1180–1820 1 
+6 0.3 10 1180–1920 1 
+7 0.7 1 1000–1540 1 
+8 0.7 10 1030–1300 1 
+9 – 1 423 0.7–1.4 
+10 0.4 1–5 298 0.7–1.5 
+11 0–1.0 1 298 1 
+12 0.05 1 298–473 0.8–1.4  X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+6population) and the tiny mutation probability ensured the robustness in 
+the process of GA reduction. On the other hand, it was aimed to be more 
+tolerant of individuals that lost important reactions and search solutions 
+in a larger domain. The final reduced mechanism contained 29 species 
+(including CO, CO2, CH4, C2H6 only defined as three-body colliders, Ar 
+and He) and 63 reactions, called Mechanism 1 in this study. The sensitivity to ignition delay times of each reaction in the full 
+mechanism was detected and the sensitivity coefficient was normalized 
+under each operating condition. The environments of the sensitivity 
+analysis were included in the optimization targets. The top 20 most 
+ignition-sensitive reactions were plotted in Fig. 6. After the addition of 
+hydrogen to ammonia, the reaction H O2O OH became the most 
+essential reaction to promote ignition [42]. From Fig. 6, it was found 
+that the GA automatically selected most of the key reactions for ignition 
+prediction. It indicated that the GA reduction technique was reliable in 
+this study, even without chemistry. To understand the NO production 
+and consumption path in Mechanism 1, the analysis of production rate 
+of ammonia/hydrogen/air mixture at high temperature, atmospheric 
+pressure, [NH3]: X[H2] 0.8:0.2 and phi 1, were conducted. From 
+Fig. 7, the NO was mainly formed through reaction of HNO H––NO 
+H2, followed by reaction N OH––NO H in this condition for both full 
+mechanism and Mechanism 1. Besides, the reaction NH2NO––NNH 
+OH and NH2NO––N2H2O were considered as most important for NO 
+reduction [21,43] and also reserved in Mechanism 1. The reactions 
+contributing significantly to the N2O concentration of full mechanism 
+were shown in Fig. 7(c), and it can be seen that the reactions NH 
+NO––N2O H, N2O H––N2OH and N2O(M) N2O(M) 
+dominated overwhelmingly. All those three reactions were retained in 
+the simplified mechanism proposed in this paper. 
+3.2. Optimized resulting mechanism 
+Since the genetic algorithm in the optimization procedure was also a 
+single-objective and gene real-coded one, which made it possible to 
+inherit the previous program framework used for mechanism reduction 
+and save the labor cost of code development. The target of the GA 
+optimizer in this paper was the pre-exponential factors of 46 reactions. 
+Although the search range was discretized, the occupation of time and 
+calculation resources were still large if too many parameters would be 
+adjusted. It was suggested that the reactions should be conditionally 
+selected when optimizing a large-scale mechanism. 
+Fig. 8 showed the detailed information of the population and the 
+fitness in every generation. It could be seen that the population evolved 
+rapidly in the first 200 generations to achieve greater fitness scores. 
+From the 200th generation to the 600th generation, the mean objective 
+function value of the population decreased slowly, and the gap between 
+the average and min was further reduced. The objective function values 
+of the best individual and population average in the 1000th generation 
+were 3.07786, 3.05898 respectively and both were almost unchanged 
+from 700th to 1000th. Specifically, the objective function value of the 
+fitness decreased in a step-like manner. This was due to the 
+Fig. 4.Overall objection function value for mechanism reduction dur-
+ing evolution. 
+Fig. 5.Gene information of the best individual in every generation for mech -
+anism reduction. 
+Fig. 6.Normalized sensitivity of the ignition delay times for various conditions (* represented this reaction was retained in Mechanism 1).  X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+7discontinuous optimization space and random gene mutation. The 
+emergence of the new best individual can be attributed to beneficial 
+mutations or crossovers in the genes of the parent. In addition, it can be 
+concluded from Fig. 8 that compared with the initially reduced mech -
+anism, the advantages of optimized reduced mechanism reflected in the prediction of laminar flame velocity, while the improvement of the 
+ignition delay time term was relatively small. The reason for that would 
+be discussed in the mechanism verification part. Both reduced and 
+optimized mechanisms were provided as Cantera YAML format in sup-
+porting material. 
+4.Mechanism verification 
+The detailed mechanism was processed by the GA, and a compact 
+mechanism set (Mechanism 1) was extracted. After that, Mechanism 1 
+was optimized to reduce disagreement between model predications and 
+experiment measurements of IDTs and LFS obtained in literature. 
+Although the global fitness of the reduced mechanism and the optimized 
+mechanism was satisfactory as described above, the mechanisms still 
+needed to be further verified against experimental data under a wide 
+range of operation conditions. 
+4.1. Verification of ignition delay time 
+In CI engines, fuel’s ignition behavior was one of the most interested 
+characters during combustion progress. The ignition characteristics of 
+fuels were dominantly governed by chemical kinetics and the experi -
+mental data of IDTs were often applied to test the chemical mechanism. 
+As a consequence, the IDTs data from the shock tube were utilized to 
+assess the reduced mechanism in this section. 
+Chen et al. [42] measured the IDTs of stoichiometric ammonia/hy -
+drogen blends in a shock tube. The experimental range covered the 
+temperatures from 1020 K to 1945 K, pressures from 1 atm to 10 atm, 
+Fig. 7.Analysis of production rate using reduced mechanism (Mechanism 1) and detailed mechanism for NO and N2O under 1200 K, phi 1, 80%NH3/20%H2 
+as fuel. 
+Fig. 8.Objection function value for mechanism optimization during evolution.  X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+8and hydrogen fractions from 0% to 70%. As a comparison, the predicted 
+results of the original mechanism were also plotted in Fig. 9. The 
+spontaneous combustion temperature of ammonia was high. The igni-
+tion delay times became shorter with the mixing of hydrogen. As in 
+Fig. 9 (d), when the proportion of hydrogen was too large, the IDTs of 
+the ammonia/hydrogen mixture was dominated by the hydrogen 
+chemistry [42] and negative pressured dependence characteristic of the 
+IDTs occurred. It can be found that the simulation IDTs estimated by 
+reduced mechanism and the original mechanism showed no obvious 
+distinction in Fig. 9. This was due to that the ability to forecast ignition 
+behavior of the subset mechanism was evaluated with full mechanism as 
+the standard under the guidance of the penalty function. Comparison 
+between various calculated values and experimental IDTs data demon -
+strated that the Mechanism 2 strived to balance accuracy under broad 
+operation conditions, and performed better in the overall prediction. In 
+addition, the calculational line by the original mechanism and Mecha -
+nism 1 deviated greatly from the measurements in Fig. 9 (a), while the 
+performance of Mechanism 2 was satisfactory. 
+Fig. 10 compared the predicted and measured ignition delay times of 
+pure ammonia at different temperatures, equivalence ratios, and pres-
+sures. It can be seen from Fig. 10 (a)–(c) that the variation tendency of 
+the IDTs with temperature and pressure forecasted by Mechanism 2 was 
+consistent with the detailed mechanism. Additionally, the difference 
+between the experimental data and the IDTs predicted by the optimi -
+zation mechanism was obvious. This was due to GA optimization being 
+more inclined to find the balanced and optimal solution under the global 
+optimization environments. The conformity illustrated the reliability of 
+the mechanism to simulate the ignition delay behavior of the ammonia/ hydrogen mixture under the investigation conditions. The predicted 
+ignition delay times of ammonia at high temperatures was also verified 
+as shown in Fig. S1. The ability of the proposed ammonia/hydrogen 
+reduced mechanism to predict the combustion of dilute mixture was 
+illustrated in Fig. S2. Currently, the ability of the detailed ammonia/ 
+hydrogen mechanism to predict the combustion at the condition of low- 
+temperature and dilute mixture was still not ideal [9], and the perfor -
+mance of our proposed simplified mechanism was slightly improved. 
+4.2. Verification of laminar flame speed 
+The laminar flame speed of combustible mixture is a fundamental 
+global parameter and could be used to validate the feasibility of reaction 
+mechanisms. The ammonia has low flame propagation speed and high 
+ignition energy, which brings difficulties into its application in SI en-
+gines. The mixing of hydrogen can promote the combustion speed of the 
+ammonia/hydrogen/air mixture. This section verified the reduced and 
+optimized mechanism against experimental laminar flame speed. The 
+problem was solved with a mixture-averaged transport model. 
+The values of laminar flame velocity predicted by the full mecha -
+nism, Mechanism 1 and Mechanism 2 were compared with the experi -
+mental data in Fig. 11. It can be seen that the laminar flame speed of the 
+ammonia/hydrogen mixture predicted by Mechanism 1 was not cred-
+ible, and the performance of Mechanism 1 was greatly improved by 
+adjusting the A-factors. More comparisons between Mechanism 2 and 
+the initial mechanism were shown in Fig. 12. Under the experimental 
+conditions described in Fig. 12 (a), the full mechanism overestimated 
+the laminar flame velocities, and Mechanism 2 estimated more reliable 
+Fig. 9.Measured (symbols) [42] and calculated (lines) IDTs by optimized mechanism, initial mechanism, and reduced mechanism.  X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+9data at the condition of the fuel-rich mixture. 
+The prediction performance of the full mechanism, Mechanism 1 and 
+Mechanism 2 under different proportions of hydrogen, initial pressure 
+from 1 to 5 atm was depicted in Fig. 13. The calculated values from the 
+optimization mechanism agreed slightly better with experimental data 
+at p 1 atm compared with the full mechanism. Mechanism 2 estimated 
+a smaller value than the full mechanism in low mole fraction regions of 
+H2 (D0.3) under the initial pressures of 3 and 5 atm. At the high proportion of hydrogen operation conditions, the NH3/H2/air mixture 
+was governed by H2 chemistry. From Fig. 13 (c), the predicted data by 
+Mechanism 1 and Mechanism 2 were similar and both higher than those 
+of the full mechanism. The experimental data of H2/O2/He laminar 
+flame speed [47] at P 5 atm and phi 1 provided some confidence 
+about the reliability of hydrogen sub-mechanism in the reduced 
+mechanism. 
+As seen from Fig. 14, both Mechanism 2 and the full mechanism can 
+Fig. 10.Ignition delay times of NH3/air [44] and NH3/O2/Ar mixture [17] measured in a shock tube at various equivalence ratios.  
+Fig. 11.Measured [45,46] (symbols) and calculated (lines) LFSs by optimization mechanism, full mechanism and reduction mechanism.  X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+10capture the variation tendency of laminar flame speed with pressure. 
+Besides, Mechanism 2 was verified under a wide range of experimental 
+conditions. As shown in Fig. 15, the verification range covered tem-
+perature of 298–473 K, equivalence ratio of 0.8–1.4, and hydrogen ratio 
+of 0.05 –0.6. Accuracy of hydrogen sub-mechanism was slightly reduced 
+due to the simplification of the hydrogen sub-mechanism in full mech -
+anism, which caused a maximum 10% estimation error at 473 K in 
+Fig. 15(c). However, the performance of Mechanism 2 remained satis-
+factorily in general under wide range of operating conditions compared 
+with original mechanism. The good agreement between the experi -
+mental data and the prediction proved that the optimized mechanism 
+was credible to reproduce the laminar flame speed characteristics of the 
+ammonia/hydrogen mixture. 
+As shown in Fig. S3, the laminar flame speed verification was 
+extended to high temperature and high pressure and the mechanism still 
+performed well. As displayed in Fig. S4, the pressure dependence of the 
+laminar flame speed became more pronounced when the hydrogen 
+doping ratio increased, and our mechanism exhibited a similar pattern. 
+Besides, the present model was also reliable to predicted the NH3/H2/ 
+N2/air mixture flame, as illustrated in Fig. S5. And the model of Stagni 
+et al. [20]’s and experimental data of Ji et al. [50] was adopted to 
+illustrated present mechanisms. 
+4.3. Verification of species concentration 
+The main species concentration profiles from the jet-stirred reactor 
+(JSR) and premixed flame experiments of NH3 or NH3/H2 mixture were 
+Fig. 12.Measured [45,46] (symbols) and calculated (lines) LFSs by optimized mechanism, full mechanism, and reduced mechanism.  
+Fig. 13.Laminar flame speed of NH3/H2/air mixtures under atmospheric and pressurized conditions (phi 1), initial mixture temperature of 298 K, experimental 
+data from Refs. [47,48]. 
+Fig. 14.Comparison between measured [49] (points) and calculated (lines) 
+laminar flame speeds of NH3/H2 mixtures with different pressures. X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+11utilized to evaluate Mechanism 2 in this section. The stirred Reactor 
+model in Cantera was used to simulated a perfectly stirred reactor. The 
+Burner Flame model in Cantera was implemented to calculate premixed 
+ammonia/hydrogen flame structure. As shown in Fig. 16, the concen -
+tration evolution of NH3 and H2O estimated by Mechanism 2 was in 
+good agreement with the measurements. The Mechanism 1 exhibits a 
+stronger reactivity and a lower conversion temperature of NH3 relative to Mechanism 2. Although the predicted concentrations of NO and N2O 
+were lower than the experimental values, the history trends were basi-
+cally identical. 
+Fig. 17 compared the premixed flame structures simulated by the 
+original full mechanism and Mechanism 2. It was observed that the NO 
+concentration in the post-flame zone still couldn ’t be ignored. The 
+widths of the reaction zone predicted by Mechanism 2 and the initial 
+Fig. 15.Comparison of measured laminar flame speed [45] and calculated data by Mechanism 2 of NH3/H2 mixtures.  
+Fig. 16.Measured [21] and simulated mole fractions of NH3, H2O, N2O, and NO in JSR oxidation of NH3/H2 mixtures with various H2 content.  
+Fig. 17.Premixed flame structures at φ1 simulated by different models, (a) pure NH3, unburned temperature of 350 K and inlet velocity of 7.8 cm/s, (b) X[NH3]: 
+X[H2] 0.8:0.2, unburned temperature of 350 K and inlet velocity of 13.2 cm/s. X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+12mechanism were not significantly different. The estimated NO and N2O 
+species concentrations by Mechanism 2 were approximately 1/2 of those 
+from the original mechanism. However, the main channels of N2O 
+generation and consumption are remained in the simplified mechanism 
+in this paper. More verification of NO distribution in premixed flame can 
+be found in Appendix. According to Fig. S6, it was found that the 
+calculated NO concentration of Mechanism 1 and Mechanism 2 were 
+still lower than that of the full mechanism, however prediction result 
+were closer to the experimental measurements for stoichiometric and 
+rich NH3/N2/air mixture. In order to test the reaction paths related to 
+NO consumption, comparisons were illustrated in Fig. 18 between 
+experimental measurements [51] and models calculations of NO/N -
+H3/Ar premixed flame. The experimental temperature data were 
+employed as input data for the simulation. Generally speaking, Mecha -
+nism 2 and full mechanism gave very similar predicted species profiles 
+and the simulation basically agreed with the experimental data. 
+4.4. Verification of the combustion in HCCI engine 
+Different from the conventional CI combustion mode, the HCCI 
+combustion process was mainly controlled by chemical reaction kinetics 
+[52] as the homogeneous premixed mixture in-cylinder. The reduced 
+mechanism was validated against the in-cylinder pressure data of the 
+HCCI engine contributed by Pochet et al. [11]. The engine specifications 
+and operating conditions were listed in Table 4. The calculation was 
+done in commercial 3D CFD software and the RNG k-ε model was chosen 
+for turbulence simulation. Due to the symmetry of the combustion 
+chamber, a 60•grid was established to reduce computational cost. The 
+2.0 mm base grid and mesh adaptive refinement are employed. The 
+number of calculation grids was more than 400,000 when the engine 
+was at the top dead center and was displayed in Fig. 19. The simulation 
+began at the intake valve closing ( 127•CA BTDC) and ended at the 
+exhaust valve opening (127 •CA ATDC). 
+Fig. 20 compared the measured and predicted in-cylinder pressures 
+at various hydrogen blend ratios. It can be observed that the peak in- 
+cylinder pressure simulated by the initial mechanism, Mechanism 1 
+and Mechanism 2 exhibited no obvious difference and the relative error 
+between predicted and measured data was within 5%. The estimated 
+ignition delay time by the three mechanisms was significantly different, 
+and the simulated pressure curve by Mechanism 2 was closer to the 
+experimental profile. This was due to the reduced mechanism being 
+optimized to accurately forecast the ignition delay time under inter-
+esting conditions. 5.Conclusion 
+The reduced mechanism and optimized mechanism for ammonia/ 
+hydrogen mixture were both developed through the single-objection 
+genetic algorithm. The reduced mechanism included 29 reactants 
+(including CO, CO2, CH4, C2H6 only defined as three-body colliders, 
+inert gas Ar and He), and 63 element reactions. 
+During the mechanism reduction progress, not only the IDT and 
+steady-state temperatures were included as evaluation terms to keep 
+high fidelity with the initial mechanism, but also the calculational cost 
+time by the reduced mechanism was restricted to avoid stiff mechanism. 
+The sensitivity analysis of ignition delay time illustrated the most 
+important reactions to ignition which were retained in the reduced 
+mechanism. This indicated that GA was a feasible methodology for 
+reducing detailed mechanisms, which had flexible and adjustable eval-
+uation rules and didn ’t require the user to understand the combustion 
+chemistry. 
+The reduced mechanism was optimized based on GA as the baseline 
+of fundamental experimental data. The predicted IDTs and LFS, pre-A 
+variation amplitude, and calculation time were considered compre -
+hensively for optimization. The overall score showed that the optimized 
+mechanism performed much better on forecasting LFS. In addition, 
+mechanism verification and comparison were carried out in shock tube, 
+laminar flame speed, JSR, premixed flame, and HCCI engine environ -
+ment. The consistency between the predictions and the measurements 
+demonstrated the reliability of the reduced mechanism and optimized 
+mechanism. 
+Author contribution 
+Xing Liu: Conceptualization, Methodology, Software, Writing – 
+original draft, Writing – review & editing.Ying Wang: Conceptualiza -
+tion, Writing – review & editing, Supervision, Funding acquisition. 
+Fig. 18.Premixed flame structures of NH3/NO/Ar mixture, φ1B46 and inlet 
+velocity of 60 cm/s, experimental data from Ref. [51]. Table 4 
+Engine specifications and operating conditions.  
+Parameter Value 
+Displacement(cm3) 463 
+Bore ×Stroke (mm) 86 ×75 
+Compression ratio 22 
+Speed(rpm) 1500 
+equivalence ratio 0.22 
+X[NH3]:X[H2] 0.37:0.63/0.57:0.43 
+Intake pressure(bar) 1  
+Fig. 19.Computational grid in engine simulation.  X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+13Yuanqi Bai: Software, Investigation.Wenxu Yang: Investigation. 
+Declaration of competing interest 
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper. 
+Data availability 
+No data was used for the research described in the article. 
+Acknowledgments 
+This work was supported by National Natural Science Foundation of 
+China (51776162) and Overall Layout Design and Research of High 
+Efficiency Aviation Kerosene Rotor Engine Project (2020-JCJQ-ZD-116- 
+11-01). 
+Appendix A.Supplementary data 
+Supplementary data to this article can be found online at https://doi. 
+org/10.1016/j.energy.2023.126927 . 
+References 
+[1]Chai WS, Bao Y, Jin P, Tang G, Zhou L. A review on ammonia, ammonia-hydrogen 
+and ammonia-methane fuels. Renew Sustain Energy Rev 2021;147:111254 . 
+[2]Cardoso JS, Silva V, Rocha RC, Hall MJ, Costa M, Eus˘ebio D. Ammonia as an 
+energy vector: current and future prospects for low-carbon fuel applications in 
+internal combustion engines. J Clean Prod 2021;296:126562 . 
+[3]Miura D, Tezuka T. A comparative study of ammonia energy systems as a future 
+energy carrier, with particular reference to vehicle use in Japan. Energy 2014;68: 
+428–36. 
+[4]Li J, Huang H, Deng L, He Z, Osaka Y, Kobayashi N. Effect of hydrogen addition on 
+combustion and heat release characteristics of ammonia flame. Energy 2019;175: 
+604–17. 
+[5]Wu F-H, Chen G-B. Numerical study of hydrogen peroxide enhancement of 
+ammonia premixed flames. Energy 2020;209:118118 . 
+[6]Nozari H, Karabeyo ˚glu A. Numerical study of combustion characteristics of 
+ammonia as a renewable fuel and establishment of reduced reaction mechanisms. 
+Fuel 2015;159:223 –33. 
+[7]Makhloufi C, Kezibri N. Large-scale decomposition of green ammonia for pure 
+hydrogen production. Int J Hydrogen Energy 2021;46(70):34777 –87. 
+[8]Zamfirescu C, Dincer I. Using ammonia as a sustainable fuel. J Power Sources 2008; 
+185(1):459 –65. 
+[9]Li J, Huang HY, Kobayashi N, Wang CG, Yuan HR. Numerical study on laminar 
+burning velocity and ignition delay time of ammonia flame with hydrogen 
+addition. Energy 2017;126:796 –809. 
+[10] Dimitriou P, Javaid R. A review of ammonia as a compression ignition engine fuel. 
+Int J Hydrogen Energy 2020;45(11):7098 –118. [11] Pochet M, Jeanmart H, Contino F. A 22:1 compression ratio ammonia-hydrogen 
+HCCI engine: combustion, load, and emission performances. Front Mech Eng 2020; 
+6. 
+[12] Lhuillier C, Brequigny P, Contino F, Mounaïm-Rousselle C. Experimental study on 
+ammonia/hydrogen/air combustion in spark ignition engine conditions. Fuel 2020; 
+269:117448 . 
+[13] Frigo S, Gentili R. Analysis of the behaviour of a 4-stroke Si engine fuelled with 
+ammonia and hydrogen. Int J Hydrogen Energy 2013;38(3):1607 –15. 
+[14] Miller JA, Smooke MD, Green RM, Kee RJ. Kinetic modeling of the oxidation of 
+ammonia in flames. Combust Sci Technol 2007;34(1 –6):149 –76. 
+[15] Glarborg P, Miller JA, Ruscic B, Klippenstein SJ. Modeling nitrogen chemistry in 
+combustion. Prog Energy Combust Sci 2018;67:31 –68. 
+[16] Klippenstein SJ, Harding LB, Glarborg P, Miller JA. The role of NNH in NO 
+formation and control. Combust Flame 2011;158(4):774 –89. 
+[17] Mathieu O, Petersen EL. Experimental and modeling study on the high-temperature 
+oxidation of Ammonia and related NOx chemistry. Combust Flame 2015;162(3): 
+554–70. 
+[18] M˘evel R, Javoy S, Lafosse F, Chaumeix N, Dupr ˘e G, Paillard CE. Hydrogen –nitrous 
+oxide delay times: shock tube experimental study and kinetic modelling. Proc 
+Combust Inst 2009;32(1):359 –66. 
+[19] Song Y, Marrod ˘an L, Vin N, Herbinet O, Assaf E, Fittschen C, et al. The sensitizing 
+effects of NO2 and NO on methane low temperature oxidation in a jet stirred 
+reactor. Proc Combust Inst 2019;37(1):667 –75. 
+[20] Stagni A, Cavallotti C, Arunthanayothin S, Song Y, Herbinet O, Battin-Leclerc F, 
+et al. An experimental, theoretical and kinetic-modeling study of the gas-phase 
+oxidation of ammonia. Reaction Chemistry & Engineering 2020;5(4):696 –711. 
+[21] Zhang X, Moosakutty SP, Rajan RP, Younes M, Sarathy SM. Combustion chemistry 
+of ammonia/hydrogen mixtures: jet-stirred reactor measurements and 
+comprehensive kinetic modeling. Combust Flame 2021;234:111653 . 
+[22] Otomo J, Koshi M, Mitsumori T, Iwasaki H, Yamada K. Chemical kinetic modeling 
+of ammonia oxidation with improved reaction mechanism for ammonia/air and 
+ammonia/hydrogen/air combustion. Int J Hydrogen Energy 2018;43(5):3004 –14. 
+[23] Zhang Y, Mathieu O, Petersen EL, Bourque G, Curran HJ. Assessing the predictions 
+of a NO x kinetic mechanism on recent hydrogen and syngas experimental data. 
+Combust Flame 2017;182:122 –41. 
+[24] Nakamura H, Hasegawa S, Tezuka T. Kinetic modeling of ammonia/air weak 
+flames in a micro flow reactor with a controlled temperature profile. Combust 
+Flame 2017;185:16 –27. 
+[25] Liao W, Chu Z, Wang Y, Li S, Yang B. An experimental and modeling study on auto- 
+ignition of ammonia in an RCM with N2O and H2 addition. Proc Combust Inst 
+2022 . 
+[26] Xiao H, Valera-Medina A, Bowen PJ. Modeling combustion of ammonia/hydrogen 
+fuel blends under gas turbine conditions. Energy Fuel 2017;31(8):8631 –42. 
+[27] Duynslaegher C, Contino F, Vandooren J, Jeanmart H. Modeling of ammonia 
+combustion at low pressure. Combust Flame 2012;159(9):2799 –805. 
+[28] da Rocha RC, Costa M, Bai X-S. Chemical kinetic modelling of ammonia/hydrogen/ 
+air ignition, premixed flame propagation and NO emission. Fuel 2019;246:24 –33. 
+[29] Okafor EC, Naito Y, Colson S, Ichikawa A, Kudo T, Hayakawa A, et al. Experimental 
+and numerical study of the laminar burning velocity of CH4 –NH3 –air premixed 
+flames. Combust Flame 2018;187:185 –98. 
+[30] Li R, Konnov AA, He G, Qin F, Zhang D. Chemical mechanism development and 
+reduction for combustion of NH3/H2/CH4 mixtures. Fuel 2019;257:116059 . 
+[31] Cai T, Zhao D, Chan SH, Shahsavari M. Tailoring reduced mechanisms for 
+predicting flame propagation and ignition characteristics in ammonia and 
+ammonia/hydrogen mixtures. Energy 2022:260 . 
+[32] Perini F, Brakora JL, Reitz RD, Cantore G. Development of reduced and optimized 
+reaction mechanisms based on genetic algorithms and element flux analysis. 
+Combust Flame 2012;159(1):103 –19. 
+Fig. 20.Comparisons of in-cylinder pressures between simulation and experiment [11].  X. Liu et al.                                                                                                                                                                                                                                      
+
+Energy 270 (2023) 126927
+14[33] Sheen DA, Wang H. The method of uncertainty quantification and minimization 
+using polynomial chaos expansions. Combust Flame 2011;158(12):2358 –74. 
+[34] Chang Y, Jia M, Niu B, Xu Z, Liu Z, Li Y, et al. Construction of a skeletal oxidation 
+mechanism of n-pentanol by integrating decoupling methodology, genetic 
+algorithm, and uncertainty quantification. Combust Flame 2018;194:15 –27. 
+[35] Hern ˘andez JJ, Ballesteros R, Sanz-Argent J. Reduction of kinetic mechanisms for 
+fuel oxidation through genetic algorithms. Math Comput Model 2010;52(7 –8): 
+1185 –93. 
+[36] Lee HC, Mohamad AA, Jiang LY. A detailed chemical kinetics for the combustion of 
+H 2/CO/CH 4/CO 2 fuel mixtures. Fuel 2017;193:294 –307. 
+[37] Sikalo N, Hasemann O, Schulz C, Kempf A, Wlokas I. A genetic algorithm-based 
+method for the automatic reduction of reaction mechanisms. Int J Chem Kinet 
+2014;46(1):41 –59. 
+[38] Sikalo N, Hasemann O, Schulz C, Kempf A, Wlokas I. A genetic algorithm-based 
+method for the optimization of reduced kinetics mechanisms. Int J Chem Kinet 
+2015;47(11):695 –723. 
+[39] Niu B, Jia M, Xu G, Chang Y, Xie M. Efficient approach for the optimization of 
+skeletal chemical mechanisms with multiobjective genetic algorithm. Energy Fuel 
+2018;32(6):7086 –102. 
+[40] Elliott L, Ingham DB, Kyne AG, Mera NS, Pourkashanian M, Wilson CW. Genetic 
+algorithms for optimisation of chemical kinetics reaction mechanisms. Prog Energy 
+Combust Sci 2004;30(3):297 –328. 
+[41] Wang H, Sheen DA. Combustion kinetic model uncertainty quantification, 
+propagation and minimization. Prog Energy Combust Sci 2015;47:1 –31. 
+[42] Chen J, Jiang X, Qin X, Huang Z. Effect of hydrogen blending on the high 
+temperature auto-ignition of ammonia at elevated pressure. Fuel 2021;287: 
+119563 . 
+[43] Woo M, Choi BC. Numerical study on fuel-NO formation characteristics of 
+ammonia-added methane fuel in laminar non-premixed flames with oxygen/ 
+carbon dioxide oxidizer. Energy 2021;226:120365 . [44] He X, Shu B, Nascimento D, Moshammer K, Costa M, Fernandes RX. Auto-ignition 
+kinetics of ammonia and ammonia/hydrogen mixtures at intermediate 
+temperatures and high pressures. Combust Flame 2019;206:189 –200. 
+[45] Lhuillier C, Brequigny P, Lamoureux N, Contino F, Mounaim-Rousselle C. 
+Experimental investigation on laminar burning velocities of ammonia/hydrogen/ 
+air mixtures at elevated temperatures. Fuel 2020;263:116653 . 
+[46] Wang SX, Wang ZH, Elbaz AM, Han XL, He Y, Costa M, et al. Experimental study 
+and kinetic analysis of the laminar burning velocity of NH3/syngas/air, NH3/CO/ 
+air and NH3/H-2/air premixed flames at elevated pressures. Combust Flame 2020; 
+221:270 –87. 
+[47] Krejci MC, Mathieu O, Vissotski AJ, Ravi S, Sikes TG, Petersen EL, et al. Laminar 
+flame speed and ignition delay time data for the kinetic modeling of hydrogen and 
+syngas fuel blends. J Eng Gas Turbines Power 2013;135(2):021503 . 
+[48] Ichikawa A, Hayakawa A, Kitagawa Y, Somarathne KDKA, Kudo T, Kobayashi H. 
+Laminar burning velocity and Markstein length of ammonia/hydrogen/air 
+premixed flames at elevated pressures. Int J Hydrogen Energy 2015;40(30): 
+9570 –8. 
+[49] Shrestha KP, Lhuillier C, Barbosa AA, Brequigny P, Contino F, Mounaim- 
+Rousselle C, et al. An experimental and modeling study of ammonia with enriched 
+oxygen content and ammonia/hydrogen laminar flame speed at elevated pressure 
+and temperature. Proc Combust Inst 2021;38(2):2163 –74. 
+[50] Ji C, Wang Z, Wang D, Hou R, Zhang T, Wang S. Experimental and numerical study 
+on premixed partially dissociated ammonia mixtures. Part I: laminar burning 
+velocity of NH3/H2/N2/air mixtures. Int J Hydrogen Energy 2022;47(6):4171 –84. 
+[51] Vandooren J, Bian J, Vantiggelen PJ. Comparison of experimental and calculated 
+structures of an ammonia nitric-oxide flame - importance of the Nh2No reaction. 
+Combust Flame 1994;98(4):402 –10. 
+[52] Bai Y, Wang Y, Wang X, Wang P. Development of a skeletal mechanism for tri- 
+component diesel surrogate fuel: N-hexadecane/iso-cetane/1-methylnaphthalene. 
+Fuel 2020;259:116217 . X. Liu et al.                                                                                                                                                                                                                                      

@@ -1,0 +1,119 @@
+Development of reduced and optimized mechanism for ammonia/ 
+hydrogen mixture based on genetic algorithm  
+Xing Liu, Ying Wang*, Yuanqi Bai, Wenxu Yang  
+ 
+ 
+Additional model validation  
+ 
+Figure  S1 Measured (symbols)  [1] and calculated (lines) IDTs  of ammonia by optimized 
+mechanism and initial mechanism under high temperature.  
+ 
+ 
+Figure  S2 Measured (symbols)  [2, 3]  and calculated (lines) IDTs  of ammonia/ammonia by reduced 
+mechanism optimized mechanism and initial mechanism under low temperature and d iluted 
+condition , (a) phi=0.35 and pressure of 43.4 bar and (b) phi=1, pressure of 20 bar.  
+0.40 0.45 0.50 0.55 0.60 0.650.010.1110
+                EXP     Mechanism2   FullMechanism
+ 1.4 atm                                
+ 11  atm         IDT (ms)
+1000/K (1/K) 1.143% NH3/0.857% O2/98% Ar mixture  
+    =1
+    
+0.88 0.90 0.92 0.94 0.96 0.98 1.00 1.020.11101001000
+ 90% NH3/ 10% H2
+ Mechanism 1
+ Mechanism 2
+ Full MechanismIDT (ms)
+1000/T (1/K)(a)
+0.85 0.90 0.95 1.00 1.050.11101001000
+  90% NH3/10% H2
+  75% NH3/25% H2
+ Mechanism 1
+ Mechanism 2
+ Full mechanismIDT (ms)
+1000/T (1/K)(b)
+
+ 
+Figure S 3 Measured [4] (symbols) and calculated (lines) LFSs by optimization mechanism  and 
+full mechanism  under high temperature and high pressure . 
+ 
+Figure S 4 Measured [5, 6]  (symbols) and calculated (lines) LFSs  in air  by optimization 
+mechanism  under temperature of 360K . 
+ 
+Figure S5 Comparison of Measured [7] (points) and calculated (lines)  LFSs of NH3/H2 /N2/air 
+mixture.  
+ 
+0.8 1.0 1.2 1.4 1.6101520253035404550
+ Exp
+ Mechanism 2Laminar flame speed (cm/s)
+Equivalence ratio(a) 80%NH3/20%H2 in air
+P=40 bar, T=820K
+0.6 0.8 1.0 1.2 1.40246810121416182022Laminar flame speed (cm/s)(b) 100%NH3 in air
+P=40 bar, T=720K
+Equivalence ratio
+0.1 0.2 0.3 0.4 0.505101520253035
+ 100% NH3
+ 90% NH3/ 10% H2
+ 80% NH3/ 20% H2
+ 100% NH3_373KLaminare flame speed (cm/s)
+Pressure (MPa)
+0.6 0.8 1.0 1.2 1.42468101214161820
+ Exp
+  Stagni(2020)
+ Full mechanism
+ Mechanism 2Laminar flame speed (cm/s)
+Equivalence ratio(a) NH2/H2/N2/air mixture
+      Tu=303K, Pu=1 atm
+       =0.3
+0.6 0.8 1.0 1.2 1.4 1.6 1.810203040
+ Exp
+  Stagni(2020)
+ Full mechanism
+ Mechanism 2Laminar flame speed (cm/s)
+Equivalence ratio(b) NH2/H2/N2/air mixture
+      Tu=303K, Pu=1 atm
+       =0.5
+
+ 
+ 
+Figure S6 Mole fraction of NO in premixed flame of lean, stoichiometric, and rich NH3 /air 
+mixture, experimental value [8]. 
+ 
+Reference:  
+[1] Mathieu O, Petersen EL. Experimental and modeling study on the high -temperature oxidation of 
+Ammonia and related NOx chemistry. Combustion and Flame. 2015;162(3):554 -70. 
+[2] Liao W, Chu Z, Wang Y , Li S, Yang B. An experimental and modeling study on auto -ignition of 
+ammonia in an RCM with N2O and H2 addition. Proceedings of the Combustion Institute. 2022.  
+[3] Pochet M, Dias V , Moreau B, Foucher F, Jeanmart H, Contino F. Experimental and numerical study, 
+under LTC conditions, of ammonia igniti on delay with and without hydrogen addition. Proceedings of 
+the Combustion Institute. 2019;37(1):621 -9. 
+[4] Pessina V , Berni F, Fontanesi S, Stagni A, Mehl M. Laminar flame speed correlations of 
+ammonia/hydrogen mixtures at high pressure and temperature fo r combustion modeling applications. 
+International Journal of Hydrogen Energy. 2022;47(61):25780 -94. 
+[5] Wang N, Huang S, Zhang Z, Li T, Yi P, Wu D, et al. Laminar burning characteristics of 
+ammonia/hydrogen/air mixtures with laser ignition. International J ournal of Hydrogen Energy. 
+2021;46(62):31879 -93. 
+[6] Lhuillier C, Brequigny P, Lamoureux N, Contino F, Mounaim -Rousselle C. Experimental 
+investigation on laminar burning velocities of ammonia/hydrogen/air mixtures at elevated temperatures. 
+Fuel. 2020;263:1 16653.  
+[7] Ji C, Wang Z, Wang D, Hou R, Zhang T, Wang S. Experimental and numerical study on premixed 
+partially dissociated ammonia mixtures. Part I: Laminar burning velocity of NH3/H2/N2/air mixtures. 
+International Journal of Hydrogen Energy. 2022;47(6):4 171-84. 
+0.0 0.5 1.0 1.50.0000.0020.0040.0060.0080.0100.012
+ Exp
+ Full mechanism
+ Mechanism 1
+ Mechanism 2Mole fraction of NO
+Distance (cm)(a) Premixed flame of NH3/air
+      =0.9
+0.0 0.5 1.0 1.50.0000.0010.0020.0030.0040.005Mole fraction of NO
+Distance (cm)(b) Premixed flame of NH3/air
+      =1
+0.0 0.5 1.0 1.50.0000.0010.0020.003Mole fraction of NO
+Distance (cm)(c) Premixed flame of NH3/air
+      =1.2
+
+[8] Brackmann C, Alekseev VA, Zhou B, Nordström E, Bengtsson P -E, Li Z, et al. Structure of premixed 
+ammonia  + air flames at atmospheric pressure: Laser diagnostics and kinetic modeling. Combustion and 
+Flame. 2016;163:370 -81. 
+ 
