@@ -1,0 +1,26 @@
+=== Fig.17 Full ===
+  Fig17a_pure_NH3: u=7.80 cm/s, (44 点)
+  Fig17b_NH3H2_0.8_0.2: u=13.20 cm/s, (59 点)
+=== Fig.17 Mechanism 2 ===
+  Fig17a_pure_NH3: u=7.85 cm/s, (156 点)
+  Fig17b_NH3H2_0.8_0.2: u=13.09 cm/s, (144 点)
+=== Fig.18 Full ===
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:919: RuntimeWarning: invalid value encountered in scalar divide
+  if abs(T[n] - T[0]) / (T[-1] - T[0]) < 1e-6:
+  solved, (11 点)
+=== Fig.18 Mechanism 2 ===
+  solved, (11 点)
+=== Fig.S6 Full ===
+  phi=0.9: ok
+  phi=1.0: ok
+  phi=1.2: ok
+=== Fig.S6 Mechanism 1 ===
+  phi=0.9: ok
+  phi=1.0: ok
+  phi=1.2: ok
+=== Fig.S6 Mechanism 2 ===
+  phi=0.9: ok
+  phi=1.0: ok
+  phi=1.2: ok
+
+预混火焰计算完成: 1614 行 -> E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\results\premixed_flame.csv

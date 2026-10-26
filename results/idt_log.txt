@@ -1,0 +1,65 @@
+=== Full (36 sp, 253 rxns) ===
+  Fig9 (a) 100% NH3 P=1.2 done
+  Fig9 (a) 100% NH3 P=10.0 done
+  Fig9 (b) 95%NH3/5%H2 P=1.2 done
+  Fig9 (b) 95%NH3/5%H2 P=10.0 done
+  Fig9 (c) 70%NH3/30%H2 P=1.2 done
+  Fig9 (c) 70%NH3/30%H2 P=10.0 done
+  Fig9 (d) 30%NH3/70%H2 P=1.2 done
+  Fig9 (d) 30%NH3/70%H2 P=10.0 done
+  Fig10 (a) 100% NH3, phi=1 P=20.0 done
+  Fig10 (a) 100% NH3, phi=1 P=40.0 done
+  Fig10 (b) phi=0.5 NH3/O2/Ar P=1.4 done
+  Fig10 (c) phi=2.0 NH3/O2/Ar P=1.4 done
+  FigS1 NH3/O2/Ar, phi=1, P=1.4 atm P=1.4 done
+  FigS1 NH3/O2/Ar, phi=1, P=11.0 atm P=11.0 done
+  FigS2a 100%NH3/0%H2 P=43.4 done
+  FigS2a 90%NH3/10%H2 P=43.4 done
+  FigS2a 75%NH3/25%H2 P=43.4 done
+  FigS2b 100%NH3/0%H2 P=20.0 done
+  FigS2b 90%NH3/10%H2 P=20.0 done
+  FigS2b 75%NH3/25%H2 P=20.0 done
+=== Mechanism 1 (29 sp, 63 rxns) ===
+  Fig9 (a) 100% NH3 P=1.2 done
+  Fig9 (a) 100% NH3 P=10.0 done
+  Fig9 (b) 95%NH3/5%H2 P=1.2 done
+  Fig9 (b) 95%NH3/5%H2 P=10.0 done
+  Fig9 (c) 70%NH3/30%H2 P=1.2 done
+  Fig9 (c) 70%NH3/30%H2 P=10.0 done
+  Fig9 (d) 30%NH3/70%H2 P=1.2 done
+  Fig9 (d) 30%NH3/70%H2 P=10.0 done
+  Fig10 (a) 100% NH3, phi=1 P=20.0 done
+  Fig10 (a) 100% NH3, phi=1 P=40.0 done
+  Fig10 (b) phi=0.5 NH3/O2/Ar P=1.4 done
+  Fig10 (c) phi=2.0 NH3/O2/Ar P=1.4 done
+  FigS1 NH3/O2/Ar, phi=1, P=1.4 atm P=1.4 done
+  FigS1 NH3/O2/Ar, phi=1, P=11.0 atm P=11.0 done
+  FigS2a 100%NH3/0%H2 P=43.4 done
+  FigS2a 90%NH3/10%H2 P=43.4 done
+  FigS2a 75%NH3/25%H2 P=43.4 done
+  FigS2b 100%NH3/0%H2 P=20.0 done
+  FigS2b 90%NH3/10%H2 P=20.0 done
+  FigS2b 75%NH3/25%H2 P=20.0 done
+=== Mechanism 2 (29 sp, 63 rxns) ===
+  Fig9 (a) 100% NH3 P=1.2 done
+  Fig9 (a) 100% NH3 P=10.0 done
+  Fig9 (b) 95%NH3/5%H2 P=1.2 done
+  Fig9 (b) 95%NH3/5%H2 P=10.0 done
+  Fig9 (c) 70%NH3/30%H2 P=1.2 done
+  Fig9 (c) 70%NH3/30%H2 P=10.0 done
+  Fig9 (d) 30%NH3/70%H2 P=1.2 done
+  Fig9 (d) 30%NH3/70%H2 P=10.0 done
+  Fig10 (a) 100% NH3, phi=1 P=20.0 done
+  Fig10 (a) 100% NH3, phi=1 P=40.0 done
+  Fig10 (b) phi=0.5 NH3/O2/Ar P=1.4 done
+  Fig10 (c) phi=2.0 NH3/O2/Ar P=1.4 done
+  FigS1 NH3/O2/Ar, phi=1, P=1.4 atm P=1.4 done
+  FigS1 NH3/O2/Ar, phi=1, P=11.0 atm P=11.0 done
+  FigS2a 100%NH3/0%H2 P=43.4 done
+  FigS2a 90%NH3/10%H2 P=43.4 done
+  FigS2a 75%NH3/25%H2 P=43.4 done
+  FigS2b 100%NH3/0%H2 P=20.0 done
+  FigS2b 90%NH3/10%H2 P=20.0 done
+  FigS2b 75%NH3/25%H2 P=20.0 done
+
+IDT 计算完成: 1068 行 -> E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\results\idt_sweep.csv

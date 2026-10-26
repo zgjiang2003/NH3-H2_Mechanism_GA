@@ -1,0 +1,50 @@
+=== HCCI Full XH2=0.63 (T_in=410.0K) ===
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:73: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  reactor = ct.IdealGasReactor(gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:78: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  env = ct.Reservoir(env_gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:99: DeprecationWarning: ReactorBase.thermo: To be removed after Cantera 3.2. Renamed to `phase`.
+  "P_bar": reactor.thermo.P / 1e5,
+  Pmax=81.5 bar @ +1.5 deg ATDC
+=== HCCI Full XH2=0.43 (T_in=410.0K) ===
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:73: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  reactor = ct.IdealGasReactor(gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:78: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  env = ct.Reservoir(env_gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:99: DeprecationWarning: ReactorBase.thermo: To be removed after Cantera 3.2. Renamed to `phase`.
+  "P_bar": reactor.thermo.P / 1e5,
+  Pmax=68.5 bar @ +8.5 deg ATDC
+=== HCCI Mechanism 1 XH2=0.63 (T_in=410.0K) ===
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:73: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  reactor = ct.IdealGasReactor(gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:78: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  env = ct.Reservoir(env_gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:99: DeprecationWarning: ReactorBase.thermo: To be removed after Cantera 3.2. Renamed to `phase`.
+  "P_bar": reactor.thermo.P / 1e5,
+  Pmax=79.5 bar @ +3.5 deg ATDC
+=== HCCI Mechanism 1 XH2=0.43 (T_in=410.0K) ===
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:73: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  reactor = ct.IdealGasReactor(gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:78: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  env = ct.Reservoir(env_gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:99: DeprecationWarning: ReactorBase.thermo: To be removed after Cantera 3.2. Renamed to `phase`.
+  "P_bar": reactor.thermo.P / 1e5,
+  Pmax=50.5 bar @ -0.0 deg ATDC
+=== HCCI Mechanism 2 XH2=0.63 (T_in=410.0K) ===
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:73: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  reactor = ct.IdealGasReactor(gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:78: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  env = ct.Reservoir(env_gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:99: DeprecationWarning: ReactorBase.thermo: To be removed after Cantera 3.2. Renamed to `phase`.
+  "P_bar": reactor.thermo.P / 1e5,
+  Pmax=70.3 bar @ +8.0 deg ATDC
+=== HCCI Mechanism 2 XH2=0.43 (T_in=410.0K) ===
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:73: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  reactor = ct.IdealGasReactor(gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:78: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  env = ct.Reservoir(env_gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\08_hcci.py:99: DeprecationWarning: ReactorBase.thermo: To be removed after Cantera 3.2. Renamed to `phase`.
+  "P_bar": reactor.thermo.P / 1e5,
+  Pmax=50.4 bar @ -0.0 deg ATDC
+
+HCCI 完成 3063 行 -> results/hcci_pressure.csv

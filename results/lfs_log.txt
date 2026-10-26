@@ -1,0 +1,795 @@
+=== Full ===
+  Fig11 XH2=0.0 Full Tu=298.0 P=1.0 phi=0.70 Su=2.06 cm/s
+  Fig11 XH2=0.0 Full Tu=298.0 P=1.0 phi=0.80 Su=3.20 cm/s
+  Fig11 XH2=0.0 Full Tu=298.0 P=1.0 phi=0.90 Su=4.23 cm/s
+  Fig11 XH2=0.0 Full Tu=298.0 P=1.0 phi=1.00 Su=5.29 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2022.049000005889 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=0.0 Full Tu=298.0 P=1.0 phi=1.10 Su=6.76 cm/s
+  Fig11 XH2=0.0 Full Tu=298.0 P=1.0 phi=1.20 Su=6.69 cm/s
+  Fig11 XH2=0.0 Full Tu=298.0 P=1.0 phi=1.30 Su=6.12 cm/s
+  Fig11 XH2=0.0 Full Tu=298.0 P=1.0 phi=1.40 Su=5.47 cm/s
+  Fig11 XH2=0.2 Full Tu=298.0 P=1.0 phi=0.70 Su=4.34 cm/s
+  Fig11 XH2=0.2 Full Tu=298.0 P=1.0 phi=0.80 Su=6.25 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2022.98904320329 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=0.2 Full Tu=298.0 P=1.0 phi=0.90 Su=7.86 cm/s
+  Fig11 XH2=0.2 Full Tu=298.0 P=1.0 phi=1.00 Su=9.59 cm/s
+  Fig11 XH2=0.2 Full Tu=298.0 P=1.0 phi=1.10 Su=11.45 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2009.6316361673055 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=0.2 Full Tu=298.0 P=1.0 phi=1.20 Su=11.50 cm/s
+  Fig11 XH2=0.2 Full Tu=298.0 P=1.0 phi=1.30 Su=10.75 cm/s
+  Fig11 XH2=0.2 Full Tu=298.0 P=1.0 phi=1.40 Su=9.81 cm/s
+  Fig11 XH2=0.4 Full Tu=298.0 P=1.0 phi=0.70 Su=11.04 cm/s
+  Fig11 XH2=0.4 Full Tu=298.0 P=1.0 phi=0.80 Su=15.22 cm/s
+  Fig11 XH2=0.4 Full Tu=298.0 P=1.0 phi=0.90 Su=19.00 cm/s
+  Fig11 XH2=0.4 Full Tu=298.0 P=1.0 phi=1.00 Su=22.76 cm/s
+  Fig11 XH2=0.4 Full Tu=298.0 P=1.0 phi=1.10 Su=25.18 cm/s
+  Fig11 XH2=0.4 Full Tu=298.0 P=1.0 phi=1.20 Su=23.85 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2016.5500499847453 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=0.4 Full Tu=298.0 P=1.0 phi=1.30 Su=21.89 cm/s
+  Fig11 XH2=0.4 Full Tu=298.0 P=1.0 phi=1.40 Su=19.96 cm/s
+  Fig11 XH2=0.6 Full Tu=298.0 P=1.0 phi=0.70 Su=28.61 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2011.6925623465336 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=0.6 Full Tu=298.0 P=1.0 phi=0.80 Su=39.96 cm/s
+  Fig11 XH2=0.6 Full Tu=298.0 P=1.0 phi=0.90 Su=50.42 cm/s
+  Fig11 XH2=0.6 Full Tu=298.0 P=1.0 phi=1.00 Su=59.21 cm/s
+  Fig11 XH2=0.6 Full Tu=298.0 P=1.0 phi=1.10 Su=64.77 cm/s
+  Fig11 XH2=0.6 Full Tu=298.0 P=1.0 phi=1.20 Su=65.15 cm/s
+  Fig11 XH2=0.6 Full Tu=298.0 P=1.0 phi=1.30 Su=59.97 cm/s
+  Fig11 XH2=0.6 Full Tu=298.0 P=1.0 phi=1.40 Su=52.67 cm/s
+  Fig11 XH2=0.8 Full Tu=298.0 P=1.0 phi=0.70 Su=58.41 cm/s
+  Fig11 XH2=0.8 Full Tu=298.0 P=1.0 phi=0.80 Su=80.47 cm/s
+  Fig11 XH2=0.8 Full Tu=298.0 P=1.0 phi=0.90 Su=101.38 cm/s
+  Fig11 XH2=0.8 Full Tu=298.0 P=1.0 phi=1.00 Su=119.21 cm/s
+  Fig11 XH2=0.8 Full Tu=298.0 P=1.0 phi=1.10 Su=132.63 cm/s
+  Fig11 XH2=0.8 Full Tu=298.0 P=1.0 phi=1.20 Su=140.59 cm/s
+  Fig11 XH2=0.8 Full Tu=298.0 P=1.0 phi=1.30 Su=143.10 cm/s
+  Fig11 XH2=0.8 Full Tu=298.0 P=1.0 phi=1.40 Su=141.34 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2010.8880267972938 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=1.0 Full Tu=298.0 P=1.0 phi=0.70 Su=122.63 cm/s
+  Fig11 XH2=1.0 Full Tu=298.0 P=1.0 phi=0.80 Su=159.23 cm/s
+  Fig11 XH2=1.0 Full Tu=298.0 P=1.0 phi=0.90 Su=191.85 cm/s
+  Fig11 XH2=1.0 Full Tu=298.0 P=1.0 phi=1.00 Su=219.80 cm/s
+  Fig11 XH2=1.0 Full Tu=298.0 P=1.0 phi=1.10 Su=242.72 cm/s
+  Fig11 XH2=1.0 Full Tu=298.0 P=1.0 phi=1.20 Su=261.10 cm/s
+  Fig11 XH2=1.0 Full Tu=298.0 P=1.0 phi=1.30 Su=275.98 cm/s
+  Fig11 XH2=1.0 Full Tu=298.0 P=1.0 phi=1.40 Su=285.62 cm/s
+  Fig12 XH2=0.4 Full Tu=298.0 P=1.0 phi=0.70 Su=11.04 cm/s
+  Fig12 XH2=0.4 Full Tu=298.0 P=1.0 phi=0.80 Su=15.22 cm/s
+  Fig12 XH2=0.4 Full Tu=298.0 P=1.0 phi=0.90 Su=19.00 cm/s
+  Fig12 XH2=0.4 Full Tu=298.0 P=1.0 phi=1.00 Su=22.76 cm/s
+  Fig12 XH2=0.4 Full Tu=298.0 P=1.0 phi=1.10 Su=25.18 cm/s
+  Fig12 XH2=0.4 Full Tu=298.0 P=1.0 phi=1.20 Su=23.85 cm/s
+  Fig12 XH2=0.4 Full Tu=298.0 P=1.0 phi=1.30 Su=21.89 cm/s
+  Fig12 XH2=0.4 Full Tu=298.0 P=1.0 phi=1.40 Su=19.96 cm/s
+  Fig12 XH2=0.6 Full Tu=298.0 P=1.0 phi=0.70 Su=28.61 cm/s
+  Fig12 XH2=0.6 Full Tu=298.0 P=1.0 phi=0.80 Su=39.96 cm/s
+  Fig12 XH2=0.6 Full Tu=298.0 P=1.0 phi=0.90 Su=50.42 cm/s
+  Fig12 XH2=0.6 Full Tu=298.0 P=1.0 phi=1.00 Su=59.21 cm/s
+  Fig12 XH2=0.6 Full Tu=298.0 P=1.0 phi=1.10 Su=64.77 cm/s
+  Fig12 XH2=0.6 Full Tu=298.0 P=1.0 phi=1.20 Su=65.15 cm/s
+  Fig12 XH2=0.6 Full Tu=298.0 P=1.0 phi=1.30 Su=59.97 cm/s
+  Fig12 XH2=0.6 Full Tu=298.0 P=1.0 phi=1.40 Su=52.67 cm/s
+  Fig13 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=5.29 cm/s
+  Fig13 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=6.93 cm/s
+  Fig13 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=9.59 cm/s
+  Fig13 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=14.15 cm/s
+  Fig13 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=22.76 cm/s
+  Fig13 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=37.75 cm/s
+  Fig13 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=59.21 cm/s
+  Fig13 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=86.01 cm/s
+  Fig13 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=119.22 cm/s
+  Fig13 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=159.98 cm/s
+  Fig13 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=219.80 cm/s
+  Fig13 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=4.28 cm/s
+  Fig13 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=5.45 cm/s
+  Fig13 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=7.23 cm/s
+  Fig13 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=10.09 cm/s
+  Fig13 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=14.82 cm/s
+  Fig13 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=23.96 cm/s
+  Fig13 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=38.56 cm/s
+  Fig13 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=59.83 cm/s
+  Fig13 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=89.79 cm/s
+  Fig13 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=132.66 cm/s
+  Fig13 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=204.20 cm/s
+  Fig13 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=3.76 cm/s
+  Fig13 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=4.77 cm/s
+  Fig13 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=6.23 cm/s
+  Fig13 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=8.38 cm/s
+  Fig13 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=12.06 cm/s
+  Fig13 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=18.24 cm/s
+  Fig13 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=29.86 cm/s
+  Fig13 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=47.61 cm/s
+  Fig13 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=74.07 cm/s
+  Fig13 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=114.93 cm/s
+  Fig13 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=187.31 cm/s
+  Fig14 P=1.0atm Full Tu=298.0 P=1.0 phi=0.70 Su=11.04 cm/s
+  Fig14 P=1.0atm Full Tu=298.0 P=1.0 phi=0.80 Su=15.22 cm/s
+  Fig14 P=1.0atm Full Tu=298.0 P=1.0 phi=0.90 Su=19.00 cm/s
+  Fig14 P=1.0atm Full Tu=298.0 P=1.0 phi=1.00 Su=22.76 cm/s
+  Fig14 P=1.0atm Full Tu=298.0 P=1.0 phi=1.10 Su=25.18 cm/s
+  Fig14 P=1.0atm Full Tu=298.0 P=1.0 phi=1.20 Su=23.85 cm/s
+  Fig14 P=1.0atm Full Tu=298.0 P=1.0 phi=1.30 Su=21.89 cm/s
+  Fig14 P=1.0atm Full Tu=298.0 P=1.0 phi=1.40 Su=19.96 cm/s
+  Fig14 P=3.0atm Full Tu=298.0 P=3.0 phi=0.70 Su=6.56 cm/s
+  Fig14 P=3.0atm Full Tu=298.0 P=3.0 phi=0.80 Su=9.62 cm/s
+  Fig14 P=3.0atm Full Tu=298.0 P=3.0 phi=0.90 Su=12.23 cm/s
+  Fig14 P=3.0atm Full Tu=298.0 P=3.0 phi=1.00 Su=14.82 cm/s
+  Fig14 P=3.0atm Full Tu=298.0 P=3.0 phi=1.10 Su=17.76 cm/s
+  Fig14 P=3.0atm Full Tu=298.0 P=3.0 phi=1.20 Su=17.68 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2018.4717506290638 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig14 P=3.0atm Full Tu=298.0 P=3.0 phi=1.30 Su=16.47 cm/s
+  Fig14 P=3.0atm Full Tu=298.0 P=3.0 phi=1.40 Su=15.01 cm/s
+  Fig14 P=5.0atm Full Tu=298.0 P=5.0 phi=0.70 Su=4.99 cm/s
+  Fig14 P=5.0atm Full Tu=298.0 P=5.0 phi=0.80 Su=7.58 cm/s
+  Fig14 P=5.0atm Full Tu=298.0 P=5.0 phi=0.90 Su=9.91 cm/s
+  Fig14 P=5.0atm Full Tu=298.0 P=5.0 phi=1.00 Su=12.06 cm/s
+  Fig14 P=5.0atm Full Tu=298.0 P=5.0 phi=1.10 Su=14.76 cm/s
+  Fig14 P=5.0atm Full Tu=298.0 P=5.0 phi=1.20 Su=14.86 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2019.0734833119554 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig14 P=5.0atm Full Tu=298.0 P=5.0 phi=1.30 Su=13.81 cm/s
+  Fig14 P=5.0atm Full Tu=298.0 P=5.0 phi=1.40 Su=12.54 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Full Tu=298.0 P=1.0 phi=0.80 Su=3.72 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Full Tu=298.0 P=1.0 phi=0.90 Su=4.86 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.00 Su=6.02 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.10 Su=7.64 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.20 Su=7.61 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.30 Su=6.99 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.40 Su=6.24 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Full Tu=373.0 P=1.0 phi=0.80 Su=5.94 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Full Tu=373.0 P=1.0 phi=0.90 Su=7.62 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.00 Su=9.26 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.10 Su=11.38 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2016.3616455028082 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig15 XH2=0.05,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.20 Su=11.44 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.30 Su=10.66 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.40 Su=9.58 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Full Tu=423.0 P=1.0 phi=0.80 Su=7.89 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Full Tu=423.0 P=1.0 phi=0.90 Su=9.99 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.00 Su=12.01 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.10 Su=14.45 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.20 Su=14.58 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.30 Su=13.68 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.40 Su=12.38 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Full Tu=473.0 P=1.0 phi=0.80 Su=10.34 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Full Tu=473.0 P=1.0 phi=0.90 Su=12.87 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.00 Su=15.34 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.10 Su=18.08 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.20 Su=18.14 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2019.8436206625088 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig15 XH2=0.05,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.30 Su=17.14 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.40 Su=15.71 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Full Tu=298.0 P=1.0 phi=0.80 Su=9.22 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Full Tu=298.0 P=1.0 phi=0.90 Su=11.71 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.00 Su=14.15 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.10 Su=16.22 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.20 Su=16.07 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.30 Su=15.04 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.40 Su=13.65 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Full Tu=373.0 P=1.0 phi=0.80 Su=14.53 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Full Tu=373.0 P=1.0 phi=0.90 Su=18.03 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.00 Su=21.31 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.10 Su=23.75 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.20 Su=23.54 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.30 Su=22.11 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.40 Su=20.39 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2014.0587405218098 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig15 XH2=0.3,Tu=423.0K Full Tu=423.0 P=1.0 phi=0.80 Su=19.17 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Full Tu=423.0 P=1.0 phi=0.90 Su=23.17 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.00 Su=27.18 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.10 Su=30.04 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.20 Su=29.55 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.30 Su=27.93 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2006.8298558923536 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig15 XH2=0.3,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.40 Su=25.84 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Full Tu=473.0 P=1.0 phi=0.80 Su=24.52 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Full Tu=473.0 P=1.0 phi=0.90 Su=29.60 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.00 Su=34.54 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.10 Su=37.38 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.20 Su=36.53 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.30 Su=34.63 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.40 Su=32.24 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2011.6925623465352 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig15 XH2=0.6,Tu=298.0K Full Tu=298.0 P=1.0 phi=0.80 Su=39.96 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Full Tu=298.0 P=1.0 phi=0.90 Su=50.42 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.00 Su=59.21 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.10 Su=64.77 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.20 Su=65.15 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.30 Su=59.97 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Full Tu=298.0 P=1.0 phi=1.40 Su=52.67 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Full Tu=373.0 P=1.0 phi=0.80 Su=61.49 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Full Tu=373.0 P=1.0 phi=0.90 Su=75.46 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.00 Su=86.76 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.10 Su=93.71 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.20 Su=93.82 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.30 Su=87.25 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Full Tu=373.0 P=1.0 phi=1.40 Su=77.41 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Full Tu=423.0 P=1.0 phi=0.80 Su=79.64 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Full Tu=423.0 P=1.0 phi=0.90 Su=96.19 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.00 Su=109.11 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.10 Su=116.72 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.20 Su=116.70 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.30 Su=109.25 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Full Tu=423.0 P=1.0 phi=1.40 Su=97.13 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Full Tu=473.0 P=1.0 phi=0.80 Su=101.36 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Full Tu=473.0 P=1.0 phi=0.90 Su=120.75 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.00 Su=134.91 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.10 Su=143.18 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.20 Su=142.76 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.30 Su=134.23 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Full Tu=473.0 P=1.0 phi=1.40 Su=119.80 cm/s
+  FigS3a 80%NH3/20%H2 Full Tu=820.0 P=40.0 phi=0.80 Su=27.45 cm/s
+  FigS3a 80%NH3/20%H2 Full Tu=820.0 P=40.0 phi=0.90 Su=32.63 cm/s
+  FigS3a 80%NH3/20%H2 Full Tu=820.0 P=40.0 phi=1.00 Su=37.18 cm/s
+  FigS3a 80%NH3/20%H2 Full Tu=820.0 P=40.0 phi=1.10 Su=42.83 cm/s
+  FigS3a 80%NH3/20%H2 Full Tu=820.0 P=40.0 phi=1.20 Su=43.90 cm/s
+  FigS3a 80%NH3/20%H2 Full Tu=820.0 P=40.0 phi=1.30 Su=42.63 cm/s
+  FigS3a 80%NH3/20%H2 Full Tu=820.0 P=40.0 phi=1.40 Su=40.49 cm/s
+  FigS3a 80%NH3/20%H2 Full Tu=820.0 P=40.0 phi=1.50 Su=38.02 cm/s
+  FigS3a 80%NH3/20%H2 Full Tu=820.0 P=40.0 phi=1.60 Su=35.43 cm/s
+  FigS3b 100%NH3 Full Tu=720.0 P=40.0 phi=0.60 Su=5.74 cm/s
+  FigS3b 100%NH3 Full Tu=720.0 P=40.0 phi=0.80 Su=12.40 cm/s
+  FigS3b 100%NH3 Full Tu=720.0 P=40.0 phi=1.00 Su=17.51 cm/s
+  FigS3b 100%NH3 Full Tu=720.0 P=40.0 phi=1.20 Su=20.87 cm/s
+  FigS3b 100%NH3 Full Tu=720.0 P=40.0 phi=1.40 Su=18.39 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2010.7699961442813 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  FigS3b 100%NH3 Full Tu=720.0 P=40.0 phi=1.60 Su=15.40 cm/s
+  FigS4 XH2=0.0 Full Tu=360.0 P=1.0 phi=1.00 Su=7.61 cm/s
+  FigS4 XH2=0.0 Full Tu=360.0 P=2.0 phi=1.00 Su=6.74 cm/s
+  FigS4 XH2=0.0 Full Tu=360.0 P=3.0 phi=1.00 Su=6.20 cm/s
+  FigS4 XH2=0.0 Full Tu=360.0 P=4.0 phi=1.00 Su=5.80 cm/s
+  FigS4 XH2=0.0 Full Tu=360.0 P=5.0 phi=1.00 Su=5.48 cm/s
+  FigS4 XH2=0.1 Full Tu=360.0 P=1.0 phi=1.00 Su=9.89 cm/s
+  FigS4 XH2=0.1 Full Tu=360.0 P=2.0 phi=1.00 Su=8.68 cm/s
+  FigS4 XH2=0.1 Full Tu=360.0 P=3.0 phi=1.00 Su=7.89 cm/s
+  FigS4 XH2=0.1 Full Tu=360.0 P=4.0 phi=1.00 Su=7.35 cm/s
+  FigS4 XH2=0.1 Full Tu=360.0 P=5.0 phi=1.00 Su=6.92 cm/s
+  FigS4 XH2=0.2 Full Tu=360.0 P=1.0 phi=1.00 Su=13.56 cm/s
+  FigS4 XH2=0.2 Full Tu=360.0 P=2.0 phi=1.00 Su=11.54 cm/s
+  FigS4 XH2=0.2 Full Tu=360.0 P=3.0 phi=1.00 Su=10.42 cm/s
+  FigS4 XH2=0.2 Full Tu=360.0 P=4.0 phi=1.00 Su=9.59 cm/s
+  FigS4 XH2=0.2 Full Tu=360.0 P=5.0 phi=1.00 Su=8.98 cm/s
+  FigS5 alpha=0.3 Full Tu=303.0 P=1.0 phi=0.60 Su=4.13 cm/s
+  FigS5 alpha=0.3 Full Tu=303.0 P=1.0 phi=0.80 Su=9.53 cm/s
+  FigS5 alpha=0.3 Full Tu=303.0 P=1.0 phi=1.00 Su=14.57 cm/s
+  FigS5 alpha=0.3 Full Tu=303.0 P=1.0 phi=1.20 Su=16.52 cm/s
+  FigS5 alpha=0.3 Full Tu=303.0 P=1.0 phi=1.40 Su=14.05 cm/s
+  FigS5 alpha=0.3 Full Tu=303.0 P=1.0 phi=1.60 Su=11.52 cm/s
+  FigS5 alpha=0.3 Full Tu=303.0 P=1.0 phi=1.80 Su=9.47 cm/s
+  FigS5 alpha=0.5 Full Tu=303.0 P=1.0 phi=0.60 Su=12.52 cm/s
+  FigS5 alpha=0.5 Full Tu=303.0 P=1.0 phi=0.80 Su=26.10 cm/s
+  FigS5 alpha=0.5 Full Tu=303.0 P=1.0 phi=1.00 Su=38.84 cm/s
+  FigS5 alpha=0.5 Full Tu=303.0 P=1.0 phi=1.20 Su=40.75 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2003.7754884663948 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  FigS5 alpha=0.5 Full Tu=303.0 P=1.0 phi=1.40 Su=31.26 cm/s
+  FigS5 alpha=0.5 Full Tu=303.0 P=1.0 phi=1.60 Su=25.35 cm/s
+  FigS5 alpha=0.5 Full Tu=303.0 P=1.0 phi=1.80 Su=20.95 cm/s
+=== Mechanism 1 ===
+  Fig11 XH2=0.0 Mechanism 1 Tu=298.0 P=1.0 phi=0.70 Su=3.17 cm/s
+  Fig11 XH2=0.0 Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=4.76 cm/s
+  Fig11 XH2=0.0 Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=5.97 cm/s
+  Fig11 XH2=0.0 Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=6.81 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2022.0490083846921 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=0.0 Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=7.44 cm/s
+  Fig11 XH2=0.0 Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=7.25 cm/s
+  Fig11 XH2=0.0 Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=6.70 cm/s
+  Fig11 XH2=0.0 Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=6.01 cm/s
+  Fig11 XH2=0.2 Mechanism 1 Tu=298.0 P=1.0 phi=0.70 Su=6.14 cm/s
+  Fig11 XH2=0.2 Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=8.36 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2022.989576801687 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=0.2 Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=10.17 cm/s
+  Fig11 XH2=0.2 Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=11.49 cm/s
+  Fig11 XH2=0.2 Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=12.00 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2009.6316379182856 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=0.2 Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=11.74 cm/s
+  Fig11 XH2=0.2 Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=11.10 cm/s
+  Fig11 XH2=0.2 Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=10.22 cm/s
+  Fig11 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=0.70 Su=13.38 cm/s
+  Fig11 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=16.97 cm/s
+  Fig11 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=20.58 cm/s
+  Fig11 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=23.67 cm/s
+  Fig11 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=24.18 cm/s
+  Fig11 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=21.62 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2016.5500508454804 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=20.19 cm/s
+  Fig11 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=18.85 cm/s
+  Fig11 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=0.70 Su=30.18 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2011.6937192702985 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=41.16 cm/s
+  Fig11 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=51.48 cm/s
+  Fig11 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=59.79 cm/s
+  Fig11 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=63.28 cm/s
+  Fig11 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=60.19 cm/s
+  Fig11 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=51.79 cm/s
+  Fig11 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=42.13 cm/s
+  Fig11 XH2=0.8 Mechanism 1 Tu=298.0 P=1.0 phi=0.70 Su=62.40 cm/s
+  Fig11 XH2=0.8 Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=86.65 cm/s
+  Fig11 XH2=0.8 Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=109.06 cm/s
+  Fig11 XH2=0.8 Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=127.26 cm/s
+  Fig11 XH2=0.8 Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=140.06 cm/s
+  Fig11 XH2=0.8 Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=147.07 cm/s
+  Fig11 XH2=0.8 Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=148.24 cm/s
+  Fig11 XH2=0.8 Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=143.73 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2010.8899618968637 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig11 XH2=1.0 Mechanism 1 Tu=298.0 P=1.0 phi=0.70 Su=147.98 cm/s
+  Fig11 XH2=1.0 Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=183.48 cm/s
+  Fig11 XH2=1.0 Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=213.42 cm/s
+  Fig11 XH2=1.0 Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=239.17 cm/s
+  Fig11 XH2=1.0 Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=260.33 cm/s
+  Fig11 XH2=1.0 Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=277.34 cm/s
+  Fig11 XH2=1.0 Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=289.98 cm/s
+  Fig11 XH2=1.0 Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=299.68 cm/s
+  Fig12 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=0.70 Su=13.38 cm/s
+  Fig12 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=16.97 cm/s
+  Fig12 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=20.58 cm/s
+  Fig12 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=23.67 cm/s
+  Fig12 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=24.18 cm/s
+  Fig12 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=21.62 cm/s
+  Fig12 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=20.19 cm/s
+  Fig12 XH2=0.4 Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=18.85 cm/s
+  Fig12 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=0.70 Su=30.18 cm/s
+  Fig12 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=41.16 cm/s
+  Fig12 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=51.48 cm/s
+  Fig12 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=59.79 cm/s
+  Fig12 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=63.28 cm/s
+  Fig12 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=60.19 cm/s
+  Fig12 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=51.79 cm/s
+  Fig12 XH2=0.6 Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=42.13 cm/s
+  Fig13 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=6.81 cm/s
+  Fig13 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=8.69 cm/s
+  Fig13 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=11.49 cm/s
+  Fig13 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=15.96 cm/s
+  Fig13 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=23.67 cm/s
+  Fig13 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=37.40 cm/s
+  Fig13 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=59.79 cm/s
+  Fig13 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=89.84 cm/s
+  Fig13 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=127.26 cm/s
+  Fig13 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=172.80 cm/s
+  Fig13 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=239.17 cm/s
+  Fig13 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=5.48 cm/s
+  Fig13 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=6.90 cm/s
+  Fig13 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=8.92 cm/s
+  Fig13 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=12.04 cm/s
+  Fig13 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=16.96 cm/s
+  Fig13 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=25.80 cm/s
+  Fig13 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=41.04 cm/s
+  Fig13 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=64.77 cm/s
+  Fig13 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=101.16 cm/s
+  Fig13 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=153.63 cm/s
+  Fig13 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=240.89 cm/s
+  Fig13 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=4.77 cm/s
+  Fig13 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=5.97 cm/s
+  Fig13 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=7.70 cm/s
+  Fig13 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=10.17 cm/s
+  Fig13 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=14.15 cm/s
+  Fig13 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=20.71 cm/s
+  Fig13 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=32.73 cm/s
+  Fig13 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=53.14 cm/s
+  Fig13 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=85.08 cm/s
+  Fig13 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=138.01 cm/s
+  Fig13 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=233.39 cm/s
+  Fig14 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=0.70 Su=13.38 cm/s
+  Fig14 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=16.97 cm/s
+  Fig14 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=20.58 cm/s
+  Fig14 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=23.67 cm/s
+  Fig14 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=24.18 cm/s
+  Fig14 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=21.62 cm/s
+  Fig14 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=20.19 cm/s
+  Fig14 P=1.0atm Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=18.85 cm/s
+  Fig14 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=0.70 Su=8.39 cm/s
+  Fig14 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=0.80 Su=11.65 cm/s
+  Fig14 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=0.90 Su=14.39 cm/s
+  Fig14 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.00 Su=16.96 cm/s
+  Fig14 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.10 Su=18.11 cm/s
+  Fig14 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.20 Su=17.17 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2018.471751160005 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig14 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.30 Su=16.14 cm/s
+  Fig14 P=3.0atm Mechanism 1 Tu=298.0 P=3.0 phi=1.40 Su=14.93 cm/s
+  Fig14 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=0.70 Su=6.47 cm/s
+  Fig14 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=0.80 Su=9.48 cm/s
+  Fig14 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=0.90 Su=12.09 cm/s
+  Fig14 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.00 Su=14.15 cm/s
+  Fig14 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.10 Su=15.36 cm/s
+  Fig14 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.20 Su=14.79 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2019.0734837398272 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig14 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.30 Su=13.83 cm/s
+  Fig14 P=5.0atm Mechanism 1 Tu=298.0 P=5.0 phi=1.40 Su=12.70 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=5.43 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=6.73 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=7.68 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=8.27 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=8.11 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=7.54 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=6.80 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=0.80 Su=8.60 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=0.90 Su=10.38 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.00 Su=11.69 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.10 Su=12.37 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2016.3616474562848 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.20 Su=12.16 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.30 Su=11.42 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.40 Su=10.43 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=0.80 Su=11.31 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=0.90 Su=13.47 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.00 Su=15.06 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.10 Su=15.78 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.20 Su=15.52 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.30 Su=14.64 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.40 Su=13.46 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=0.80 Su=14.60 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=0.90 Su=17.21 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.00 Su=19.05 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.10 Su=19.76 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.20 Su=19.46 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2019.8436215804209 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.30 Su=18.44 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.40 Su=17.07 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=11.66 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=14.05 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=15.96 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=16.34 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=15.56 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=14.73 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=13.71 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=0.80 Su=18.07 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=0.90 Su=21.17 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.00 Su=23.89 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.10 Su=24.20 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.20 Su=23.00 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.30 Su=21.87 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.40 Su=20.50 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2014.059874772958 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=0.80 Su=23.22 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=0.90 Su=27.27 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.00 Su=30.35 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.10 Su=30.64 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.20 Su=28.99 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.30 Su=27.66 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2006.8298563104531 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.40 Su=25.90 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=0.80 Su=29.63 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=0.90 Su=34.42 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.00 Su=38.01 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.10 Su=38.17 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.20 Su=35.90 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.30 Su=34.31 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.40 Su=32.37 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=0.80 Su=41.16 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=0.90 Su=51.48 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.00 Su=59.79 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.10 Su=63.28 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.20 Su=60.19 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.30 Su=51.79 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 1 Tu=298.0 P=1.0 phi=1.40 Su=42.13 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=0.80 Su=63.89 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=0.90 Su=77.12 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.00 Su=86.91 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.10 Su=90.76 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.20 Su=86.72 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.30 Su=75.70 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 1 Tu=373.0 P=1.0 phi=1.40 Su=62.72 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=0.80 Su=82.16 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=0.90 Su=97.52 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.00 Su=108.41 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.10 Su=112.57 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.20 Su=107.87 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.30 Su=94.72 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 1 Tu=423.0 P=1.0 phi=1.40 Su=79.16 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=0.80 Su=103.72 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=0.90 Su=121.23 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.00 Su=133.27 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.10 Su=137.21 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.20 Su=131.38 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.30 Su=116.21 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 1 Tu=473.0 P=1.0 phi=1.40 Su=98.45 cm/s
+  FigS4 XH2=0.0 Mechanism 1 Tu=360.0 P=1.0 phi=1.00 Su=9.70 cm/s
+  FigS4 XH2=0.0 Mechanism 1 Tu=360.0 P=2.0 phi=1.00 Su=8.65 cm/s
+  FigS4 XH2=0.0 Mechanism 1 Tu=360.0 P=3.0 phi=1.00 Su=7.89 cm/s
+  FigS4 XH2=0.0 Mechanism 1 Tu=360.0 P=4.0 phi=1.00 Su=7.36 cm/s
+  FigS4 XH2=0.0 Mechanism 1 Tu=360.0 P=5.0 phi=1.00 Su=6.93 cm/s
+  FigS4 XH2=0.1 Mechanism 1 Tu=360.0 P=1.0 phi=1.00 Su=12.33 cm/s
+  FigS4 XH2=0.1 Mechanism 1 Tu=360.0 P=2.0 phi=1.00 Su=10.87 cm/s
+  FigS4 XH2=0.1 Mechanism 1 Tu=360.0 P=3.0 phi=1.00 Su=9.87 cm/s
+  FigS4 XH2=0.1 Mechanism 1 Tu=360.0 P=4.0 phi=1.00 Su=9.20 cm/s
+  FigS4 XH2=0.1 Mechanism 1 Tu=360.0 P=5.0 phi=1.00 Su=8.62 cm/s
+  FigS4 XH2=0.2 Mechanism 1 Tu=360.0 P=1.0 phi=1.00 Su=16.17 cm/s
+  FigS4 XH2=0.2 Mechanism 1 Tu=360.0 P=2.0 phi=1.00 Su=14.07 cm/s
+  FigS4 XH2=0.2 Mechanism 1 Tu=360.0 P=3.0 phi=1.00 Su=12.78 cm/s
+  FigS4 XH2=0.2 Mechanism 1 Tu=360.0 P=4.0 phi=1.00 Su=11.81 cm/s
+  FigS4 XH2=0.2 Mechanism 1 Tu=360.0 P=5.0 phi=1.00 Su=10.98 cm/s
+  FigS5 alpha=0.3 Mechanism 1 Tu=303.0 P=1.0 phi=0.60 Su=5.82 cm/s
+  FigS5 alpha=0.3 Mechanism 1 Tu=303.0 P=1.0 phi=0.80 Su=12.04 cm/s
+  FigS5 alpha=0.3 Mechanism 1 Tu=303.0 P=1.0 phi=1.00 Su=16.44 cm/s
+  FigS5 alpha=0.3 Mechanism 1 Tu=303.0 P=1.0 phi=1.20 Su=16.00 cm/s
+  FigS5 alpha=0.3 Mechanism 1 Tu=303.0 P=1.0 phi=1.40 Su=14.11 cm/s
+  FigS5 alpha=0.3 Mechanism 1 Tu=303.0 P=1.0 phi=1.60 Su=11.86 cm/s
+  FigS5 alpha=0.3 Mechanism 1 Tu=303.0 P=1.0 phi=1.80 Su=9.84 cm/s
+  FigS5 alpha=0.5 Mechanism 1 Tu=303.0 P=1.0 phi=0.60 Su=14.23 cm/s
+  FigS5 alpha=0.5 Mechanism 1 Tu=303.0 P=1.0 phi=0.80 Su=27.48 cm/s
+  FigS5 alpha=0.5 Mechanism 1 Tu=303.0 P=1.0 phi=1.00 Su=38.45 cm/s
+  FigS5 alpha=0.5 Mechanism 1 Tu=303.0 P=1.0 phi=1.20 Su=35.62 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2003.7754888583795 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  FigS5 alpha=0.5 Mechanism 1 Tu=303.0 P=1.0 phi=1.40 Su=27.48 cm/s
+  FigS5 alpha=0.5 Mechanism 1 Tu=303.0 P=1.0 phi=1.60 Su=23.63 cm/s
+  FigS5 alpha=0.5 Mechanism 1 Tu=303.0 P=1.0 phi=1.80 Su=20.35 cm/s
+=== Mechanism 2 ===
+  Fig11 XH2=0.0 Mechanism 2 Tu=298.0 P=1.0 phi=0.70 Su=2.49 cm/s
+  Fig11 XH2=0.0 Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=4.16 cm/s
+  Fig11 XH2=0.0 Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=5.81 cm/s
+  Fig11 XH2=0.0 Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=7.64 cm/s
+  Fig11 XH2=0.0 Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=8.72 cm/s
+  Fig11 XH2=0.0 Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=8.11 cm/s
+  Fig11 XH2=0.0 Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=7.12 cm/s
+  Fig11 XH2=0.0 Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=6.15 cm/s
+  Fig11 XH2=0.2 Mechanism 2 Tu=298.0 P=1.0 phi=0.70 Su=6.08 cm/s
+  Fig11 XH2=0.2 Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=8.87 cm/s
+  Fig11 XH2=0.2 Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=12.02 cm/s
+  Fig11 XH2=0.2 Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=15.15 cm/s
+  Fig11 XH2=0.2 Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=16.11 cm/s
+  Fig11 XH2=0.2 Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=14.56 cm/s
+  Fig11 XH2=0.2 Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=12.98 cm/s
+  Fig11 XH2=0.2 Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=11.42 cm/s
+  Fig11 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=0.70 Su=14.76 cm/s
+  Fig11 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=20.52 cm/s
+  Fig11 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=27.55 cm/s
+  Fig11 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=33.15 cm/s
+  Fig11 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=35.03 cm/s
+  Fig11 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=30.67 cm/s
+  Fig11 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=25.32 cm/s
+  Fig11 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=22.34 cm/s
+  Fig11 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=0.70 Su=33.81 cm/s
+  Fig11 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=46.42 cm/s
+  Fig11 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=59.08 cm/s
+  Fig11 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=69.07 cm/s
+  Fig11 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=74.20 cm/s
+  Fig11 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=72.96 cm/s
+  Fig11 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=65.47 cm/s
+  Fig11 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=55.11 cm/s
+  Fig11 XH2=0.8 Mechanism 2 Tu=298.0 P=1.0 phi=0.70 Su=67.32 cm/s
+  Fig11 XH2=0.8 Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=92.00 cm/s
+  Fig11 XH2=0.8 Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=114.40 cm/s
+  Fig11 XH2=0.8 Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=132.31 cm/s
+  Fig11 XH2=0.8 Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=144.98 cm/s
+  Fig11 XH2=0.8 Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=151.59 cm/s
+  Fig11 XH2=0.8 Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=152.32 cm/s
+  Fig11 XH2=0.8 Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=147.74 cm/s
+  Fig11 XH2=1.0 Mechanism 2 Tu=298.0 P=1.0 phi=0.70 Su=147.99 cm/s
+  Fig11 XH2=1.0 Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=183.48 cm/s
+  Fig11 XH2=1.0 Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=213.42 cm/s
+  Fig11 XH2=1.0 Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=239.17 cm/s
+  Fig11 XH2=1.0 Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=260.33 cm/s
+  Fig11 XH2=1.0 Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=277.34 cm/s
+  Fig11 XH2=1.0 Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=289.98 cm/s
+  Fig11 XH2=1.0 Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=299.68 cm/s
+  Fig12 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=0.70 Su=14.76 cm/s
+  Fig12 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=20.52 cm/s
+  Fig12 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=27.55 cm/s
+  Fig12 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=33.15 cm/s
+  Fig12 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=35.03 cm/s
+  Fig12 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=30.67 cm/s
+  Fig12 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=25.32 cm/s
+  Fig12 XH2=0.4 Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=22.34 cm/s
+  Fig12 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=0.70 Su=33.81 cm/s
+  Fig12 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=46.42 cm/s
+  Fig12 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=59.08 cm/s
+  Fig12 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=69.07 cm/s
+  Fig12 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=74.20 cm/s
+  Fig12 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=72.96 cm/s
+  Fig12 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=65.47 cm/s
+  Fig12 XH2=0.6 Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=55.11 cm/s
+  Fig13 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=7.64 cm/s
+  Fig13 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=10.60 cm/s
+  Fig13 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=15.15 cm/s
+  Fig13 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=22.34 cm/s
+  Fig13 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=33.15 cm/s
+  Fig13 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=48.41 cm/s
+  Fig13 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=69.07 cm/s
+  Fig13 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=96.70 cm/s
+  Fig13 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=132.31 cm/s
+  Fig13 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=177.10 cm/s
+  Fig13 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=239.17 cm/s
+  Fig13 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=4.58 cm/s
+  Fig13 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=6.29 cm/s
+  Fig13 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=8.92 cm/s
+  Fig13 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=13.24 cm/s
+  Fig13 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=20.02 cm/s
+  Fig13 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=30.64 cm/s
+  Fig13 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=47.12 cm/s
+  Fig13 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=70.29 cm/s
+  Fig13 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=104.80 cm/s
+  Fig13 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=156.25 cm/s
+  Fig13 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=240.87 cm/s
+  Fig13 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=3.38 cm/s
+  Fig13 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=4.59 cm/s
+  Fig13 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=6.48 cm/s
+  Fig13 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=9.44 cm/s
+  Fig13 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=14.66 cm/s
+  Fig13 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=22.97 cm/s
+  Fig13 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=35.90 cm/s
+  Fig13 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=56.97 cm/s
+  Fig13 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=88.05 cm/s
+  Fig13 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=140.05 cm/s
+  Fig13 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=233.28 cm/s
+  Fig14 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=0.70 Su=14.76 cm/s
+  Fig14 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=20.52 cm/s
+  Fig14 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=27.55 cm/s
+  Fig14 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=33.15 cm/s
+  Fig14 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=35.03 cm/s
+  Fig14 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=30.67 cm/s
+  Fig14 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=25.32 cm/s
+  Fig14 P=1.0atm Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=22.34 cm/s
+  Fig14 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=0.70 Su=7.25 cm/s
+  Fig14 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=0.80 Su=11.37 cm/s
+  Fig14 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=0.90 Su=15.57 cm/s
+  Fig14 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.00 Su=20.02 cm/s
+  Fig14 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.10 Su=22.05 cm/s
+  Fig14 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.20 Su=19.34 cm/s
+  Fig14 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.30 Su=17.06 cm/s
+  Fig14 P=3.0atm Mechanism 2 Tu=298.0 P=3.0 phi=1.40 Su=15.04 cm/s
+  Fig14 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=0.70 Su=4.42 cm/s
+  Fig14 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=0.80 Su=7.83 cm/s
+  Fig14 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=0.90 Su=11.31 cm/s
+  Fig14 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.00 Su=14.66 cm/s
+  Fig14 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.10 Su=16.26 cm/s
+  Fig14 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.20 Su=14.67 cm/s
+  Fig14 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.30 Su=12.94 cm/s
+  Fig14 P=5.0atm Mechanism 2 Tu=298.0 P=5.0 phi=1.40 Su=11.42 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=5.00 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=6.90 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=8.96 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=10.00 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=9.30 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=8.21 cm/s
+  Fig15 XH2=0.05,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=7.12 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=0.80 Su=8.04 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=0.90 Su=10.81 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.00 Su=13.72 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.10 Su=14.87 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.20 Su=13.88 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.30 Su=12.38 cm/s
+  Fig15 XH2=0.05,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.40 Su=10.92 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=0.80 Su=10.65 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=0.90 Su=14.18 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.00 Su=17.72 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.10 Su=18.89 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.20 Su=17.63 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.30 Su=15.85 cm/s
+  Fig15 XH2=0.05,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.40 Su=14.07 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=0.80 Su=13.88 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=0.90 Su=18.26 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.00 Su=22.48 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.10 Su=23.39 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.20 Su=22.04 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.30 Su=19.82 cm/s
+  Fig15 XH2=0.05,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.40 Su=17.68 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=13.45 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=17.87 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=22.34 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=23.53 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=20.23 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=17.83 cm/s
+  Fig15 XH2=0.3,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=15.93 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=0.80 Su=21.12 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=0.90 Su=27.65 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.00 Su=33.64 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.10 Su=34.89 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.20 Su=30.15 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.30 Su=26.44 cm/s
+  Fig15 XH2=0.3,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.40 Su=23.95 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=0.80 Su=27.53 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=0.90 Su=35.90 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.00 Su=42.89 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.10 Su=44.11 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.20 Su=38.24 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.30 Su=33.32 cm/s
+  Fig15 XH2=0.3,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.40 Su=29.98 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=0.80 Su=35.63 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=0.90 Su=45.89 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.00 Su=53.78 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.10 Su=54.81 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.20 Su=47.56 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.30 Su=41.42 cm/s
+  Fig15 XH2=0.3,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.40 Su=37.43 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=0.80 Su=46.42 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=0.90 Su=59.08 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.00 Su=69.07 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.10 Su=74.20 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.20 Su=72.96 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.30 Su=65.47 cm/s
+  Fig15 XH2=0.6,Tu=298.0K Mechanism 2 Tu=298.0 P=1.0 phi=1.40 Su=55.11 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=0.80 Su=71.60 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=0.90 Su=88.03 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.00 Su=100.65 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.10 Su=106.74 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.20 Su=104.78 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.30 Su=95.29 cm/s
+  Fig15 XH2=0.6,Tu=373.0K Mechanism 2 Tu=373.0 P=1.0 phi=1.40 Su=81.52 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=0.80 Su=92.44 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=0.90 Su=111.56 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.00 Su=125.74 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.10 Su=132.40 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.20 Su=130.06 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.30 Su=119.63 cm/s
+  Fig15 XH2=0.6,Tu=423.0K Mechanism 2 Tu=423.0 P=1.0 phi=1.40 Su=103.28 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=0.80 Su=117.47 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=0.90 Su=138.97 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.00 Su=154.94 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.10 Su=162.00 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.20 Su=159.22 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.30 Su=146.75 cm/s
+  Fig15 XH2=0.6,Tu=473.0K Mechanism 2 Tu=473.0 P=1.0 phi=1.40 Su=128.10 cm/s
+  FigS3a 80%NH3/20%H2 Mechanism 2 Tu=820.0 P=40.0 phi=0.80 Su=16.93 cm/s
+  FigS3a 80%NH3/20%H2 Mechanism 2 Tu=820.0 P=40.0 phi=0.90 Su=21.70 cm/s
+  FigS3a 80%NH3/20%H2 Mechanism 2 Tu=820.0 P=40.0 phi=1.00 Su=26.09 cm/s
+  FigS3a 80%NH3/20%H2 Mechanism 2 Tu=820.0 P=40.0 phi=1.10 Su=30.89 cm/s
+  FigS3a 80%NH3/20%H2 Mechanism 2 Tu=820.0 P=40.0 phi=1.20 Su=32.64 cm/s
+  FigS3a 80%NH3/20%H2 Mechanism 2 Tu=820.0 P=40.0 phi=1.30 Su=32.48 cm/s
+  FigS3a 80%NH3/20%H2 Mechanism 2 Tu=820.0 P=40.0 phi=1.40 Su=31.38 cm/s
+  FigS3a 80%NH3/20%H2 Mechanism 2 Tu=820.0 P=40.0 phi=1.50 Su=29.87 cm/s
+  FigS3a 80%NH3/20%H2 Mechanism 2 Tu=820.0 P=40.0 phi=1.60 Su=28.20 cm/s
+  FigS3b 100%NH3 Mechanism 2 Tu=720.0 P=40.0 phi=0.60 Su=3.75 cm/s
+  FigS3b 100%NH3 Mechanism 2 Tu=720.0 P=40.0 phi=0.80 Su=7.66 cm/s
+  FigS3b 100%NH3 Mechanism 2 Tu=720.0 P=40.0 phi=1.00 Su=11.68 cm/s
+  FigS3b 100%NH3 Mechanism 2 Tu=720.0 P=40.0 phi=1.20 Su=15.30 cm/s
+  FigS3b 100%NH3 Mechanism 2 Tu=720.0 P=40.0 phi=1.40 Su=14.20 cm/s
+C:\Users\jzg29\AppData\Roaming\Python\Python313\site-packages\cantera\onedim.py:669: UserWarning: ChemEquil::equilibrate: Temperature (2010.769996302039 K) outside valid range of 300 K to 2000 K
+  self.gas.equilibrate('HP')
+  FigS3b 100%NH3 Mechanism 2 Tu=720.0 P=40.0 phi=1.60 Su=12.22 cm/s
+  FigS4 XH2=0.0 Mechanism 2 Tu=360.0 P=1.0 phi=1.00 Su=10.94 cm/s
+  FigS4 XH2=0.0 Mechanism 2 Tu=360.0 P=2.0 phi=1.00 Su=8.20 cm/s
+  FigS4 XH2=0.0 Mechanism 2 Tu=360.0 P=3.0 phi=1.00 Su=6.67 cm/s
+  FigS4 XH2=0.0 Mechanism 2 Tu=360.0 P=4.0 phi=1.00 Su=5.68 cm/s
+  FigS4 XH2=0.0 Mechanism 2 Tu=360.0 P=5.0 phi=1.00 Su=4.99 cm/s
+  FigS4 XH2=0.1 Mechanism 2 Tu=360.0 P=1.0 phi=1.00 Su=15.11 cm/s
+  FigS4 XH2=0.1 Mechanism 2 Tu=360.0 P=2.0 phi=1.00 Su=11.22 cm/s
+  FigS4 XH2=0.1 Mechanism 2 Tu=360.0 P=3.0 phi=1.00 Su=9.10 cm/s
+  FigS4 XH2=0.1 Mechanism 2 Tu=360.0 P=4.0 phi=1.00 Su=7.73 cm/s
+  FigS4 XH2=0.1 Mechanism 2 Tu=360.0 P=5.0 phi=1.00 Su=6.75 cm/s
+  FigS4 XH2=0.2 Mechanism 2 Tu=360.0 P=1.0 phi=1.00 Su=21.48 cm/s
+  FigS4 XH2=0.2 Mechanism 2 Tu=360.0 P=2.0 phi=1.00 Su=15.99 cm/s
+  FigS4 XH2=0.2 Mechanism 2 Tu=360.0 P=3.0 phi=1.00 Su=12.86 cm/s
+  FigS4 XH2=0.2 Mechanism 2 Tu=360.0 P=4.0 phi=1.00 Su=10.89 cm/s
+  FigS4 XH2=0.2 Mechanism 2 Tu=360.0 P=5.0 phi=1.00 Su=9.44 cm/s
+  FigS5 alpha=0.3 Mechanism 2 Tu=303.0 P=1.0 phi=0.60 Su=5.50 cm/s
+  FigS5 alpha=0.3 Mechanism 2 Tu=303.0 P=1.0 phi=0.80 Su=13.88 cm/s
+  FigS5 alpha=0.3 Mechanism 2 Tu=303.0 P=1.0 phi=1.00 Su=23.01 cm/s
+  FigS5 alpha=0.3 Mechanism 2 Tu=303.0 P=1.0 phi=1.20 Su=20.82 cm/s
+  FigS5 alpha=0.3 Mechanism 2 Tu=303.0 P=1.0 phi=1.40 Su=16.40 cm/s
+  FigS5 alpha=0.3 Mechanism 2 Tu=303.0 P=1.0 phi=1.60 Su=12.95 cm/s
+  FigS5 alpha=0.3 Mechanism 2 Tu=303.0 P=1.0 phi=1.80 Su=10.29 cm/s
+  FigS5 alpha=0.5 Mechanism 2 Tu=303.0 P=1.0 phi=0.60 Su=15.80 cm/s
+  FigS5 alpha=0.5 Mechanism 2 Tu=303.0 P=1.0 phi=0.80 Su=32.07 cm/s
+  FigS5 alpha=0.5 Mechanism 2 Tu=303.0 P=1.0 phi=1.00 Su=49.78 cm/s
+  FigS5 alpha=0.5 Mechanism 2 Tu=303.0 P=1.0 phi=1.20 Su=49.18 cm/s
+  FigS5 alpha=0.5 Mechanism 2 Tu=303.0 P=1.0 phi=1.40 Su=33.40 cm/s
+  FigS5 alpha=0.5 Mechanism 2 Tu=303.0 P=1.0 phi=1.60 Su=26.35 cm/s
+  FigS5 alpha=0.5 Mechanism 2 Tu=303.0 P=1.0 phi=1.80 Su=21.55 cm/s
+
+LFS 计算完成: 732 行 -> E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\results\lfs_sweep.csv

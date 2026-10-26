@@ -1,0 +1,60 @@
+  Case 1 (XH2=0.0, P=1.0 atm, T=1700.0 K): IDT0=1.6822 ms, done
+  Case 4 (XH2=0.05, P=10.0 atm, T=1700.0 K): IDT0=0.1663 ms, done
+  Case 2 (XH2=0.0, P=10.0 atm, T=1600.0 K): IDT0=0.4936 ms, done
+  Case 3 (XH2=0.05, P=1.0 atm, T=1700.0 K): IDT0=1.2650 ms, done
+  Case 7 (XH2=0.7, P=1.0 atm, T=1270.0 K): IDT0=0.5315 ms, done
+  Case 6 (XH2=0.3, P=10.0 atm, T=1550.0 K): IDT0=0.0982 ms, done
+  Case 5 (XH2=0.3, P=1.0 atm, T=1500.0 K): IDT0=0.8341 ms, done
+  Case 8 (XH2=0.7, P=10.0 atm, T=1165.0 K): IDT0=0.4052 ms, done
+
+Top-5 reactions per condition:
+ Case 1 (XH2=0.0, P=1.0 atm):
+   H + O2 <=> O + OH                        S=-0.613 (norm -1.000)
+   NH2 + NH3 <=> H2 + N2H3                  S=-0.265 (norm -0.432)
+   N2H2 + M <=> H + NNH + M                 S=-0.168 (norm -0.274)
+   HNO <=> H + NO                           S=-0.134 (norm -0.219)
+   H + NH3 <=> H2 + NH2                     S=+0.130 (norm +0.212)
+ Case 2 (XH2=0.0, P=10.0 atm):
+   H + O2 <=> O + OH                        S=-0.707 (norm -1.000)
+   NH2 + NH3 <=> H2 + N2H3                  S=-0.189 (norm -0.268)
+   N2H2 + M <=> H + NNH + M                 S=-0.176 (norm -0.249)
+   NH2 + NO <=> NNH + OH                    S=-0.159 (norm -0.225)
+   NH2 + NO <=> H2O + N2                    S=+0.154 (norm +0.218)
+ Case 3 (XH2=0.05, P=1.0 atm):
+   H + O2 <=> O + OH                        S=-0.739 (norm -1.000)
+   HNO <=> H + NO                           S=-0.134 (norm -0.181)
+   NH2 + NH3 <=> H2 + N2H3                  S=-0.130 (norm -0.176)
+   N2H2 + M <=> H + NNH + M                 S=-0.123 (norm -0.166)
+   NH2 + NO <=> NNH + OH                    S=-0.093 (norm -0.126)
+ Case 4 (XH2=0.05, P=10.0 atm):
+   H + O2 <=> O + OH                        S=-0.792 (norm -1.000)
+   N2H2 + M <=> H + NNH + M                 S=-0.142 (norm -0.180)
+   HNO <=> H + NO                           S=-0.141 (norm -0.178)
+   NH2 + NO <=> NNH + OH                    S=-0.103 (norm -0.130)
+   NNH + O2 <=> HO2 + N2                    S=+0.091 (norm +0.115)
+ Case 5 (XH2=0.3, P=1.0 atm):
+   H + O2 <=> O + OH                        S=-0.996 (norm -1.000)
+   H2 + O <=> H + OH                        S=-0.200 (norm -0.201)
+   H2 + OH <=> H + H2O                      S=-0.186 (norm -0.187)
+   H + NH2 <=> H2 + NH                      S=+0.174 (norm +0.175)
+   NH2 + O <=> H + HNO                      S=+0.167 (norm +0.168)
+ Case 6 (XH2=0.3, P=10.0 atm):
+   H + O2 <=> O + OH                        S=-1.118 (norm -1.000)
+   NH3 + M <=> H + NH2 + M                  S=+0.193 (norm +0.172)
+   H2 + OH <=> H + H2O                      S=-0.173 (norm -0.155)
+   H + O2 (+M) <=> HO2 (+M)                 S=+0.165 (norm +0.148)
+   H2 + O <=> H + OH                        S=-0.164 (norm -0.147)
+ Case 7 (XH2=0.7, P=1.0 atm):
+   H + O2 <=> O + OH                        S=-0.825 (norm -1.000)
+   H2 + OH <=> H + H2O                      S=-0.202 (norm -0.245)
+   NH3 + OH <=> H2O + NH2                   S=+0.198 (norm +0.240)
+   H2 + O <=> H + OH                        S=-0.164 (norm -0.199)
+   H + NH3 <=> H2 + NH2                     S=+0.097 (norm +0.118)
+ Case 8 (XH2=0.7, P=10.0 atm):
+   H + O2 <=> O + OH                        S=-1.794 (norm -1.000)
+   H + O2 (+M) <=> HO2 (+M)                 S=+1.657 (norm +0.923)
+   H2 + OH <=> H + H2O                      S=-0.419 (norm -0.234)
+   NH3 + M <=> H + NH2 + M                  S=+0.413 (norm +0.230)
+   NH3 + OH <=> H2O + NH2                   S=+0.379 (norm +0.211)
+
+敏感性分析完成: E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\results\sensitivity.csv

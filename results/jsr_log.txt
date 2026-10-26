@@ -1,0 +1,29 @@
+=== Full ===
+  XH2=0.0 (phi=0.150), inlet NH3=300 ppm, H2=0.0 ppm
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\03_jsr.py:54: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  inlet = ct.Reservoir(gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\03_jsr.py:55: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  reactor = ct.IdealGasConstPressureReactor(gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\03_jsr.py:57: DeprecationWarning: ReactorBase.__init__: After Cantera 3.2, the default value of the `clone` argument will be `True`, resulting in an independent copy of the `phase` being created for use by this reactor. Add the `clone=False` argument to retain the old behavior of sharing `Solution` objects.
+  exhaust = ct.Reservoir(gas)
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\03_jsr.py:66: DeprecationWarning: ReactorBase.thermo: To be removed after Cantera 3.2. Renamed to `phase`.
+  x_prev = reactor.thermo["NH3"].X[0]
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\03_jsr.py:68: DeprecationWarning: ReactorBase.thermo: To be removed after Cantera 3.2. Renamed to `phase`.
+  if abs(reactor.thermo["NH3"].X[0] - x_prev) / max(x_prev, 1e-30) > 0.01:
+E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\03_jsr.py:70: DeprecationWarning: ReactorBase.thermo: To be removed after Cantera 3.2. Renamed to `phase`.
+  return reactor.thermo
+  XH2=0.05 (phi=0.155), inlet NH3=300 ppm, H2=15.8 ppm
+  XH2=0.3 (phi=0.193), inlet NH3=300 ppm, H2=128.6 ppm
+  Full JSR done
+=== Mechanism 1 ===
+  XH2=0.0 (phi=0.150), inlet NH3=300 ppm, H2=0.0 ppm
+  XH2=0.05 (phi=0.155), inlet NH3=300 ppm, H2=15.8 ppm
+  XH2=0.3 (phi=0.193), inlet NH3=300 ppm, H2=128.6 ppm
+  Mechanism 1 JSR done
+=== Mechanism 2 ===
+  XH2=0.0 (phi=0.150), inlet NH3=300 ppm, H2=0.0 ppm
+  XH2=0.05 (phi=0.155), inlet NH3=300 ppm, H2=15.8 ppm
+  XH2=0.3 (phi=0.193), inlet NH3=300 ppm, H2=128.6 ppm
+  Mechanism 2 JSR done
+
+JSR 计算完成: 189 行 -> E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\results\jsr_sweep.csv

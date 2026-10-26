@@ -1,191 +1,128 @@
-import cantera as ct
+"""
+IDT 验证仿真 - 复现论文 Fig. 9, 10, S1, S2
+
+机理:
+  Full = Full mechanism 2021recon.yaml  (Zhang 2021 重建版, 论文的"初始机理"替代)
+  M1   = Reduced mechanism.yaml         (论文补充材料原版 Mechanism 1)
+  M2   = Optimized mechanism.yaml       (论文补充材料原版 Mechanism 2)
+
+图件与工况 (论文 Table 3 与图注):
+  Fig. 9  (2x2): Chen et al. [42] 激波管, phi=1, P=1.2/10 atm, XH2=0/0.05/0.3/0.7
+  Fig. 10 (1x3): (a) NH3/air [44] phi=1, P=20/40 bar;
+                 (b) NH3/O2/Ar [17] phi=0.5, P=1.4 atm; (c) phi=2.0
+  Fig. S1 (1x2): NH3/O2/Ar [17] phi=1, P=1.4/11 atm, 高温段
+  Fig. S2 (1x2): (a) RCM [2] phi=0.35, P=43.4 bar; (b) [3] phi=1, P=20 bar
+点火判据: OH 摩尔分数峰值时刻。
+输出: results/idt_sweep.csv
+"""
+import sys
 import numpy as np
 import pandas as pd
+import cantera as ct
 from pathlib import Path
 
-R = 8.31446261815324
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from mech_utils import (RESULTS_DIR, phi_composition, chen_composition,
+                        ignition_delay, dissociated_nh3_composition)
+
+MECHS = {
+    "Full": "Full mechanism 2021recon.yaml",
+    "Mechanism 1": "Reduced mechanism.yaml",
+    "Mechanism 2": "Optimized mechanism.yaml",
+}
 
 
-def oxidizer_for_phi(fuel_moles, phi, diluent="N2", n2_o2=3.76):
-    """
-    fuel_moles: dict, e.g. {"NH3": 0.7, "H2": 0.3}
-    phi: equivalence ratio
-    化学计量：
-      NH3 + 0.75 O2 -> 0.5 N2 + 1.5 H2O
-      H2  + 0.5  O2 -> H2O
-    diluent: "N2" for air, "AR" for Ar-diluted mixtures
-    n2_o2: N2/O2 ratio (3.76 for air); for Ar diluent, this is Ar/O2 ratio
-    """
-    o2_stoich = 0.0
-    o2_stoich += fuel_moles.get("NH3", 0.0) * 0.75
-    o2_stoich += fuel_moles.get("H2", 0.0) * 0.5
-    o2_actual = o2_stoich / phi
-    comp = dict(fuel_moles)
-    comp["O2"] = o2_actual
-    comp[diluent] = o2_actual * n2_o2
-    return comp
+def sweep():
+    all_mechs = {k: (Path(__file__).resolve().parent.parent
+                     / "mechanisms" / v) for k, v in MECHS.items()}
 
+    cases = []
 
-def ignition_delay(
-        mech,
-        T,
-        P_atm,
-        fuel_H2_frac=0.0,
-        phi=1.0,
-        t_end=0.1,
-        dt_max=1e-5,
-        criterion="OH_peak",
-        diluent="N2",
-        n2_o2=3.76,
-):
-    gas = ct.Solution(mech)
-    fuel = {"NH3": 1.0 - fuel_H2_frac}
-    if fuel_H2_frac > 0:
-        fuel["H2"] = fuel_H2_frac
-    X = oxidizer_for_phi(fuel, phi, diluent=diluent, n2_o2=n2_o2)
-    gas.TPX = T, P_atm * ct.one_atm, X
-    reactor = ct.IdealGasReactor(gas)
-    net = ct.ReactorNet([reactor])
-
-    times = []
-    temps = []
-    oh = []
-    t = 0.0
-
-    while t < t_end:
-        t = net.step()
-        times.append(t)
-        temps.append(reactor.T)
-        oh.append(reactor.thermo["OH"].X[0])
-        if reactor.T > T + 1500:
-            break
-
-    times = np.array(times)
-    temps = np.array(temps)
-    oh = np.array(oh)
-
-    if len(times) < 5:
-        return np.nan
-
-    if criterion == "OH_peak":
-        tau = times[np.argmax(oh)]
-    elif criterion == "dTdt_peak":
-        dTdt = np.gradient(temps, times)
-        tau = times[np.argmax(dTdt)]
-    else:
-        raise ValueError("criterion must be OH_peak or dTdt_peak")
-
-    return tau
-
-
-def sweep_idt():
-    SCRIPT_DIR = Path(__file__).resolve().parent
-    PROJECT_ROOT = SCRIPT_DIR.parent
-    MECH_DIR = PROJECT_ROOT / "mechanisms"
-    RESULTS_DIR = PROJECT_ROOT / "results"
-    RESULTS_DIR.mkdir(exist_ok=True)
-
-    mechs = {
-        "Full": MECH_DIR / "Full mechanism.yaml",
-        "Reduced": MECH_DIR / "Reduced mechanism.yaml",
-        "Optimized": MECH_DIR / "Optimized mechanism.yaml",
+    # ---------------- Fig. 9: Chen et al. [42], phi=1 ----------------
+    fig9 = {
+        0.0:  {"T": np.arange(1430, 1860, 30), "label": "(a) 100% NH3"},
+        0.05: {"T": np.arange(1500, 1930, 30), "label": "(b) 95%NH3/5%H2"},
+        0.3:  {"T": np.arange(1180, 1830, 30), "label": "(c) 70%NH3/30%H2"},
+        0.7:  {"T": np.arange(1000, 1550, 30), "label": "(d) 30%NH3/70%H2"},
     }
+    for XH2, cfg in fig9.items():
+        for P in (1.2, 10.0):
+            cases.append({"fig": "Fig9", "label": cfg["label"],
+                          "XH2": XH2, "P_atm": P, "phi": 1.0,
+                          "diluent": "N2", "n2_o2": 3.76,
+                          "T_range": cfg["T"]})
 
-    # 论文 Table 3 的温度范围 - 不同 XH2 和 P 对应不同温度区间
-    # Fig. 9: Chen et al. [42] shock tube, phi=1.0
-    # Case 1: XH2=0, P=1 atm, T=1540-1850 K
-    # Case 2: XH2=0, P=10 atm, T=1430-1820 K
-    # Case 3: XH2=0.05, P=1 atm, T=1500-1920 K
-    # Case 4: XH2=0.05, P=10 atm, T=1450-1920 K
-    # Case 5: XH2=0.3, P=1 atm, T=1180-1820 K
-    # Case 6: XH2=0.3, P=10 atm, T=1180-1920 K
-    # Case 7: XH2=0.7, P=1 atm, T=1000-1540 K
-    # Case 8: XH2=0.7, P=10 atm, T=1030-1300 K
+    # ---------------- Fig. 10 ----------------
+    # (a) NH3/air [44] phi=1, P=20/40 bar
+    for P in (20.0, 40.0):
+        cases.append({"fig": "Fig10", "label": "(a) 100% NH3, phi=1",
+                      "XH2": 0.0, "P_atm": P, "phi": 1.0,
+                      "diluent": "N2", "n2_o2": 3.76,
+                      "T_range": np.arange(1100, 2000, 40)})
+    # (b)(c) NH3/O2/Ar [17]: 1.143%NH3/0.857%O2/98%Ar (phi=1 基准, Ar/O2=98/0.857)
+    for phi, lab in [(0.5, "(b) phi=0.5"), (2.0, "(c) phi=2.0")]:
+        cases.append({"fig": "Fig10", "label": lab + " NH3/O2/Ar",
+                      "XH2": 0.0, "P_atm": 1.4, "phi": phi,
+                      "diluent": "AR", "n2_o2": 98.0 / 0.857,
+                      "T_range": np.arange(1500, 2500, 50)})
 
-    # 扩展温度范围以覆盖 Fig. 9 和 Fig. 10 的实验数据范围
-    idt_conditions = [
-        # Fig. 9: Chen et al. [42] - P=1.2 atm and 10 atm
-        {"XH2": 0.0, "P_atm": 1.2, "T_range": np.linspace(1050, 2000, 20)},
-        {"XH2": 0.0, "P_atm": 10.0, "T_range": np.linspace(1050, 2000, 20)},
-        {"XH2": 0.05, "P_atm": 1.2, "T_range": np.linspace(1050, 2000, 20)},
-        {"XH2": 0.05, "P_atm": 10.0, "T_range": np.linspace(1050, 2000, 20)},
-        {"XH2": 0.3, "P_atm": 1.2, "T_range": np.linspace(1000, 2000, 20)},
-        {"XH2": 0.3, "P_atm": 10.0, "T_range": np.linspace(1000, 2000, 20)},
-        {"XH2": 0.7, "P_atm": 1.2, "T_range": np.linspace(900, 1800, 20)},
-        {"XH2": 0.7, "P_atm": 10.0, "T_range": np.linspace(900, 1800, 20)},
-        # Fig. 10: He et al. [44] - pure NH3, P=20 and 40 bar
-        {"XH2": 0.0, "P_atm": 20.0, "T_range": np.linspace(1050, 2000, 20)},
-        {"XH2": 0.0, "P_atm": 40.0, "T_range": np.linspace(1050, 2000, 20)},
-        # Fig. 10: Mathieu et al. [17] - NH3/O2/Ar, P~1.4 atm
-        # 论文: 3.43% NH3 / 0.857% O2 / 98% Ar (phi=1.0)
-        # Ar/O2 = 98/0.857 ≈ 114.3 (高度稀释)
-        {"XH2": 0.0, "P_atm": 1.4, "T_range": np.linspace(1050, 2000, 20),
-         "phi": 0.5, "diluent": "AR", "n2_o2": 114.3},
-        {"XH2": 0.0, "P_atm": 1.4, "T_range": np.linspace(1050, 2000, 20),
-         "phi": 1.0, "diluent": "AR", "n2_o2": 114.3},
-        {"XH2": 0.0, "P_atm": 1.4, "T_range": np.linspace(1050, 2000, 20),
-         "phi": 2.0, "diluent": "AR", "n2_o2": 114.3},
-        # Appendix Fig. S1: Mathieu & Petersen [1] - NH3/O2/Ar, P=1.4 and 11 atm
-        # 1.143% NH3 / 0.857% O2 / 98% Ar (phi=1)
-        {"XH2": 0.0, "P_atm": 1.4, "T_range": np.linspace(1500, 2500, 20),
-         "phi": 1.0, "diluent": "AR", "n2_o2": 114.3, "label": "FigS1_1.4atm"},
-        {"XH2": 0.0, "P_atm": 11.0, "T_range": np.linspace(1500, 2500, 20),
-         "phi": 1.0, "diluent": "AR", "n2_o2": 114.3, "label": "FigS1_11atm"},
-        # Appendix Fig. S2(a): Liao et al. [2] - phi=0.35, P=43.4 bar
-        {"XH2": 0.0, "P_atm": 43.4, "T_range": np.linspace(900, 1300, 20),
-         "phi": 0.35, "label": "FigS2a"},
-        {"XH2": 0.1, "P_atm": 43.4, "T_range": np.linspace(900, 1300, 20),
-         "phi": 0.35, "label": "FigS2a"},
-        {"XH2": 0.25, "P_atm": 43.4, "T_range": np.linspace(900, 1300, 20),
-         "phi": 0.35, "label": "FigS2a"},
-        # Appendix Fig. S2(b): Pochet et al. [3] - phi=1, P=20 bar
-        {"XH2": 0.0, "P_atm": 20.0, "T_range": np.linspace(900, 1400, 20),
-         "phi": 1.0, "label": "FigS2b"},
-        {"XH2": 0.1, "P_atm": 20.0, "T_range": np.linspace(900, 1400, 20),
-         "phi": 1.0, "label": "FigS2b"},
-        {"XH2": 0.25, "P_atm": 20.0, "T_range": np.linspace(900, 1400, 20),
-         "phi": 1.0, "label": "FigS2b"},
-    ]
+    # ---------------- Fig. S1: Mathieu [17], phi=1, 高温 ----------------
+    for P in (1.4, 11.0):
+        cases.append({"fig": "FigS1", "label": f"NH3/O2/Ar, phi=1, P={P} atm",
+                      "XH2": 0.0, "P_atm": P, "phi": 1.0,
+                      "diluent": "AR", "n2_o2": 98.0 / 0.857,
+                      "T_range": np.arange(1600, 2550, 50)})
+
+    # ---------------- Fig. S2: RCM 低温稀释 ----------------
+    # (a) Liao et al. [2]: phi=0.35, P=43.4 bar, XH2=0/0.1/0.25
+    for XH2 in (0.0, 0.1, 0.25):
+        cases.append({"fig": "FigS2a", "label": f"{int((1-XH2)*100)}%NH3/{int(XH2*100)}%H2",
+                      "XH2": XH2, "P_atm": 43.4, "phi": 0.35,
+                      "diluent": "N2", "n2_o2": 3.76,
+                      "T_range": np.arange(950, 1300, 25)})
+    # (b) Pochet et al. [3]: phi=1, P=20 bar
+    for XH2 in (0.0, 0.1, 0.25):
+        cases.append({"fig": "FigS2b", "label": f"{int((1-XH2)*100)}%NH3/{int(XH2*100)}%H2",
+                      "XH2": XH2, "P_atm": 20.0, "phi": 1.0,
+                      "diluent": "N2", "n2_o2": 3.76,
+                      "T_range": np.arange(1000, 1400, 25)})
 
     rows = []
-    for mech_name, mech_path in mechs.items():
-        for cond in idt_conditions:
-            XH2 = cond["XH2"]
-            P = cond["P_atm"]
-            phi = cond.get("phi", 1.0)
-            diluent = cond.get("diluent", "N2")
-            n2_o2 = cond.get("n2_o2", 3.76)
-            for T in cond["T_range"]:
-                # 根据温度调整模拟时间
-                t_end = 10.0 if T < 1200 else (1.0 if T < 1500 else 0.1)
-                tau = ignition_delay(
-                    mech_path, T=T, P_atm=P,
-                    fuel_H2_frac=XH2,
-                    phi=phi,
-                    t_end=t_end,
-                    diluent=diluent,
-                    n2_o2=n2_o2,
-                )
+    for mech_name, mech_path in all_mechs.items():
+        gas = ct.Solution(str(mech_path))
+        print(f"=== {mech_name} ({gas.n_species} sp, {gas.n_reactions} rxns) ===")
+        for case in cases:
+            for T in case["T_range"]:
+                if case["fig"] == "Fig9":
+                    # Chen 2021 激波管混合气: 4% 燃料 + 化学计量 O2 + Ar
+                    comp = chen_composition(case["XH2"])
+                else:
+                    comp = phi_composition(case["XH2"], case["phi"],
+                                           case["diluent"], case["n2_o2"])
+                # 低温 RCM 条件需要更长时间
+                if case["P_atm"] >= 20 and T < 1300:
+                    t_end = 2000.0
+                elif T < 1200:
+                    t_end = 20.0
+                elif T < 1500:
+                    t_end = 2.0
+                else:
+                    t_end = 0.2
+                tau = ignition_delay(gas, float(T), case["P_atm"], comp, t_end)
                 rows.append({
+                    "figure": case["fig"], "label": case["label"],
                     "mechanism": mech_name,
-                    "XH2_fuel": XH2,
-                    "P_atm": P,
-                    "T_K": T,
-                    "1000/T": 1000.0 / T,
-                    "phi": phi,
-                    "diluent": diluent,
-                    "label": cond.get("label", ""),
-                    "IDT_s": tau,
-                    "IDT_ms": tau * 1000.0,
+                    "XH2_fuel": case["XH2"], "P_atm": case["P_atm"],
+                    "T_K": float(T), "1000/T": 1000.0 / T,
+                    "phi": case["phi"], "IDT_s": tau, "IDT_ms": tau * 1000.0,
                 })
+            print(f"  {case['fig']} {case['label']} P={case['P_atm']} done")
 
     df = pd.DataFrame(rows)
-    output_file = RESULTS_DIR / "idt_sweep.csv"
-    df.to_csv(output_file, index=False)
-
-    print(f"IDT 计算完成，结果已保存至：{output_file}")
-    print(df.head())
+    out = RESULTS_DIR / "idt_sweep.csv"
+    df.to_csv(out, index=False)
+    print(f"\nIDT 计算完成: {len(df)} 行 -> {out}")
 
 
 if __name__ == "__main__":
-    sweep_idt()
+    sweep()

@@ -1,0 +1,692 @@
+计算完整机理参考值 (IDT + 稳态温度)...
+  Case1 XH2=0.0 P=1.0atm T=1571K: tau=4.2068 ms, Ts=2100.0 K
+  Case1 XH2=0.0 P=1.0atm T=1695K: tau=1.7378 ms, Ts=2207.9 K
+  Case1 XH2=0.0 P=1.0atm T=1819K: tau=0.8221 ms, Ts=2309.4 K
+  Case2 XH2=0.0 P=10.0atm T=1469K: tau=1.9432 ms, Ts=2015.0 K
+  Case2 XH2=0.0 P=10.0atm T=1625K: tau=0.3967 ms, Ts=2162.2 K
+  Case2 XH2=0.0 P=10.0atm T=1781K: tau=0.1248 ms, Ts=2305.1 K
+  Case3 XH2=0.05 P=1.0atm T=1542K: tau=3.2962 ms, Ts=2069.6 K
+  Case3 XH2=0.05 P=1.0atm T=1710K: tau=1.1960 ms, Ts=2216.8 K
+  Case3 XH2=0.05 P=1.0atm T=1878K: tau=0.5036 ms, Ts=2352.0 K
+  Case4 XH2=0.05 P=10.0atm T=1497K: tau=0.8130 ms, Ts=2037.3 K
+  Case4 XH2=0.05 P=10.0atm T=1685K: tau=0.1837 ms, Ts=2213.6 K
+  Case4 XH2=0.05 P=10.0atm T=1873K: tau=0.0602 ms, Ts=2382.8 K
+  Case5 XH2=0.3 P=1.0atm T=1244K: tau=3.4342 ms, Ts=1767.6 K
+  Case5 XH2=0.3 P=1.0atm T=1500K: tau=0.8341 ms, Ts=2009.5 K
+  Case5 XH2=0.3 P=1.0atm T=1756K: tau=0.3170 ms, Ts=2237.5 K
+  Case6 XH2=0.3 P=10.0atm T=1244K: tau=1.3498 ms, Ts=1771.8 K
+  Case6 XH2=0.3 P=10.0atm T=1550K: tau=0.0982 ms, Ts=2066.2 K
+  Case6 XH2=0.3 P=10.0atm T=1856K: tau=0.0260 ms, Ts=2348.7 K
+  Case7 XH2=0.7 P=1.0atm T=1054K: tau=2.6310 ms, Ts=1537.7 K
+  Case7 XH2=0.7 P=1.0atm T=1270K: tau=0.5315 ms, Ts=1745.1 K
+  Case7 XH2=0.7 P=1.0atm T=1486K: tau=0.2403 ms, Ts=1954.9 K
+  Case8 XH2=0.7 P=10.0atm T=1057K: tau=5.8244 ms, Ts=1551.0 K
+  Case8 XH2=0.7 P=10.0atm T=1165K: tau=0.4052 ms, Ts=1657.3 K
+  Case8 XH2=0.7 P=10.0atm T=1273K: tau=0.1062 ms, Ts=1760.3 K
+参考评估耗时 2.50 s (作为 t_CPU 基准)
+  Gen    0: best=0.86906 avg=0.86906 Nr=253 fN=0.8176 fCPU=0.0515 [21s, cache=1]
+  Gen   10: best=0.42942 avg=0.74481 Nr=177 fN=0.3202 fCPU=0.0144 [196s, cache=591]
+  Gen   20: best=0.23287 avg=0.73188 Nr=143 fN=0.1467 fCPU=0.0149 [345s, cache=1180]
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0337504756349022 and h = 2.68927710519482e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0337504756349022 and h = 2.68927710519482e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0337504756349022 and h = 6.72319276298706e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0337504756349022 and h = 6.72319276298706e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0337504756349022 and h = 6.72319276298706e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0337504756349022 and h = 6.72319276298706e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0337504756349022 and h = 6.72319276298706e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0337504756349022 and h = 6.72319276298706e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0337504756349022 and h = 6.72319276298706e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0337504756349022 and h = 1.68079819074677e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0123376126935236 and h = 3.22065603122015e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0123376126935236 and h = 3.22065603122015e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0123376126935236 and h = 8.05164007805037e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0123376126935236 and h = 8.05164007805037e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0123376126935236 and h = 2.01291001951259e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0123376126935236 and h = 2.01291001951259e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0123376126935236 and h = 5.03227504878148e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0123376126935236 and h = 5.03227504878148e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0  Gen   30: best=0.18376 avg=0.39724 Nr=130 fN=0.1047 fCPU=0.0125 [490s, cache=1770]
+  Gen   40: best=0.13751 avg=0.27061 Nr=119 fN=0.0778 fCPU=0.0095 [623s, cache=2360]
+  Gen   50: best=0.12675 avg=0.45854 Nr=115 fN=0.0697 fCPU=0.0098 [753s, cache=2950]
+  Gen   60: best=0.12197 avg=0.32678 Nr=112 fN=0.0642 fCPU=0.0091 [874s, cache=3539]
+  Gen   70: best=0.12007 avg=0.37099 Nr=113 fN=0.0660 fCPU=0.0101 [1007s, cache=4129]
+  Gen   80: best=0.11380 avg=0.24410 Nr=110 fN=0.0607 fCPU=0.0088 [1131s, cache=4718]
+  Gen   90: best=0.10402 avg=0.40973 Nr=106 fN=0.0543 fCPU=0.0093 [1255s, cache=5308]
+  Gen  100: best=0.10402 avg=0.30994 Nr=106 fN=0.0543 fCPU=0.0093 [1394s, cache=5897]
+  Gen  110: best=0.09708 avg=0.37404 Nr=103 fN=0.0499 fCPU=0.0083 [1540s, cache=6487]
+  Gen  120: best=0.09461 avg=0.45956 Nr=102 fN=0.0485 fCPU=0.0068 [1681s, cache=7077]
+  Gen  130: best=0.09461 avg=0.37079 Nr=102 fN=0.0485 fCPU=0.0068 [1814s, cache=7666]
+  Gen  140: best=0.09461 avg=0.30765 Nr=102 fN=0.0485 fCPU=0.0068 [1947s, cache=8256]
+  Gen  150: best=0.08813 avg=0.29889 Nr=96 fN=0.0409 fCPU=0.0113 [2087s, cache=8846]
+  Gen  160: best=0.08730 avg=0.35769 Nr=97 fN=0.0421 fCPU=0.0093 [2234s, cache=9436]
+  Gen  170: best=0.08730 avg=0.39826 Nr=97 fN=0.0421 fCPU=0.0093 [2364s, cache=10025]
+  Gen  180: best=0.08603 avg=0.30983 Nr=96 fN=0.0409 fCPU=0.0082 [2476s, cache=10615]
+  Gen  190: best=0.08371 avg=0.29089 Nr=94 fN=0.0387 fCPU=0.0082 [2589s, cache=11205]
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100569644043878 and h = 6.92429688864908e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100569644043878 and h = 6.92429688864908e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100569644043878 and h = 6.92429688864908e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100569644043878 and h = 6.92429688864908e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100569644043878 and h = 6.92429688864908e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100569644043878 and h = 5.05003834813155e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100569644043878 and h = 5.05003834813155e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100569644043878 and h = 5.05003834813155e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100569644043878 and h = 5.05003834813155e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100569644043878 and h = 5.05003834813155e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0112767925528392 and h = 8.48766741240947e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0112767925528392 and h = 8.48766741240947e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0112767925528392 and h = 8.48766741240947e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0112767925528392 and h = 5.65313926442254e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0112767925528392 and h = 5.65313926442254e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0112767925528392 and h = 5.65313926442254e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0112767925528392 and h = 5.65313926442254e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0112767925528392 and h = 5.65313926442254e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0  Gen  200: best=0.08052 avg=0.35744 Nr=93 fN=0.0376 fCPU=0.0090 [2707s, cache=11795]
+  Gen  210: best=0.07937 avg=0.20328 Nr=92 fN=0.0365 fCPU=0.0076 [2821s, cache=12385]
+  Gen  220: best=0.07937 avg=0.36892 Nr=92 fN=0.0365 fCPU=0.0076 [2928s, cache=12974]
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00372993063933058 and h = 1.82947018067719e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00372993063933058 and h = 1.82947018067719e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00372993063933058 and h = 1.82947018067719e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00372993063933059 and h = 1.98465768898759e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00372993063933059 and h = 1.98465768898759e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00372993063933059 and h = 1.3299623291241e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00372993063933059 and h = 1.3299623291241e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00372993063933059 and h = 9.13935477461224e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00372993063933059 and h = 9.13935477461224e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00372993063933059 and h = 9.13935477461224e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000736117400998405 and h = 3.94866785119644e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000736117400998405 and h = 3.94866785119644e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000736117400998405 and h = 3.94866785119644e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000736117400998405 and h = 2.85000685194123e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000736117400998405 and h = 2.85000685194123e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000736117400998405 and h = 2.85000685194123e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000736117400998405 and h = 2.11041689118149e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000736117400998405 and h = 2.11041689118149e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:352Traceback (most recent call last):
+  File "E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\06_ga_reduction.py", line 346, in <module>
+    main()
+    ~~~~^^
+  File "E:\0XM\NH3_H2_Mechanism_GA\NH3-H2_Mechanism_GA\scripts\06_ga_reduction.py", line 258, in main
+    results = list(ex.map(_worker_eval, jobs))
+  File "E:\conda\Lib\concurrent\futures\process.py", line 617, in _chain_from_iterable_of_lists
+    for element in iterable:
+                   ^^^^^^^^
+  File "E:\conda\Lib\concurrent\futures\_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "E:\conda\Lib\concurrent\futures\_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "E:\conda\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "E:\conda\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.
+恢复 GA 状态: 从第 200 代继续, 缓存 11736 条
+计算完整机理参考值 (IDT + 稳态温度)...
+  Case1 XH2=0.0 P=1.0atm T=1571K: tau=4.2068 ms, Ts=2100.0 K
+  Case1 XH2=0.0 P=1.0atm T=1695K: tau=1.7378 ms, Ts=2207.9 K
+  Case1 XH2=0.0 P=1.0atm T=1819K: tau=0.8221 ms, Ts=2309.4 K
+  Case2 XH2=0.0 P=10.0atm T=1469K: tau=1.9432 ms, Ts=2015.0 K
+  Case2 XH2=0.0 P=10.0atm T=1625K: tau=0.3967 ms, Ts=2162.2 K
+  Case2 XH2=0.0 P=10.0atm T=1781K: tau=0.1248 ms, Ts=2305.1 K
+  Case3 XH2=0.05 P=1.0atm T=1542K: tau=3.2962 ms, Ts=2069.6 K
+  Case3 XH2=0.05 P=1.0atm T=1710K: tau=1.1960 ms, Ts=2216.8 K
+  Case3 XH2=0.05 P=1.0atm T=1878K: tau=0.5036 ms, Ts=2352.0 K
+  Case4 XH2=0.05 P=10.0atm T=1497K: tau=0.8130 ms, Ts=2037.3 K
+  Case4 XH2=0.05 P=10.0atm T=1685K: tau=0.1837 ms, Ts=2213.6 K
+  Case4 XH2=0.05 P=10.0atm T=1873K: tau=0.0602 ms, Ts=2382.8 K
+  Case5 XH2=0.3 P=1.0atm T=1244K: tau=3.4342 ms, Ts=1767.6 K
+  Case5 XH2=0.3 P=1.0atm T=1500K: tau=0.8341 ms, Ts=2009.5 K
+  Case5 XH2=0.3 P=1.0atm T=1756K: tau=0.3170 ms, Ts=2237.5 K
+  Case6 XH2=0.3 P=10.0atm T=1244K: tau=1.3498 ms, Ts=1771.8 K
+  Case6 XH2=0.3 P=10.0atm T=1550K: tau=0.0982 ms, Ts=2066.2 K
+  Case6 XH2=0.3 P=10.0atm T=1856K: tau=0.0260 ms, Ts=2348.7 K
+  Case7 XH2=0.7 P=1.0atm T=1054K: tau=2.6310 ms, Ts=1537.7 K
+  Case7 XH2=0.7 P=1.0atm T=1270K: tau=0.5315 ms, Ts=1745.1 K
+  Case7 XH2=0.7 P=1.0atm T=1486K: tau=0.2403 ms, Ts=1954.9 K
+  Case8 XH2=0.7 P=10.0atm T=1057K: tau=5.8244 ms, Ts=1551.0 K
+  Case8 XH2=0.7 P=10.0atm T=1165K: tau=0.4052 ms, Ts=1657.3 K
+  Case8 XH2=0.7 P=10.0atm T=1273K: tau=0.1062 ms, Ts=1760.3 K
+参考评估耗时 2.43 s (作为 t_CPU 基准)
+  Gen  200: best=0.07875 avg=0.35567 Nr=92 fN=0.0365 fCPU=0.0083 [11s, cache=11795]
+  Gen  210: best=0.07875 avg=0.20522 Nr=92 fN=0.0365 fCPU=0.0083 [123s, cache=12385]
+  Gen  220: best=0.07875 avg=0.37371 Nr=92 fN=0.0365 fCPU=0.0083 [235s, cache=12974]
+  Gen  230: best=0.07684 avg=0.32490 Nr=89 fN=0.0335 fCPU=0.0075 [341s, cache=13564]
+  Gen  240: best=0.07684 avg=0.36560 Nr=89 fN=0.0335 fCPU=0.0075 [501s, cache=14154]
+  Gen  250: best=0.07684 avg=0.39402 Nr=89 fN=0.0335 fCPU=0.0075 [765s, cache=14744]
+恢复 GA 状态: 从第 250 代继续, 缓存 14685 条
+计算完整机理参考值 (IDT + 稳态温度)...
+  Case1 XH2=0.0 P=1.0atm T=1571K: tau=4.2068 ms, Ts=2100.0 K
+  Case1 XH2=0.0 P=1.0atm T=1695K: tau=1.7378 ms, Ts=2207.9 K
+  Case1 XH2=0.0 P=1.0atm T=1819K: tau=0.8221 ms, Ts=2309.4 K
+  Case2 XH2=0.0 P=10.0atm T=1469K: tau=1.9432 ms, Ts=2015.0 K
+  Case2 XH2=0.0 P=10.0atm T=1625K: tau=0.3967 ms, Ts=2162.2 K
+  Case2 XH2=0.0 P=10.0atm T=1781K: tau=0.1248 ms, Ts=2305.1 K
+  Case3 XH2=0.05 P=1.0atm T=1542K: tau=3.2962 ms, Ts=2069.6 K
+  Case3 XH2=0.05 P=1.0atm T=1710K: tau=1.1960 ms, Ts=2216.8 K
+  Case3 XH2=0.05 P=1.0atm T=1878K: tau=0.5036 ms, Ts=2352.0 K
+  Case4 XH2=0.05 P=10.0atm T=1497K: tau=0.8130 ms, Ts=2037.3 K
+  Case4 XH2=0.05 P=10.0atm T=1685K: tau=0.1837 ms, Ts=2213.6 K
+  Case4 XH2=0.05 P=10.0atm T=1873K: tau=0.0602 ms, Ts=2382.8 K
+  Case5 XH2=0.3 P=1.0atm T=1244K: tau=3.4342 ms, Ts=1767.6 K
+  Case5 XH2=0.3 P=1.0atm T=1500K: tau=0.8341 ms, Ts=2009.5 K
+  Case5 XH2=0.3 P=1.0atm T=1756K: tau=0.3170 ms, Ts=2237.5 K
+  Case6 XH2=0.3 P=10.0atm T=1244K: tau=1.3498 ms, Ts=1771.8 K
+  Case6 XH2=0.3 P=10.0atm T=1550K: tau=0.0982 ms, Ts=2066.2 K
+  Case6 XH2=0.3 P=10.0atm T=1856K: tau=0.0260 ms, Ts=2348.7 K
+  Case7 XH2=0.7 P=1.0atm T=1054K: tau=2.6310 ms, Ts=1537.7 K
+  Case7 XH2=0.7 P=1.0atm T=1270K: tau=0.5315 ms, Ts=1745.1 K
+  Case7 XH2=0.7 P=1.0atm T=1486K: tau=0.2403 ms, Ts=1954.9 K
+  Case8 XH2=0.7 P=10.0atm T=1057K: tau=5.8244 ms, Ts=1551.0 K
+  Case8 XH2=0.7 P=10.0atm T=1165K: tau=0.4052 ms, Ts=1657.3 K
+  Case8 XH2=0.7 P=10.0atm T=1273K: tau=0.1062 ms, Ts=1760.3 K
+参考评估耗时 2.94 s (作为 t_CPU 基准)
+  Gen  250: best=0.07684 avg=0.35076 Nr=89 fN=0.0335 fCPU=0.0075 [16s, cache=14744]
+恢复 GA 状态: 从第 250 代继续, 缓存 14685 条
+计算完整机理参考值 (IDT + 稳态温度)...
+  Case1 XH2=0.0 P=1.0atm T=1571K: tau=4.2068 ms, Ts=2100.0 K
+  Case1 XH2=0.0 P=1.0atm T=1695K: tau=1.7378 ms, Ts=2207.9 K
+  Case1 XH2=0.0 P=1.0atm T=1819K: tau=0.8221 ms, Ts=2309.4 K
+  Case2 XH2=0.0 P=10.0atm T=1469K: tau=1.9432 ms, Ts=2015.0 K
+  Case2 XH2=0.0 P=10.0atm T=1625K: tau=0.3967 ms, Ts=2162.2 K
+  Case2 XH2=0.0 P=10.0atm T=1781K: tau=0.1248 ms, Ts=2305.1 K
+  Case3 XH2=0.05 P=1.0atm T=1542K: tau=3.2962 ms, Ts=2069.6 K
+  Case3 XH2=0.05 P=1.0atm T=1710K: tau=1.1960 ms, Ts=2216.8 K
+  Case3 XH2=0.05 P=1.0atm T=1878K: tau=0.5036 ms, Ts=2352.0 K
+  Case4 XH2=0.05 P=10.0atm T=1497K: tau=0.8130 ms, Ts=2037.3 K
+  Case4 XH2=0.05 P=10.0atm T=1685K: tau=0.1837 ms, Ts=2213.6 K
+  Case4 XH2=0.05 P=10.0atm T=1873K: tau=0.0602 ms, Ts=2382.8 K
+  Case5 XH2=0.3 P=1.0atm T=1244K: tau=3.4342 ms, Ts=1767.6 K
+  Case5 XH2=0.3 P=1.0atm T=1500K: tau=0.8341 ms, Ts=2009.5 K
+  Case5 XH2=0.3 P=1.0atm T=1756K: tau=0.3170 ms, Ts=2237.5 K
+  Case6 XH2=0.3 P=10.0atm T=1244K: tau=1.3498 ms, Ts=1771.8 K
+  Case6 XH2=0.3 P=10.0atm T=1550K: tau=0.0982 ms, Ts=2066.2 K
+  Case6 XH2=0.3 P=10.0atm T=1856K: tau=0.0260 ms, Ts=2348.7 K
+  Case7 XH2=0.7 P=1.0atm T=1054K: tau=2.6310 ms, Ts=1537.7 K
+  Case7 XH2=0.7 P=1.0atm T=1270K: tau=0.5315 ms, Ts=1745.1 K
+  Case7 XH2=0.7 P=1.0atm T=1486K: tau=0.2403 ms, Ts=1954.9 K
+  Case8 XH2=0.7 P=10.0atm T=1057K: tau=5.8244 ms, Ts=1551.0 K
+  Case8 XH2=0.7 P=10.0atm T=1165K: tau=0.4052 ms, Ts=1657.3 K
+  Case8 XH2=0.7 P=10.0atm T=1273K: tau=0.1062 ms, Ts=1760.3 K
+参考评估耗时 5.74 s (作为 t_CPU 基准)
+  Gen  250: best=0.07684 avg=0.36172 Nr=89 fN=0.0335 fCPU=0.0075 [41s, cache=14744]
+恢复 GA 状态: 从第 250 代继续, 缓存 14685 条
+计算完整机理参考值 (IDT + 稳态温度)...
+  Case1 XH2=0.0 P=1.0atm T=1571K: tau=4.2068 ms, Ts=2100.0 K
+  Case1 XH2=0.0 P=1.0atm T=1695K: tau=1.7378 ms, Ts=2208.0 K
+  Case1 XH2=0.0 P=1.0atm T=1819K: tau=0.8221 ms, Ts=2309.5 K
+  Case2 XH2=0.0 P=10.0atm T=1469K: tau=1.9432 ms, Ts=2015.0 K
+  Case2 XH2=0.0 P=10.0atm T=1625K: tau=0.3967 ms, Ts=2162.2 K
+  Case2 XH2=0.0 P=10.0atm T=1781K: tau=0.1248 ms, Ts=2305.1 K
+  Case3 XH2=0.05 P=1.0atm T=1542K: tau=3.2962 ms, Ts=2069.7 K
+  Case3 XH2=0.05 P=1.0atm T=1710K: tau=1.1960 ms, Ts=2216.8 K
+  Case3 XH2=0.05 P=1.0atm T=1878K: tau=0.5036 ms, Ts=2352.1 K
+  Case4 XH2=0.05 P=10.0atm T=1497K: tau=0.8130 ms, Ts=2037.3 K
+  Case4 XH2=0.05 P=10.0atm T=1685K: tau=0.1837 ms, Ts=2213.6 K
+  Case4 XH2=0.05 P=10.0atm T=1873K: tau=0.0602 ms, Ts=2382.8 K
+  Case5 XH2=0.3 P=1.0atm T=1244K: tau=3.4342 ms, Ts=1767.6 K
+  Case5 XH2=0.3 P=1.0atm T=1500K: tau=0.8341 ms, Ts=2009.5 K
+  Case5 XH2=0.3 P=1.0atm T=1756K: tau=0.3170 ms, Ts=2237.5 K
+  Case6 XH2=0.3 P=10.0atm T=1244K: tau=1.3498 ms, Ts=1771.8 K
+  Case6 XH2=0.3 P=10.0atm T=1550K: tau=0.0982 ms, Ts=2066.2 K
+  Case6 XH2=0.3 P=10.0atm T=1856K: tau=0.0260 ms, Ts=2348.8 K
+  Case7 XH2=0.7 P=1.0atm T=1054K: tau=2.6310 ms, Ts=1537.7 K
+  Case7 XH2=0.7 P=1.0atm T=1270K: tau=0.5315 ms, Ts=1745.1 K
+  Case7 XH2=0.7 P=1.0atm T=1486K: tau=0.2403 ms, Ts=1954.9 K
+  Case8 XH2=0.7 P=10.0atm T=1057K: tau=5.8244 ms, Ts=1551.0 K
+  Case8 XH2=0.7 P=10.0atm T=1165K: tau=0.4052 ms, Ts=1657.3 K
+  Case8 XH2=0.7 P=10.0atm T=1273K: tau=0.1062 ms, Ts=1760.3 K
+参考评估耗时 4.04 s (作为 t_CPU 基准)
+  Gen  250: best=0.07684 avg=0.37912 Nr=89 fN=0.0335 fCPU=0.0075 [35s, cache=14744]
+  Gen  260: best=0.07684 avg=0.39468 Nr=89 fN=0.0335 fCPU=0.0075 [460s, cache=15334]
+  Gen  270: best=0.07684 avg=0.36364 Nr=89 fN=0.0335 fCPU=0.0075 [855s, cache=15924]
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0124440371946852 and h = 5.91896535775232e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0124440371946852 and h = 1.47974133943808e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0124440371946852 and h = 3.6126497544875e-23 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0124440371946852 and h = 3.6126497544875e-23 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0124440371946852 and h = 2.25790609655469e-23 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0124440371946852 and h = 2.25790609655469e-23 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0124440371946852 and h = 2.25790609655469e-22 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0124440371946852 and h = 2.25790609655469e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0124440371946852 and h = 2.25790609655469e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0124440371946852 and h = 2.25790609655469e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00292209727891376 and h = 9.33334221954294e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00292209727891376 and h = 9.33334221954294e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00292209727891376 and h = 1.50026871177981e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00292209727891376 and h = 1.50026871177981e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00392301287618596 and h = 4.22438071270859e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00392301287618596 and h = 2.90373135718102e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00392301287618596 and h = 1.99595049516596e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00392301287618596 and h = 1.37196503401635e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00176988934769346 and h = 9.7815233592007e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00176988934769346 and h = 7.10276386981635e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00176988934769346 and h = 7.10276386981635e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00176988934769346 and h = 7.10276386981635e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00176988934769346 and h = 7.10276386981635e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00176988934769346 and h = 7.10276386981635e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00176988934769346 and h = 7.10276386981635e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00176988934769346 and h = 7.10276386981635e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00176988934769346 and h = 7.10276386981635e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00176988934769346 and h = 7.10276386981635e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00135371435859427 and h = 8.31930855218002e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00135371435859427 and h = 8.31930855218002e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00135371435859427 and h = 8.31930855218002e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00135371435859427 and h = 8.31930855218002e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00135371435859427 and h = 8.31930855218002e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00135371435859427 and h = 8.31930855218002e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00135371435859427 and h = 5.75505066725305e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00135371435859427 and h = 5.75505066725305e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVod[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0567168768240657 and h = 3.09176158734311e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0567168768240657 and h = 3.09176158734311e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0567168768240657 and h = 3.09176158734311e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0567168768240657 and h = 2.1365241251131e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0567168768240657 and h = 2.1365241251131e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0567168768240657 and h = 2.1365241251131e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0567168768240657 and h = 2.1365241251131e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0567168768240657 and h = 2.1365241251131e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0567168768240657 and h = 2.1365241251131e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0567168768240657 and h = 2.1365241251131e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0463273822560737 and h = 2.16616000182416e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0463273822560737 and h = 2.16616000182416e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0463273822560737 and h = 2.16616000182416e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0463273822560737 and h = 1.35899456548368e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0463273822560737 and h = 1.35899456548368e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0463273822560737 and h = 1.35899456548368e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0463273822560737 and h = 8.61692876441156e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0463273822560737 and h = 8.61692876441156e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.046327  Gen  280: best=0.07684 avg=0.37328 Nr=89 fN=0.0335 fCPU=0.0075 [1107s, cache=16514]
+  Gen  290: best=0.07684 avg=0.31143 Nr=89 fN=0.0335 fCPU=0.0075 [1342s, cache=17104]
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00094829422528633 and h = 4.80496223619675e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00094829422528633 and h = 4.80496223619675e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00094829422528633 and h = 4.80496223619675e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00094829422528633 and h = 4.80496223619675e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00094829422528633 and h = 4.80496223619675e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00094829422528633 and h = 4.80496223619675e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00094829422528633 and h = 4.80496223619675e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00094829422528633 and h = 4.80496223619675e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00094829422528633 and h = 4.80496223619675e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00094829422528633 and h = 4.80496223619675e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000946235159547777 and h = 5.13245385408858e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000946235159547777 and h = 5.13245385408858e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000946235159547777 and h = 5.13245385408858e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000946235159547777 and h = 5.13245385408858e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000946235159547777 and h = 3.27752743266564e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000946235159547777 and h = 3.27752743266564e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000946235159547777 and h = 3.27752743266564e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000946235159547777 and h = 2.13441003616288e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3  Gen  300: best=0.07684 avg=0.28703 Nr=89 fN=0.0335 fCPU=0.0075 [1629s, cache=17693]
+  Gen  310: best=0.07684 avg=0.38453 Nr=89 fN=0.0335 fCPU=0.0075 [1930s, cache=18283]
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0126290814883332 and h = 6.07641365709658e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0126290814883332 and h = 4.12782740955198e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0126290814883332 and h = 2.80411440475465e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0126290814883332 and h = 1.90489010270282e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0126290814883332 and h = 1.29402933501593e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0126290814883332 and h = 8.79059593040792e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0126290814883332 and h = 5.97162480632567e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0126290814883332 and h = 4.0566422456529e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0126290814883332 and h = 2.75575690696364e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0126290814883332 and h = 1.87203989640528e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.036753231695478 and h = 3.03600726528931e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.036753231695478 and h = 2.0454604284082e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.036753231695478 and h = 2.0454604284082e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.036753231695478 and h = 2.0454604284082e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.036753231695478 and h = 3.19325865145586e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.036753231695478 and h = 3.19325865145586e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.036753231695478 and h = 3.19325865145586e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.036753231695478 and h = 3.19325865145586e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.03675323169  Gen  320: best=0.07684 avg=0.37085 Nr=89 fN=0.0335 fCPU=0.0075 [2161s, cache=18872]
+  Gen  330: best=0.07394 avg=0.28814 Nr=87 fN=0.0316 fCPU=0.0074 [2348s, cache=19460]
+  Gen  340: best=0.07394 avg=0.28415 Nr=87 fN=0.0316 fCPU=0.0074 [2546s, cache=20049]
+e] Internal t = 0.00135371435859427 and h = 5.75505066725305e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00135371435859427 and h = 5.75505066725305e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0033579352222449 and h = 9.56115002945463e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0033579352222449 and h = 9.56115002945463e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0033579352222449 and h = 9.56115002945463e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0033579352222449 and h = 9.56115002945463e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0033579352222449 and h = 1.5690663643286e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0033579352222449 and h = 1.5690663643286e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00335793522273153 and h = 1.7166472389385e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00335793522273153 and h = 1.7166472389385e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00335793522273153 and h = 1.7166472389385e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00335793522273153 and h = 1.7166472389385e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000121169655668659 and h = 5.98232220066087e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000121169655668659 and h = 5.98232220066087e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000121169655668659 and h = 5.98232220066087e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000121169655668661 and h = 6.60095299983035e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000121169655668661 and h = 6.60095299983035e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000121169655668661 and h = 6.60095299983035e-21 are such that t + h = t on the next step. The solver will  Gen  350: best=0.07394 avg=0.41250 Nr=87 fN=0.0316 fCPU=0.0074 [2806s, cache=20639]
+3822560737 and h = 8.61692876441156e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0463273822560737 and h = 8.61692876441156e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0474368570737446 and h = 2.60363608064184e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0474368570737446 and h = 1.56514475789018e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0474368570737446 and h = 9.89120336581251e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0474368570737446 and h = 6.89149987016011e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0474368570737446 and h = 6.89149987016011e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0474368570737446 and h = 6.89149987016011e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0474368570737446 and h = 6.89149987016011e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0474368570737446 and h = 6.89149987016011e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0474368570737446 and h = 6.89149987016011e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0474368570737446 and h = 1.04196281729634e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0190686642396733 and h = 3.85765703008937e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0190686642396733 and h = 3.85765703008937e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0190686642396733 and h = 3.85765703008937e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0190686642396733 and h = 3.85765703008937e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0190686642396733 and h = 3.85765703008937e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0190686642396733 and h = 1.14232363488017e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][  Gen  360: best=0.07394 avg=0.41498 Nr=87 fN=0.0316 fCPU=0.0074 [3083s, cache=21229]
+  Gen  370: best=0.07394 avg=0.30896 Nr=87 fN=0.0316 fCPU=0.0074 [3411s, cache=21819]
+D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0211249117235202 and h = 3.55629013200688e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0211249117235202 and h = 3.55629013200688e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0211249117235202 and h = 3.55629013200688e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0211249117235202 and h = 3.55629013200688e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0211249117235202 and h = 5.65688939991459e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0211249117235202 and h = 1.165197922101e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.108074670704163 and h = 3.72759773212199e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.108074670704163 and h = 3.72759773212199e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.108074670704163 and h = 3.72759773212199e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.108074670704163 and h = 3.72759773212199e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.108074670704163 and h = 3.72759773212199e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.108074670704163 and h = 9.77997176724616e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.108074670704163 and h = 1.72320039147108e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.108074670704163 and h = 4.29454716783788e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.108074670704163 and h = 4.29454716783788e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.108074670704163 and h = 4.29454716783788e-18 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0111650505953066 and h = 7.96557258357563e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0111650505953066 and h = 5.62136855835976e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0111650505953066 and h = 4.05  Gen  380: best=0.07207 avg=0.42754 Nr=85 fN=0.0299 fCPU=0.0062 [3625s, cache=22409]
+  Gen  390: best=0.07207 avg=0.46683 Nr=85 fN=0.0299 fCPU=0.0062 [3798s, cache=22999]
+  Gen  400: best=0.07207 avg=0.30482 Nr=85 fN=0.0299 fCPU=0.0062 [3997s, cache=23589]
+  Gen  410: best=0.07207 avg=0.37959 Nr=85 fN=0.0299 fCPU=0.0062 [4176s, cache=24179]
+  Gen  420: best=0.07207 avg=0.28387 Nr=85 fN=0.0299 fCPU=0.0062 [4330s, cache=24769]
+  Gen  430: best=0.07151 avg=0.25803 Nr=86 fN=0.0308 fCPU=0.0053 [4474s, cache=25359]
+  Gen  440: best=0.07151 avg=0.28493 Nr=86 fN=0.0308 fCPU=0.0053 [4644s, cache=25949]
+  Gen  450: best=0.07151 avg=0.43848 Nr=86 fN=0.0308 fCPU=0.0053 [4868s, cache=26539]
+恢复 GA 状态: 从第 450 代继续, 缓存 26480 条
+计算完整机理参考值 (IDT + 稳态温度)...
+  Case1 XH2=0.0 P=1.0atm T=1571K: tau=4.2068 ms, Ts=2100.0 K
+  Case1 XH2=0.0 P=1.0atm T=1695K: tau=1.7378 ms, Ts=2208.0 K
+  Case1 XH2=0.0 P=1.0atm T=1819K: tau=0.8221 ms, Ts=2309.5 K
+  Case2 XH2=0.0 P=10.0atm T=1469K: tau=1.9432 ms, Ts=2015.0 K
+  Case2 XH2=0.0 P=10.0atm T=1625K: tau=0.3967 ms, Ts=2162.2 K
+  Case2 XH2=0.0 P=10.0atm T=1781K: tau=0.1248 ms, Ts=2305.1 K
+  Case3 XH2=0.05 P=1.0atm T=1542K: tau=3.2962 ms, Ts=2069.7 K
+  Case3 XH2=0.05 P=1.0atm T=1710K: tau=1.1960 ms, Ts=2216.8 K
+  Case3 XH2=0.05 P=1.0atm T=1878K: tau=0.5036 ms, Ts=2352.1 K
+  Case4 XH2=0.05 P=10.0atm T=1497K: tau=0.8130 ms, Ts=2037.3 K
+  Case4 XH2=0.05 P=10.0atm T=1685K: tau=0.1837 ms, Ts=2213.6 K
+  Case4 XH2=0.05 P=10.0atm T=1873K: tau=0.0602 ms, Ts=2382.8 K
+  Case5 XH2=0.3 P=1.0atm T=1244K: tau=3.4342 ms, Ts=1767.6 K
+  Case5 XH2=0.3 P=1.0atm T=1500K: tau=0.8341 ms, Ts=2009.5 K
+  Case5 XH2=0.3 P=1.0atm T=1756K: tau=0.3170 ms, Ts=2237.5 K
+  Case6 XH2=0.3 P=10.0atm T=1244K: tau=1.3498 ms, Ts=1771.8 K
+  Case6 XH2=0.3 P=10.0atm T=1550K: tau=0.0982 ms, Ts=2066.2 K
+  Case6 XH2=0.3 P=10.0atm T=1856K: tau=0.0260 ms, Ts=2348.8 K
+  Case7 XH2=0.7 P=1.0atm T=1054K: tau=2.6310 ms, Ts=1537.7 K
+  Case7 XH2=0.7 P=1.0atm T=1270K: tau=0.5315 ms, Ts=1745.1 K
+  Case7 XH2=0.7 P=1.0atm T=1486K: tau=0.2403 ms, Ts=1954.9 K
+  Case8 XH2=0.7 P=10.0atm T=1057K: tau=5.8244 ms, Ts=1551.0 K
+  Case8 XH2=0.7 P=10.0atm T=1165K: tau=0.4052 ms, Ts=1657.3 K
+  Case8 XH2=0.7 P=10.0atm T=1273K: tau=0.1062 ms, Ts=1760.3 K
+参考评估耗时 5.27 s (作为 t_CPU 基准)
+  Gen  450: best=0.07151 avg=0.39411 Nr=86 fN=0.0308 fCPU=0.0053 [43s, cache=26539]
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0104163737017838 and h = 9.90484910241005e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0104163737017838 and h = 9.90484910241005e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0104163737017838 and h = 5.97428278547392e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0104163737017838 and h = 3.64592292571158e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0104163737017838 and h = 2.31672847271002e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0104163737017838 and h = 1.47421182854491e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0104163737017838 and h = 9.27694199279406e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0104163737017838 and h = 5.80746687046826e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0104163737017838 and h = 3.6422725360092e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0104163737017838 and h = 2.27216567940842e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000571408989949556 and h = 4.031340349277e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000571408989949556 and h = 4.031340349277e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000571408989949556 and h = 4.031340349277e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000571408989949556 and h = 2.6691714991168e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000571408989949556 and h = 2.6691714991168e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000571408989949556 and h = 2.6691714991168e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000571408989949556 and h = 1.75645389815532e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000571408989949556 and h = 1.75645389815532e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000571408989949556 and h = 1.75645389815532e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000571408989949556 and h = 1.09837531923802e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000216199198278181 and h = 1.09637005207041e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000216199198278181 and h = 1.09637005207041e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000216199198278181 and h = 6.55384577756533e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000216199198278181 and h = 4.73760587924184e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000216199198278181 and h = 4.73760587924184e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000216199198278181 and h = 2.5823311745789e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000216199198278181 and h = 1.78477838120994e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000216199198278181 and h = 1.27349005509353e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000216199198278181 and h = 9.1325989977719e-22 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000216199198278181 and h = 6.50759658404549e-22 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000221295627342623 and h = 1.10590754763813e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000221295627342623 and h = 1.10590754763813e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000221295627342623 and h = 8.10315496679748e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000221295627342623 and h = 8.10315496679748e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000221295627342623 and h = 5.78597415721079e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000221295627342623 and h = 5.78597415721079e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000221295627342623 and h = 4.1624030034054e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000221295627342623 and h = 4.1624030034054e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000221295627342623 and h = 2.9441192393543e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000221295627342623 and h = 2.9441192393543e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00244378129213687 and h = 1.73867110732019e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00244378129213687 and h = 1.73867110732019e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00244378129213687 and h = 1.73867110732019e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00244378129213687 and h = 1.17543014734328e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00244378129213687 and h = 1.17543014734328e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00244378129213687 and h = 1.17543014734328e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00244378129213687 and h = 7.86751620163486e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00244378129213687 and h = 7.86751620163486e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00244378129213687 and h = 7.86751620163486e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00244378129213687 and h = 7.86751620163486e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00111440825458231 and h = 3.52647520164538e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00111440825458231 and h = 3.52647520164538e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00111440825458231 and h = 3.52647520164538e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t  Gen  460: best=0.07151 avg=0.22509 Nr=86 fN=0.0308 fCPU=0.0053 [320s, cache=27129]
+  Gen  470: best=0.07151 avg=0.20696 Nr=86 fN=0.0308 fCPU=0.0053 [677s, cache=27719]
+ = 0.00111440825458231 and h = 3.52647520164538e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00111440825458231 and h = 3.52647520164538e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00111440825458231 and h = 3.52647520164538e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00111440825458231 and h = 2.42454087741704e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00111440825458231 and h = 1.70677367257722e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00111440825458231 and h = 1.70677367257722e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00111440825458231 and h = 1.70677367257722e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000165212906454179 and h = 1.08772775489919e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000165212906454179 and h = 1.08772775489919e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000165212906454179 and h = 1.08772775489919e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000165212906454179 and h = 1.08772775489919e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000165212906454179 and h = 1.08772775489919e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000165212906454179 and h = 1.08772775489919e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000165212906454179 and h = 5.93000737875618e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000165212906454179 and h = 5.93000737875618e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000165212906454179 and h = 5.93000737875618e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000165212906454179 and h = 5.93000737875618e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000523210906397102 and h = 3.9061439341415e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000523210906397102 and h = 3.9061439341415e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000523210906397102 and h = 2.37088113401029e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000523210906397102 and h = 2.37088113401029e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000523210906397102 and h = 1.42885409381521e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000523210906397102 and h = 1.42885409381521e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000523210906397102 and h = 8.56457445457986e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000523210906397102 and h = 8.56457445457986e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000523210906397102 and h = 5.11273291895557e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000523210906397102 and h = 5.11273291895557e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000246615878218621 and h = 2.51117188880527e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000246615878218621 and h = 2.51117188880527e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000246615878218621 and h = 2.51117188880527e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000246615878218621 and h = 2.51117188880527e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000246615878218621 and h = 1.78839852954613e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000246615878218621 and h = 1.78839852954613e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000246615878218621 and h = 1.78839852954613e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000246615878218621 and h = 1.78839852954613e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000246615878218621 and h = 1.94193121813298e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundia  Gen  480: best=0.07151 avg=0.36288 Nr=86 fN=0.0308 fCPU=0.0053 [949s, cache=28309]
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000301481833864931 and h = 1.56241120596045e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000301481833864931 and h = 1.56241120596045e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000301481833864931 and h = 1.56241120596045e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000301481833864931 and h = 1.56241120596045e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000301481833864931 and h = 1.56241120596045e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000301481833864931 and h = 4.36711103453582e-22 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000301481833864931 and h = 4.36711103453582e-22 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000301481833864931 and h = 2.72944439658489e-22 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000301481833864931 and h = 2.72944439658489e-22 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000301481833864931 and h = 1.70590274786556e-22 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000434652887920433 and h = 2.17442192357926e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000434652887920433 and h = 2.17442192357926e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000434652887920433 and h = 1.00849707598686e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000434652887920433 and h = 1.00849707598686e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000434652887920433 and h = 4.67741066092019e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000434652887920433 and h = 4.67741066092019e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000434652887920433 and h = 2.16938372389374e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000434652887920433 and h = 2.16938372389374e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000500904298714305 and h = 5.35105131873658e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000500904298714305 and h = 5.35105131873658e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00099366243852258 and h = 7.73043472528443e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00099366243852258 and h = 7.73043472528443e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00099366243852258 and h = 7.73043472528443e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00099366243852258 and h = 7.73043472528443e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00099366243852258 and h = 7.73043472528443e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00099366243852258 and h = 7.73043472528443e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00099366243852258 and h = 7.73043472528443e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00099366243852258 and h = 7.73043472528443e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00099366243852258 and h = 7.73043472528443e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00099366243852258 and h = 7.73043472528443e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000949564454457437 and h = 3.01918735698094e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000949564454457437 and h = 3.01918735698094e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000949564454457437 and h = 3.01918735698094e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000949564454457437 and h = 3.01918735698094e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000949564454458145 and h = 4.03207999087182e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000949564454458145 and h = 4.03207999087182e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3  Gen  490: best=0.07151 avg=0.44536 Nr=86 fN=0.0308 fCPU=0.0053 [1210s, cache=28899]
+  Gen  500: best=0.07151 avg=0.33906 Nr=86 fN=0.0308 fCPU=0.0053 [1403s, cache=29489]
+  Gen  510: best=0.07030 avg=0.20923 Nr=86 fN=0.0308 fCPU=0.0050 [1566s, cache=30079]
+  Gen  520: best=0.07030 avg=0.21372 Nr=86 fN=0.0308 fCPU=0.0050 [1744s, cache=30669]
+  Gen  530: best=0.07030 avg=0.38354 Nr=86 fN=0.0308 fCPU=0.0050 [1902s, cache=31259]
+528][CVode] Internal t = 0.000949564454458174 and h = 4.08360175856182e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000949564454458174 and h = 4.08360175856182e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000949564454458174 and h = 2.73105149497429e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000949564454458174 and h = 2.73105149497429e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00107635354332775 and h = 8.96641072618281e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00107635354332775 and h = 8.96641072618281e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00107635354332775 and h = 4.73096424394175e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00107635354332775 and h = 4.73096424394175e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00107635354332775 and h = 4.73096424394175e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00107635354332775 and h = 4.73096424394175e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00107635354332775 and h = 4.73096424394175e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00107635354332775 and h = 4.73096424394175e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00107635354332775 and h = 4.73096424394175e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00107635354332775 and h = 3.16894815157209e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00351954779688166 and h = 1.50487127103786e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00351954779688166 and h = 1.50487127103786e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00351954779688166 and h = 1.50487127103786e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00351954779688166 and h = 1.50487127103786e-19 are such that t + h = t on the next st  Gen  540: best=0.07030 avg=0.27684 Nr=86 fN=0.0308 fCPU=0.0050 [2071s, cache=31849]
+  Gen  550: best=0.06762 avg=0.32649 Nr=83 fN=0.0282 fCPU=0.0055 [2236s, cache=32439]
+  Gen  560: best=0.06762 avg=0.34161 Nr=83 fN=0.0282 fCPU=0.0055 [2418s, cache=33028]
+  Gen  570: best=0.06762 avg=0.21539 Nr=83 fN=0.0282 fCPU=0.0055 [2921s, cache=33618]
+  Gen  580: best=0.06762 avg=0.28729 Nr=83 fN=0.0282 fCPU=0.0055 [3143s, cache=34208]
+cvodes.c:3528][CVode] Internal t = 0.000434652887920433 and h = 2.16938372389374e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000434652887920433 and h = 4.40032186350118e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0153189756556971 and h = 6.3605617429131e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0153189756556971 and h = 6.3605617429131e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0153189756556971 and h = 4.52999636242628e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0153189756556971 and h = 4.52999636242628e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0153189756556971 and h = 3.02562228121406e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0153189756556971 and h = 2.24094896074164e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0153189756556971 and h = 1.61159628066345e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0153189756556971 and h = 1.14428280157765e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0153189756556971 and h = 8.12176639035094e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0153189756556971 and h = 5.7687880879872e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00330186106668831 and h = 1.7825020613067e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00330186106668831 and h = 1.7825020613067e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00330186106668831 and h = 1.7825020613067e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00330186106668831 and h = 1.7825020613067e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00330186106668831 and h = 1.7825020613067e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00330186106668831 and h = 1.7825020613067e-19 are such that t + h = t on the next step. The sol  Gen  590: best=0.06762 avg=0.23056 Nr=83 fN=0.0282 fCPU=0.0055 [3341s, cache=34798]
+ls-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000246615878218621 and h = 1.94193121813298e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000300692034048034 and h = 2.68472397623114e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000300692034048034 and h = 2.68472397623114e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000300692034048034 and h = 2.68472397623114e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000300692034048034 and h = 2.68472397623114e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000300692034048034 and h = 2.68472397623114e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000300692034048034 and h = 2.68472397623114e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000300692034048034 and h = 2.68472397623114e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000300692034048034 and h = 2.68472397623114e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000300692034048034 and h = 2.68472397623114e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000300692034048034 and h = 2.68472397623114e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00478143731004001 and h = 1.74736882590793e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00478143731004001 and h = 1.74736882590793e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00478143731004001 and h = 1.74736882590793e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00478143731004001 and h = 1.74736882590793e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00478143731004001 and h = 3.73372604712616e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00478143731004001 and h = 3.73372604712616e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00478143731004001 and h = 3.73372604712616e-19 a  [池崩溃: BrokenProcessPool] 逐个重评估定位崩溃基因...
+  [定位完成] 崩溃基因 32 个已拉黑, 重建进程池
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100232515828996 and h = 3.25168606358063e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100232515828996 and h = 3.25168606358063e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100232515828996 and h = 3.25168606358063e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100232515828996 and h = 8.43240249095642e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100232515828996 and h = 2.10810062273911e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100232515828996 and h = 2.10810062273911e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100232515828996 and h = 3.30345757810344e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100232515828996 and h = 8.37054926047126e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100232515828996 and h = 8.37054926047126e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.0100232515829023 and h = 2.14710769588033e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00127160767430516 and h = 7.31446282618429e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00127160767430516 and h = 4.55570090892522e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00127160767430516 and h = 2.88526076320335e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00127160767430516 and h = 2.88526076320335e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00127160767430516 and h = 7.21315190800838e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00127160767430516 and h = 7.21315190800838e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00127160767430516 and h = 7.21315190800838e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00127160767430516 and h = 1.8032879770021e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00127160767430516 and h = 1.8032879770021e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00127160767430516 and h = 1.8032879770021e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000811876952478502 and h = 3.7396132369292e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000811876952478502 and h = 3.7396132369292e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000811876952478502 and h = 2.31314888872638e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000811876952478502 and h = 5.78287222181594e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000811876952478502 and h = 5.78287222181594e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000811876952478502 and h = 5.78287222181594e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000811876952478502 and h = 5.78287222181594e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000811876952478502 and h = 3.19253972232871e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000811876952478502 and h = 3.19253972232871e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.000811876952478502 and h = 3.19253972232871e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3533][CVode] The above warning has been issued mxhnil times and will not be issued again for this problem.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00250285158005208 and h = 1.82127494585008e-19 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00250285158005208 and h = 4.55318736462521e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00250285158005208 and h = 1.1382968411563e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00250285158005208 and h = 1.1382968411563e-20 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00250285158005208 and h = 6.46971493233496e-21 are such that t + h = t on the next step. The solver will continue anyway.
+[WARNING][rank 0][D:\a\_temp\sundials-7.4.0\src\cvodes\cvodes.c:3528][CVode] Internal t = 0.00250285158005208 and h = 6.46971493233496e-21 are such that t + h = t on the next step. The solver will  Gen  600: best=0.06762 avg=0.47395 Nr=83 fN=0.0282 fCPU=0.0055 [3685s, cache=35388]

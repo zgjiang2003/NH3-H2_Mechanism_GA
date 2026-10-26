@@ -1,0 +1,18 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# IDE and operating-system metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+__MACOSX/
+
+# Local scratch and backup files
+*.bak
+*.tmp
+*.temp
+results/_pdf_pages/

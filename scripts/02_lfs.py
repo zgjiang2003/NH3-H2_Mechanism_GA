@@ -1,184 +1,132 @@
-import cantera as ct
+"""
+层流火焰速度 (LFS) 验证仿真 - 复现论文 Fig. 11-15, S3-S5
+
+机理: Full(2021recon) / M1(Reduced) / M2(Optimized) —— 同 01_idt.py
+模型: Cantera FreeFlame, mixture-averaged 输运 (论文口径)
+
+图件与工况:
+  Fig. 11 (2x3): LFS vs phi, Tu=298K, P=1atm, XH2=0/0.2/0.4/0.6/0.8/1.0
+  Fig. 12 (1x2): (a) XH2=0.4, (b) XH2=0.6 (Tu=298K, P=1atm)
+  Fig. 13 (1x3): LFS vs XH2, phi=1, Tu=298K, P=1/3/5 atm
+  Fig. 14 (1x1): LFS vs phi, XH2=0.4, Tu=298K, P=1/3/5 atm
+  Fig. 15 (1x3): LFS vs phi, XH2=0.05/0.3/0.6, Tu=298/373/423/473K, P=1atm
+  Fig. S3 (1x2): 高温高压: (a) XH2=0.2, P=40bar, Tu=820K; (b) XH2=0, P=40bar, Tu=720K
+  Fig. S4 (1x1): LFS vs P(0.1-0.5 MPa), XH2=0/0.1/0.2, Tu=360K, phi=1
+  Fig. S5 (1x2): 部分解离氨 NH3/H2/N2/air, alpha=0.3/0.5, Tu=303K, P=1atm
+输出: results/lfs_sweep.csv
+"""
+import sys
 import numpy as np
 import pandas as pd
+import cantera as ct
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from mech_utils import RESULTS_DIR, phi_composition, dissociated_nh3_composition
 
-def oxidizer_for_phi(fuel_moles, phi, diluent="N2", n2_o2=3.76):
-    o2_stoich = 0.0
-    o2_stoich += fuel_moles.get("NH3", 0.0) * 0.75
-    o2_stoich += fuel_moles.get("H2", 0.0) * 0.5
-    o2_actual = o2_stoich / phi
-    comp = dict(fuel_moles)
-    comp["O2"] = o2_actual
-    comp[diluent] = o2_actual * n2_o2
-    return comp
+MECHS = {
+    "Full": "Full mechanism 2021recon.yaml",
+    "Mechanism 1": "Reduced mechanism.yaml",
+    "Mechanism 2": "Optimized mechanism.yaml",
+}
 
 
-def compute_lfs(mech, Tu, P_atm, fuel_H2_frac=0.0, phi=1.0, width=0.03):
-    gas = ct.Solution(str(mech))
-    fuel = {"NH3": 1.0 - fuel_H2_frac}
-    if fuel_H2_frac > 0:
-        fuel["H2"] = fuel_H2_frac
-
-    X = oxidizer_for_phi(fuel, phi)
-    gas.TPX = Tu, P_atm * ct.one_atm, X
-
+def compute_lfs(gas, Tu, P_atm, comp, tight=False, width=0.03):
+    gas.TPX = Tu, P_atm * ct.one_atm, comp
     f = ct.FreeFlame(gas, width=width)
     f.transport_model = "mixture-averaged"
-
-    f.set_refine_criteria(ratio=3, slope=0.06, curve=0.12)
-
+    if tight:
+        f.set_refine_criteria(ratio=3, slope=0.06, curve=0.12)
+    else:
+        f.set_refine_criteria(ratio=3, slope=0.1, curve=0.2)
     try:
         f.solve(loglevel=0, auto=True)
-        Su = f.velocity[0]
-    except Exception as e:
-        print(f"Failed: Tu={Tu} P={P_atm} XH2={fuel_H2_frac} phi={phi}: {e}")
-        Su = float('nan')
-
-    return Su
+        return f.velocity[0]
+    except Exception:
+        return np.nan
 
 
-def sweep_lfs():
-    SCRIPT_DIR = Path(__file__).resolve().parent
-    PROJECT_ROOT = SCRIPT_DIR.parent
-    MECH_DIR = PROJECT_ROOT / "mechanisms"
-    RESULTS_DIR = PROJECT_ROOT / "results"
-    RESULTS_DIR.mkdir(exist_ok=True)
-
-    mechs = {
-        "Full": MECH_DIR / "Full mechanism.yaml",
-        "Reduced": MECH_DIR / "Reduced mechanism.yaml",
-        "Optimized": MECH_DIR / "Optimized mechanism.yaml",
-    }
-
+def sweep():
     rows = []
+    mech_dir = Path(__file__).resolve().parent.parent / "mechanisms"
 
-    # -------------------------------------------------------
-    # 1) Fig. 11/12: LFS vs phi, Tu=298K, P=1 atm, 各种 XH2
-    #    论文 Table 3 case 9: XH2=0, P=1, T=423K, phi=0.7-1.4
-    #    论文 Fig.11: XH2=0,0.2,0.4,0.6,0.8,1.0, Tu=298K, P=1atm
-    # -------------------------------------------------------
-    for mech_name, mech_path in mechs.items():
-        for XH2 in [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]:
-            for phi in np.arange(0.7, 1.5, 0.1):
-                Su = compute_lfs(mech_path, Tu=298.0, P_atm=1.0,
-                                 fuel_H2_frac=XH2, phi=round(phi, 2))
-                rows.append({
-                    "mechanism": mech_name,
-                    "XH2_fuel": XH2,
-                    "P_atm": 1.0,
-                    "T_unburned_K": 298.0,
-                    "phi": round(phi, 2),
-                    "Su_m_s": Su,
-                })
-                print(f"  {mech_name} XH2={XH2} phi={phi:.1f} Su={Su:.4f}" if not np.isnan(Su) else f"  {mech_name} XH2={XH2} phi={phi:.1f} FAILED")
+    def job(fig, label, XH2, Tu, P, phis, mech_name, gas, tight=False,
+            width=0.03, alpha_diss=None):
+        for phi in phis:
+            comp = (dissociated_nh3_composition(alpha_diss, phi)
+                    if alpha_diss is not None
+                    else phi_composition(XH2, phi))
+            Su = compute_lfs(gas, Tu, P, comp, tight=tight, width=width)
+            rows.append({"figure": fig, "label": label,
+                         "mechanism": mech_name,
+                         "XH2_fuel": (alpha_diss if alpha_diss is not None
+                                      else XH2),
+                         "Tu_K": Tu, "P_atm": P, "phi": round(float(phi), 3),
+                         "Su_m_s": Su,
+                         "Su_cm_s": Su * 100.0 if np.isfinite(Su) else np.nan})
+            print(f"  {fig} {label} {mech_name} Tu={Tu} P={P} phi={phi:.2f} "
+                  f"Su={Su*100 if np.isfinite(Su) else float('nan'):.2f} cm/s",
+                  flush=True)
 
-    # -------------------------------------------------------
-    # 2) Fig. 13: LFS vs XH2, phi=1.0, Tu=298K, P=1,3,5 atm
-    #    论文 Table 3 case 11: XH2=0-1.0, P=1, T=298, phi=1
-    # -------------------------------------------------------
-    for mech_name, mech_path in mechs.items():
-        for P in [1.0, 3.0, 5.0]:
-            for XH2 in np.arange(0.0, 1.05, 0.1):
-                Su = compute_lfs(mech_path, Tu=298.0, P_atm=P,
-                                 fuel_H2_frac=round(XH2, 2), phi=1.0)
-                rows.append({
-                    "mechanism": mech_name,
-                    "XH2_fuel": round(XH2, 2),
-                    "P_atm": P,
-                    "T_unburned_K": 298.0,
-                    "phi": 1.0,
-                    "Su_m_s": Su,
-                })
+    phis_full = np.arange(0.7, 1.45, 0.1)
+    phis_narrow = np.arange(0.8, 1.45, 0.1)
 
-    # -------------------------------------------------------
-    # 3) Fig. 14: LFS vs P, XH2=0.4, Tu=298K, phi=0.7-1.5
-    #    论文 Table 3 case 10: XH2=0.4, P=1-5, T=298, phi=0.7-1.5
-    # -------------------------------------------------------
-    for mech_name, mech_path in mechs.items():
-        for P in [1.0, 3.0, 5.0]:
-            for phi in np.arange(0.7, 1.55, 0.1):
-                Su = compute_lfs(mech_path, Tu=298.0, P_atm=P,
-                                 fuel_H2_frac=0.4, phi=round(phi, 2))
-                rows.append({
-                    "mechanism": mech_name,
-                    "XH2_fuel": 0.4,
-                    "P_atm": P,
-                    "T_unburned_K": 298.0,
-                    "phi": round(phi, 2),
-                    "Su_m_s": Su,
-                })
+    for mech_name, mech_file in MECHS.items():
+        gas = ct.Solution(str(mech_dir / mech_file))
+        print(f"=== {mech_name} ===", flush=True)
 
-    # -------------------------------------------------------
-    # 4) Fig. 15: LFS vs XH2, 不同 Tu, phi=0.8-1.4, P=1 atm
-    #    论文 Table 3 case 12: XH2=0.05, P=1, T=298-473, phi=0.8-1.4
-    #    论文 Fig.15 还包括 XH2=0-0.6 的数据
-    # -------------------------------------------------------
-    for mech_name, mech_path in mechs.items():
-        for Tu in [298.0, 373.0, 423.0, 473.0]:
-            for XH2 in [0.0, 0.05, 0.2, 0.4, 0.6]:
-                for phi in np.arange(0.8, 1.45, 0.1):
-                    Su = compute_lfs(mech_path, Tu=Tu, P_atm=1.0,
-                                     fuel_H2_frac=XH2, phi=round(phi, 2))
-                    rows.append({
-                        "mechanism": mech_name,
-                        "XH2_fuel": XH2,
-                        "P_atm": 1.0,
-                        "T_unburned_K": Tu,
-                        "phi": round(phi, 2),
-                        "Su_m_s": Su,
-                    })
+        # Fig. 11: XH2 = 0/0.2/0.4/0.6/0.8/1.0, 298K, 1atm, phi 0.7-1.4
+        for XH2 in (0.0, 0.2, 0.4, 0.6, 0.8, 1.0):
+            job("Fig11", f"XH2={XH2}", XH2, 298.0, 1.0, phis_full,
+                mech_name, gas)
 
-    # -------------------------------------------------------
-    # 5) Appendix Fig. S3: 高温高压 LFS
-    #    (a) 80%NH3/20%H2, P=40 bar, T=820K
-    #    (b) 100%NH3, P=40 bar, T=720K
-    #    注意: P=40 atm 的 FreeFlame 收敛极困难，跳过此条件
-    #    如需计算，需使用更精细的网格和更小的初始步长
-    # -------------------------------------------------------
-    # 跳过 P=40 atm 条件 (FreeFlame 收敛困难)
+        # Fig. 12: XH2=0.4 / 0.6 (298K, 1atm)
+        for XH2 in (0.4, 0.6):
+            job("Fig12", f"XH2={XH2}", XH2, 298.0, 1.0, phis_full,
+                mech_name, gas)
 
-    # -------------------------------------------------------
-    # 6) Appendix Fig. S4: 360K下LFS随压力变化
-    #    XH2=0, 0.1, 0.2, Tu=360K, P=1-5 atm
-    # -------------------------------------------------------
-    for mech_name, mech_path in mechs.items():
-        for XH2 in [0.0, 0.1, 0.2]:
-            for P in [1.0, 2.0, 3.0, 5.0]:
-                for phi in np.arange(0.7, 1.5, 0.1):
-                    Su = compute_lfs(mech_path, Tu=360.0, P_atm=P,
-                                     fuel_H2_frac=XH2, phi=round(phi, 2))
-                    rows.append({
-                        "mechanism": mech_name, "XH2_fuel": XH2,
-                        "P_atm": P, "T_unburned_K": 360.0,
-                        "phi": round(phi, 2), "Su_m_s": Su,
-                    })
+        # Fig. 13: vs XH2 (0-1, step 0.1), phi=1, 298K, P=1/3/5
+        for P in (1.0, 3.0, 5.0):
+            for XH2 in np.arange(0.0, 1.01, 0.1):
+                job("Fig13", f"P={P}atm", round(float(XH2), 2), 298.0, P,
+                    [1.0], mech_name, gas)
 
-    # -------------------------------------------------------
-    # 7) Appendix Fig. S5: NH3/H2/N2/air 混合物 LFS
-    #    alpha=0.3 and 0.5, Tu=303K, P=1 atm
-    #    alpha = X_H2 / (X_NH3 + X_H2) in fuel+N2 blend
-    # -------------------------------------------------------
-    for mech_name, mech_path in mechs.items():
-        for alpha in [0.3, 0.5]:
-            for phi in np.arange(0.7, 1.5, 0.1):
-                # NH3/H2/N2 blend: alpha = XH2/(XNH3+XH2)
-                # fuel_H2_frac in fuel = alpha
-                Su = compute_lfs(mech_path, Tu=303.0, P_atm=1.0,
-                                 fuel_H2_frac=alpha, phi=round(phi, 2))
-                rows.append({
-                    "mechanism": mech_name, "XH2_fuel": alpha,
-                    "P_atm": 1.0, "T_unburned_K": 303.0,
-                    "phi": round(phi, 2), "Su_m_s": Su,
-                })
+        # Fig. 14: vs phi, XH2=0.4, 298K, P=1/3/5
+        for P in (1.0, 3.0, 5.0):
+            job("Fig14", f"P={P}atm", 0.4, 298.0, P, phis_full, mech_name, gas)
+
+        # Fig. 15: XH2=0.05/0.3/0.6 x Tu=298/373/423/473, P=1atm, phi 0.8-1.4
+        for XH2 in (0.05, 0.3, 0.6):
+            for Tu in (298.0, 373.0, 423.0, 473.0):
+                job("Fig15", f"XH2={XH2},Tu={Tu}K", XH2, Tu, 1.0,
+                    phis_narrow, mech_name, gas)
+
+        # Fig. S3: 高温高压 (仅 Full 与 M2, 论文口径; 40 bar 收敛难, 单独参数)
+        if mech_name in ("Full", "Mechanism 2"):
+            job("FigS3a", "80%NH3/20%H2", 0.2, 820.0, 40.0,
+                np.arange(0.8, 1.65, 0.1), mech_name, gas, tight=True,
+                width=0.01)
+            job("FigS3b", "100%NH3", 0.0, 720.0, 40.0,
+                np.arange(0.6, 1.65, 0.2), mech_name, gas, tight=True,
+                width=0.01)
+
+        # Fig. S4: vs P(1-5 atm), XH2=0/0.1/0.2, Tu=360K, phi=1
+        for XH2 in (0.0, 0.1, 0.2):
+            for P in (1.0, 2.0, 3.0, 4.0, 5.0):
+                job("FigS4", f"XH2={XH2}", XH2, 360.0, P, [1.0],
+                    mech_name, gas)
+
+        # Fig. S5: 部分解离氨 alpha=0.3/0.5, Tu=303K, P=1atm, phi 0.7-1.8
+        for alpha in (0.3, 0.5):
+            job("FigS5", f"alpha={alpha}", None, 303.0, 1.0,
+                np.arange(0.6, 1.85, 0.2), mech_name, gas,
+                alpha_diss=alpha)
 
     df = pd.DataFrame(rows)
-    output_file = RESULTS_DIR / "lfs_sweep.csv"
-    df.to_csv(output_file, index=False)
-    print(f"\nLFS 计算完成，结果已保存至：{output_file}")
-    print(f"共 {len(df)} 行数据")
+    out = RESULTS_DIR / "lfs_sweep.csv"
+    df.to_csv(out, index=False)
+    print(f"\nLFS 计算完成: {len(df)} 行 -> {out}")
 
 
 if __name__ == "__main__":
-    sweep_lfs()
+    sweep()

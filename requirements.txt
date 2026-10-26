@@ -1,0 +1,4 @@
+cantera==3.2.0
+matplotlib==3.10.6
+numpy==2.4.2
+pandas==2.3.3

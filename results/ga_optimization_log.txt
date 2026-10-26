@@ -1,0 +1,253 @@
+Mechanism 1: 29 sp, 63 rxns; 可优化反应 50 个 (排除 13 个: falloff/压力依赖 + H2 子机理)
+  排除 R1: H + O2 <=> O + OH  [Arrhenius]
+  排除 R2: H2 + O <=> H + OH  [Arrhenius]
+  排除 R3: H2 + O <=> H + OH  [Arrhenius]
+  排除 R4: H2 + OH <=> H + H2O  [Arrhenius]
+  排除 R5: 2 OH <=> H2O + O  [Arrhenius]
+  排除 R6: H2O + M <=> H + OH + M  [three-body-Arrhenius]
+  排除 R7: H + O2 (+M) <=> HO2 (+M)  [falloff-Troe]
+  排除 R8: H + HO2 <=> H2 + O2  [Arrhenius]
+  排除 R9: H + HO2 <=> 2 OH  [Arrhenius]
+  排除 R10: 2 H + O2 <=> H2 + O2  [three-body-Arrhenius]
+  排除 R11: 2 HO2 <=> H2O2 + O2  [Arrhenius]
+  排除 R12: H2O2 (+M) <=> 2 OH (+M)  [falloff-Troe]
+  排除 R13: H + H2O2 <=> H2 + HO2  [Arrhenius]
+IDT 目标点 14 个, LFS 目标点 12 个
+M1 基准: fitness=3.0878 (f_tau=1.1495, f_lfs=1.9273, f_a=0.0000, f_cpu=0.0110, t=4.1s)
+  Gen    0: best=3.0878 avg=3.0878 f_tau=1.150 f_lfs=1.927 f_a=0.000 [15s, cache=1]
+  Gen    5: best=2.4880 avg=2.9805 f_tau=1.071 f_lfs=1.361 f_a=0.046 [1316s, cache=137]
+  Gen   10: best=2.4880 avg=3.5315 f_tau=1.071 f_lfs=1.361 f_a=0.046 [1370s, cache=279]
+  Gen   15: best=1.4901 avg=2.9301 f_tau=1.078 f_lfs=0.329 f_a=0.072 [2671s, cache=419]
+Mechanism 1: 29 sp, 63 rxns; 可优化反应 50 个 (排除 13 个: falloff/压力依赖 + H2 子机理)
+  排除 R1: H + O2 <=> O + OH  [Arrhenius]
+  排除 R2: H2 + O <=> H + OH  [Arrhenius]
+  排除 R3: H2 + O <=> H + OH  [Arrhenius]
+  排除 R4: H2 + OH <=> H + H2O  [Arrhenius]
+  排除 R5: 2 OH <=> H2O + O  [Arrhenius]
+  排除 R6: H2O + M <=> H + OH + M  [three-body-Arrhenius]
+  排除 R7: H + O2 (+M) <=> HO2 (+M)  [falloff-Troe]
+  排除 R8: H + HO2 <=> H2 + O2  [Arrhenius]
+  排除 R9: H + HO2 <=> 2 OH  [Arrhenius]
+  排除 R10: 2 H + O2 <=> H2 + O2  [three-body-Arrhenius]
+  排除 R11: 2 HO2 <=> H2O2 + O2  [Arrhenius]
+  排除 R12: H2O2 (+M) <=> 2 OH (+M)  [falloff-Troe]
+  排除 R13: H + H2O2 <=> H2 + HO2  [Arrhenius]
+IDT 目标点 14 个, LFS 目标点 12 个
+M1 基准: fitness=3.0878 (f_tau=1.1495, f_lfs=1.9273, f_a=0.0000, f_cpu=0.0110, t=4.0s)
+  Gen    0: best=3.0878 avg=3.0878 f_tau=1.150 f_lfs=1.927 f_a=0.000 [13s, cache=1]
+  Gen    5: best=2.8996 avg=3.2673 f_tau=1.144 f_lfs=1.728 f_a=0.016 [419s, cache=137]
+  Gen   10: best=2.8996 avg=3.3848 f_tau=1.144 f_lfs=1.728 f_a=0.016 [1690s, cache=278]
+  Gen   15: best=2.8910 avg=3.1395 f_tau=1.098 f_lfs=1.639 f_a=0.143 [1969s, cache=418]
+Mechanism 1: 29 sp, 63 rxns; 可优化反应 50 个 (排除 13 个: falloff/压力依赖 + H2 子机理)
+  排除 R1: H + O2 <=> O + OH  [Arrhenius]
+  排除 R2: H2 + O <=> H + OH  [Arrhenius]
+  排除 R3: H2 + O <=> H + OH  [Arrhenius]
+  排除 R4: H2 + OH <=> H + H2O  [Arrhenius]
+  排除 R5: 2 OH <=> H2O + O  [Arrhenius]
+  排除 R6: H2O + M <=> H + OH + M  [three-body-Arrhenius]
+  排除 R7: H + O2 (+M) <=> HO2 (+M)  [falloff-Troe]
+  排除 R8: H + HO2 <=> H2 + O2  [Arrhenius]
+  排除 R9: H + HO2 <=> 2 OH  [Arrhenius]
+  排除 R10: 2 H + O2 <=> H2 + O2  [three-body-Arrhenius]
+  排除 R11: 2 HO2 <=> H2O2 + O2  [Arrhenius]
+  排除 R12: H2O2 (+M) <=> 2 OH (+M)  [falloff-Troe]
+  排除 R13: H + H2O2 <=> H2 + HO2  [Arrhenius]
+IDT 目标点 14 个, LFS 目标点 12 个
+恢复: 从第 20 代继续
+M1 基准: fitness=3.0878 (f_tau=1.1495, f_lfs=1.9273, f_a=0.0000, f_cpu=0.0110, t=5.2s)
+  Gen   20: best=2.7105 avg=3.0475 f_tau=1.117 f_lfs=1.416 f_a=0.167 [25s, cache=30]
+Mechanism 1: 29 sp, 63 rxns; 可优化反应 50 个 (排除 13 个: falloff/压力依赖 + H2 子机理)
+  排除 R1: H + O2 <=> O + OH  [Arrhenius]
+  排除 R2: H2 + O <=> H + OH  [Arrhenius]
+  排除 R3: H2 + O <=> H + OH  [Arrhenius]
+  排除 R4: H2 + OH <=> H + H2O  [Arrhenius]
+  排除 R5: 2 OH <=> H2O + O  [Arrhenius]
+  排除 R6: H2O + M <=> H + OH + M  [three-body-Arrhenius]
+  排除 R7: H + O2 (+M) <=> HO2 (+M)  [falloff-Troe]
+  排除 R8: H + HO2 <=> H2 + O2  [Arrhenius]
+  排除 R9: H + HO2 <=> 2 OH  [Arrhenius]
+  排除 R10: 2 H + O2 <=> H2 + O2  [three-body-Arrhenius]
+  排除 R11: 2 HO2 <=> H2O2 + O2  [Arrhenius]
+  排除 R12: H2O2 (+M) <=> 2 OH (+M)  [falloff-Troe]
+  排除 R13: H + H2O2 <=> H2 + HO2  [Arrhenius]
+IDT 目标点 14 个, LFS 目标点 12 个
+恢复: 从第 20 代继续
+M1 基准: fitness=3.0878 (f_tau=1.1495, f_lfs=1.9273, f_a=0.0000, f_cpu=0.0110, t=6.7s)
+  Gen   20: best=2.7106 avg=3.0523 f_tau=1.117 f_lfs=1.416 f_a=0.167 [40s, cache=30]
+Mechanism 1: 29 sp, 63 rxns; 可优化反应 50 个 (排除 13 个: falloff/压力依赖 + H2 子机理)
+  排除 R1: H + O2 <=> O + OH  [Arrhenius]
+  排除 R2: H2 + O <=> H + OH  [Arrhenius]
+  排除 R3: H2 + O <=> H + OH  [Arrhenius]
+  排除 R4: H2 + OH <=> H + H2O  [Arrhenius]
+  排除 R5: 2 OH <=> H2O + O  [Arrhenius]
+  排除 R6: H2O + M <=> H + OH + M  [three-body-Arrhenius]
+  排除 R7: H + O2 (+M) <=> HO2 (+M)  [falloff-Troe]
+  排除 R8: H + HO2 <=> H2 + O2  [Arrhenius]
+  排除 R9: H + HO2 <=> 2 OH  [Arrhenius]
+  排除 R10: 2 H + O2 <=> H2 + O2  [three-body-Arrhenius]
+  排除 R11: 2 HO2 <=> H2O2 + O2  [Arrhenius]
+  排除 R12: H2O2 (+M) <=> 2 OH (+M)  [falloff-Troe]
+  排除 R13: H + H2O2 <=> H2 + HO2  [Arrhenius]
+IDT 目标点 14 个, LFS 目标点 12 个
+恢复: 从第 20 代继续
+M1 基准: fitness=3.0878 (f_tau=1.1495, f_lfs=1.9273, f_a=0.0000, f_cpu=0.0110, t=2.3s)
+  Gen   20: best=2.7106 avg=3.0455 f_tau=1.117 f_lfs=1.416 f_a=0.167 [35s, cache=30]
+Mechanism 1: 29 sp, 63 rxns; 可优化反应 50 个 (排除 13 个: falloff/压力依赖 + H2 子机理)
+  排除 R1: H + O2 <=> O + OH  [Arrhenius]
+  排除 R2: H2 + O <=> H + OH  [Arrhenius]
+  排除 R3: H2 + O <=> H + OH  [Arrhenius]
+  排除 R4: H2 + OH <=> H + H2O  [Arrhenius]
+  排除 R5: 2 OH <=> H2O + O  [Arrhenius]
+  排除 R6: H2O + M <=> H + OH + M  [three-body-Arrhenius]
+  排除 R7: H + O2 (+M) <=> HO2 (+M)  [falloff-Troe]
+  排除 R8: H + HO2 <=> H2 + O2  [Arrhenius]
+  排除 R9: H + HO2 <=> 2 OH  [Arrhenius]
+  排除 R10: 2 H + O2 <=> H2 + O2  [three-body-Arrhenius]
+  排除 R11: 2 HO2 <=> H2O2 + O2  [Arrhenius]
+  排除 R12: H2O2 (+M) <=> 2 OH (+M)  [falloff-Troe]
+  排除 R13: H + H2O2 <=> H2 + HO2  [Arrhenius]
+IDT 目标点 14 个, LFS 目标点 12 个
+恢复: 从第 20 代继续
+M1 基准: fitness=1.5281 (f_tau=1.1495, f_lfs=0.3676, f_a=0.0000, f_cpu=0.0110, t=56.3s)
+  Gen   20: best=1.5735 avg=1.7795 f_tau=1.030 f_lfs=0.373 f_a=0.160 [178s, cache=30]
+Mechanism 1: 29 sp, 63 rxns; 可优化反应 50 个 (排除 13 个: falloff/压力依赖 + H2 子机理)
+  排除 R1: H + O2 <=> O + OH  [Arrhenius]
+  排除 R2: H2 + O <=> H + OH  [Arrhenius]
+  排除 R3: H2 + O <=> H + OH  [Arrhenius]
+  排除 R4: H2 + OH <=> H + H2O  [Arrhenius]
+  排除 R5: 2 OH <=> H2O + O  [Arrhenius]
+  排除 R6: H2O + M <=> H + OH + M  [three-body-Arrhenius]
+  排除 R7: H + O2 (+M) <=> HO2 (+M)  [falloff-Troe]
+  排除 R8: H + HO2 <=> H2 + O2  [Arrhenius]
+  排除 R9: H + HO2 <=> 2 OH  [Arrhenius]
+  排除 R10: 2 H + O2 <=> H2 + O2  [three-body-Arrhenius]
+  排除 R11: 2 HO2 <=> H2O2 + O2  [Arrhenius]
+  排除 R12: H2O2 (+M) <=> 2 OH (+M)  [falloff-Troe]
+  排除 R13: H + H2O2 <=> H2 + HO2  [Arrhenius]
+IDT 目标点 14 个, LFS 目标点 12 个
+恢复: 从第 20 代继续
+M1 基准: fitness=1.5281 (f_tau=1.1495, f_lfs=0.3676, f_a=0.0000, f_cpu=0.0110, t=49.6s)
+  Gen   20: best=1.5735 avg=1.7883 f_tau=1.030 f_lfs=0.373 f_a=0.160 [182s, cache=30]
+  [池崩溃: BrokenProcessPool] 逐个重评估定位崩溃基因...
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=38772, pipe_handle=896)
+                                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\conda\Lib\multiprocessing\spawn.py", line 108, in spawn_main
+    source_process = _winapi.OpenProcess(
+        _winapi.SYNCHRONIZE | _winapi.PROCESS_DUP_HANDLE,
+        False, parent_pid)
+  File "<string>", line 1, in <module>
+    from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=3008, pipe_handle=960)
+                                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 87] 参数错误。
+  File "<string>", line 1, in <module>
+    from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=11516, pipe_handle=640)
+                                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\conda\Lib\multiprocessing\spawn.py", line 108, in spawn_main
+    source_process = _winapi.OpenProcess(
+        _winapi.SYNCHRONIZE | _winapi.PROCESS_DUP_HANDLE,
+        False, parent_pid)
+  File "E:\conda\Lib\multiprocessing\spawn.py", line 108, in spawn_main
+    source_process = _winapi.OpenProcess(
+        _winapi.SYNCHRONIZE | _winapi.PROCESS_DUP_HANDLE,
+        False, parent_pid)
+OSError: [WinError 87] 参数错误。
+OSError: [WinError 87] 参数错误。
+  File "<string>", line 1, in <module>
+    from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=42064, pipe_handle=908)
+                                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\conda\Lib\multiprocessing\spawn.py", line 108, in spawn_main
+    source_process = _winapi.OpenProcess(
+        _winapi.SYNCHRONIZE | _winapi.PROCESS_DUP_HANDLE,
+        False, parent_pid)
+OSError: [WinError 87] 参数错误。
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=33396, pipe_handle=876)
+                                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\conda\Lib\multiprocessing\spawn.py", line 108, in spawn_main
+    source_process = _winapi.OpenProcess(
+        _winapi.SYNCHRONIZE | _winapi.PROCESS_DUP_HANDLE,
+        False, parent_pid)
+OSError: [WinError 87] 参数错误。
+Mechanism 1: 29 sp, 63 rxns; 可优化反应 50 个 (排除 13 个: falloff/压力依赖 + H2 子机理)
+  排除 R1: H + O2 <=> O + OH  [Arrhenius]
+  排除 R2: H2 + O <=> H + OH  [Arrhenius]
+  排除 R3: H2 + O <=> H + OH  [Arrhenius]
+  排除 R4: H2 + OH <=> H + H2O  [Arrhenius]
+  排除 R5: 2 OH <=> H2O + O  [Arrhenius]
+  排除 R6: H2O + M <=> H + OH + M  [three-body-Arrhenius]
+  排除 R7: H + O2 (+M) <=> HO2 (+M)  [falloff-Troe]
+  排除 R8: H + HO2 <=> H2 + O2  [Arrhenius]
+  排除 R9: H + HO2 <=> 2 OH  [Arrhenius]
+  排除 R10: 2 H + O2 <=> H2 + O2  [three-body-Arrhenius]
+  排除 R11: 2 HO2 <=> H2O2 + O2  [Arrhenius]
+  排除 R12: H2O2 (+M) <=> 2 OH (+M)  [falloff-Troe]
+  排除 R13: H + H2O2 <=> H2 + HO2  [Arrhenius]
+IDT 目标点 14 个, LFS 目标点 12 个
+恢复: 从第 20 代继续
+M1 基准: fitness=1.5281 (f_tau=1.1495, f_lfs=0.3676, f_a=0.0000, f_cpu=0.0110, t=35.1s)
+  Gen   20: best=1.5735 avg=1.7882 f_tau=1.030 f_lfs=0.373 f_a=0.160 [152s, cache=30]
+    [worker] 缓存已重暖
+Mechanism 1: 29 sp, 63 rxns; 可优化反应 50 个 (排除 13 个: falloff/压力依赖 + H2 子机理)
+  排除 R1: H + O2 <=> O + OH  [Arrhenius]
+  排除 R2: H2 + O <=> H + OH  [Arrhenius]
+  排除 R3: H2 + O <=> H + OH  [Arrhenius]
+  排除 R4: H2 + OH <=> H + H2O  [Arrhenius]
+  排除 R5: 2 OH <=> H2O + O  [Arrhenius]
+  排除 R6: H2O + M <=> H + OH + M  [three-body-Arrhenius]
+  排除 R7: H + O2 (+M) <=> HO2 (+M)  [falloff-Troe]
+  排除 R8: H + HO2 <=> H2 + O2  [Arrhenius]
+  排除 R9: H + HO2 <=> 2 OH  [Arrhenius]
+  排除 R10: 2 H + O2 <=> H2 + O2  [three-body-Arrhenius]
+  排除 R11: 2 HO2 <=> H2O2 + O2  [Arrhenius]
+  排除 R12: H2O2 (+M) <=> 2 OH (+M)  [falloff-Troe]
+  排除 R13: H + H2O2 <=> H2 + HO2  [Arrhenius]
+IDT 目标点 14 个, LFS 目标点 12 个
+恢复: 从第 20 代继续
+M1 基准: fitness=1.5281 (f_tau=1.1495, f_lfs=0.3676, f_a=0.0000, f_cpu=0.0110, t=90.6s)
+  Gen   20: best=1.5401 avg=1.7162 f_tau=1.030 f_lfs=0.340 f_a=0.160 [183s, cache=30]
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] gene 中止: 5 次火焰超时
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+Mechanism 1: 29 sp, 63 rxns; 可优化反应 50 个 (排除 13 个: falloff    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+  Gen   25: best=1.4731 avg=1.7169 f_tau=1.005 f_lfs=0.257 f_a=0.200 [1967s, cache=167]
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+  Gen   30: best=1.3960 avg=1.5636 f_tau=0.806 f_lfs=0.359 f_a=0.221 [2883s, cache=308]
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+
+  排除 R9: H + HO2 <=> 2 OH  [Arrhenius]
+  排除 R10: 2 H + O2 <=> H2 + O2  [three-body-Arrhenius]
+  排除 R11: 2 HO2 <=> H2O2 + O2  [Arrhenius]
+  排除 R12: H2O2 (+M) <=> 2 OH (+M)  [falloff-Troe]
+  排除 R13: H + H2O2 <=> H2 + HO2  [Arrhenius]
+IDT 目标点 14 个, LFS 目标点 12 个
+恢复: 从第 20 代继续
+M1 基准: fitness=1.5281 (f_tau=1.1495, f_lfs=0.3676, f_a=0.0000, f_cpu=0.0110, t=39.4s)
+  Gen   20: best=1.5401 avg=1.7162 f_tau=1.030 f_lfs=0.340 f_a=0.160 [218s, cache=30]
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] gene 中止: 5 次火焰超时
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖
+    [worker] 缓存已重暖

@@ -1,404 +1,386 @@
 """
-GA 机理简化算法
-复现论文 Section 2.2: GA-based mechanism reduction
+GA 机理简化 - 复现论文 Section 2.2 (二进制编码遗传算法)
 
-算法流程:
-1. 二进制编码: 每个基因对应一个反应 (1=保留, 0=删除)
-2. 初始种群: 全部基因设为1 (完整机理)
-3. 适应度函数: f_objective = f_tau + f_Ts + f_N + f_CPU
-4. 锦标赛选择 + 精英保留
-5. 单点交叉 (交叉率 0.2)
-6. 双向变异 (变异率 0.03)
-7. 运行 1000 代
+论文参数 (Table 2):
+  种群 60, 代数 1000, 单点交叉率 0.2, 双向变异率 0.03,
+  锦标赛选择 + 精英保留; 初始种群全部基因 = 1 (完整机理)
 
-目标工况 (Table 3 Case 1-8):
-- XH2=0, P=1/10 atm, T=1540-1850/1430-1820 K
-- XH2=0.05, P=1/10 atm, T=1500-1920/1450-1920 K
-- XH2=0.3, P=1/10 atm, T=1180-1820/1180-1920 K
-- XH2=0.7, P=1/10 atm, T=1000-1540/1030-1300 K
+目标函数 (Eq.1-5, Table 1):
+  f = f_tau + f_Ts + f_N + f_CPU
+  f_tau = ln[1 + 1*|tau_r - tau_0| / tau_0]                (对全机理, 按点平均)
+  f_Ts  = ln[1 + 1*|Ts_r - Ts_0| / (Ts_0 - Tin)]           (对全机理, 按点平均)
+  f_N   = 1 / (1 + exp[6*(1 - Nr/(0.8*NR))])
+  f_CPU = 1 / (1 + exp[6*(1 - t_r/(4*t_0))])
+
+目标工况: Table 3 Case 1-8, 每工况取 3 个温度点 (共 24 点)。
+
+用法:
+  python 06_ga_reduction.py [--gens 1000] [--pop 60] [--workers 16] [--resume]
 """
-import cantera as ct
+import argparse
+import pickle
+import sys
+import time
 import numpy as np
 import pandas as pd
-import yaml
-import copy
-import time
 from pathlib import Path
-from multiprocessing import Pool
+from concurrent.futures import ProcessPoolExecutor
 
-SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = SCRIPT_DIR.parent
-MECH_DIR = PROJECT_ROOT / "mechanisms"
-RESULTS_DIR = PROJECT_ROOT / "results"
-RESULTS_DIR.mkdir(exist_ok=True)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from mech_utils import (MECH_DIR, RESULTS_DIR, FULL_MECH, REDUCED_MECH,
+                        MechBuilder, chen_composition, ignition_delay,
+                        steady_state_temperature)
 
-# ============================================================
 # GA 参数 (论文 Table 2)
-# ============================================================
 POP_SIZE = 60
 N_GENERATIONS = 1000
 CROSSOVER_RATE = 0.2
 MUTATION_RATE = 0.03
 TOURNAMENT_SIZE = 3
-ELITISM = True
 
-# 目标函数系数 (论文 Section 2.2)
+# 目标函数系数 (论文 Table 1)
 SIGMA_TAU = 1.0
 SIGMA_TS = 1.0
-SIGMA_N = 6.0
-LAMBDA_N = 0.8
-SIGMA_CPU = 6.0
-LAMBDA_CPU = 4.0
+SIGMA_N, LAMBDA_N = 6.0, 0.8
+SIGMA_CPU, LAMBDA_CPU = 6.0, 4.0
 
-# 简化目标工况 (Table 3 Case 1-8)
-# 每个工况取温度范围中点附近 3 个温度点用于评估
+MISSING_PENALTY = np.log(1.0 + 50.0)   # IDT 未点火惩罚 (相当于 t_end=50*tau_ref)
+BROKEN_FITNESS = 1.0e3
+FAIL_FRACTION_LIMIT = 0.2              # 超过 20% 工况失效 => 个体失效
+
+# Table 3 Case 1-8 温度范围及评估点 (每工况 3 点)
 REDUCTION_CONDITIONS = [
-    {"XH2": 0.0, "P_atm": 1.0, "T_range": [1600, 1700, 1800]},
-    {"XH2": 0.0, "P_atm": 10.0, "T_range": [1500, 1600, 1700]},
-    {"XH2": 0.05, "P_atm": 1.0, "T_range": [1600, 1700, 1800]},
-    {"XH2": 0.05, "P_atm": 10.0, "T_range": [1600, 1700, 1800]},
-    {"XH2": 0.3, "P_atm": 1.0, "T_range": [1300, 1500, 1700]},
-    {"XH2": 0.3, "P_atm": 10.0, "T_range": [1300, 1500, 1700]},
-    {"XH2": 0.7, "P_atm": 1.0, "T_range": [1100, 1270, 1400]},
-    {"XH2": 0.7, "P_atm": 10.0, "T_range": [1050, 1165, 1250]},
+    {"case": 1, "XH2": 0.0,  "P_atm": 1.0,  "T": [1571, 1695, 1819]},
+    {"case": 2, "XH2": 0.0,  "P_atm": 10.0, "T": [1469, 1625, 1781]},
+    {"case": 3, "XH2": 0.05, "P_atm": 1.0,  "T": [1542, 1710, 1878]},
+    {"case": 4, "XH2": 0.05, "P_atm": 10.0, "T": [1497, 1685, 1873]},
+    {"case": 5, "XH2": 0.3,  "P_atm": 1.0,  "T": [1244, 1500, 1756]},
+    {"case": 6, "XH2": 0.3,  "P_atm": 10.0, "T": [1244, 1550, 1856]},
+    {"case": 7, "XH2": 0.7,  "P_atm": 1.0,  "T": [1054, 1270, 1486]},
+    {"case": 8, "XH2": 0.7,  "P_atm": 10.0, "T": [1057, 1165, 1273]},
 ]
 
 
-def oxidizer_for_phi(fuel_moles, phi, diluent="N2", n2_o2=3.76):
-    o2_stoich = 0.0
-    o2_stoich += fuel_moles.get("NH3", 0.0) * 0.75
-    o2_stoich += fuel_moles.get("H2", 0.0) * 0.5
-    o2_actual = o2_stoich / phi
-    comp = dict(fuel_moles)
-    comp["O2"] = o2_actual
-    comp[diluent] = o2_actual * n2_o2
-    return comp
+def flatten_conditions():
+    """展开为 [(XH2, P, T), ...] 与工况标签"""
+    conds, labels = [], []
+    for c in REDUCTION_CONDITIONS:
+        for T in c["T"]:
+            conds.append((c["XH2"], c["P_atm"], T))
+            labels.append((c["case"], c["XH2"], c["P_atm"], T))
+    return conds, labels
 
 
-def compute_idt(mech_path, T, P_atm, fuel_H2_frac=0.0, phi=1.0, t_end=0.1):
-    """计算点火延迟时间 (OH峰值准则)"""
+# ---------------- 工作进程全局 ----------------
+_W = {}
+
+
+def _init_worker(conds):
+    _W["builder"] = MechBuilder(FULL_MECH)
+    _W["conds"] = conds
+
+
+def _evaluate_gene(gene, ref, with_breakdown=False):
+    """
+    评估单个基因: 返回 (fitness, n_kept, cpu_time[, breakdown])
+    ref: {"tau0": arr, "ts0": arr, "t0_cpu": float, "NR": int}
+    """
+    import cantera as ct
+    builder = _W["builder"]
+    conds = _W["conds"]
+    n_kept = int(np.sum(gene))
+
+    t_start = time.perf_counter()
     try:
-        gas = ct.Solution(str(mech_path))
-        fuel = {"NH3": 1.0 - fuel_H2_frac}
-        if fuel_H2_frac > 0:
-            fuel["H2"] = fuel_H2_frac
-        X = oxidizer_for_phi(fuel, phi)
-        gas.TPX = T, P_atm * ct.one_atm, X
-
-        reactor = ct.IdealGasReactor(gas)
-        net = ct.ReactorNet([reactor])
-
-        times, oh_vals = [], []
-        t = 0.0
-        while t < t_end:
-            t = net.step()
-            times.append(t)
-            oh_vals.append(reactor.thermo["OH"].X[0])
-            if reactor.T > T + 1500:
-                break
-
-        if len(times) < 5:
-            return np.nan
-
-        times = np.array(times)
-        oh_vals = np.array(oh_vals)
-        tau = times[np.argmax(oh_vals)]
-        return tau
+        yaml_text = builder.build(gene)
+        gas = ct.Solution(yaml=yaml_text)
     except Exception:
-        return np.nan
+        return (BROKEN_FITNESS, n_kept, 0.0)
+
+    tau_r = np.full(len(conds), np.nan)
+    ts_r = np.full(len(conds), np.nan)
+    n_fail = 0
+    for i, (XH2, P, T) in enumerate(conds):
+        comp = chen_composition(XH2, 1.0)   # Chen 2021 Ar 稀释混合气
+        tau_ref = ref["tau0"][i]
+        t_end = min(max(50.0 * tau_ref, 1e-5), 20.0)
+        tau_r[i] = ignition_delay(gas, T, P, comp, t_end)
+        if not np.isfinite(tau_r[i]):
+            n_fail += 1
+            if n_fail > FAIL_FRACTION_LIMIT * len(conds):
+                return (BROKEN_FITNESS, n_kept, time.perf_counter() - t_start,
+                        (np.nan,) * 4)
+    for i, (XH2, P, T) in enumerate(conds):
+        comp = chen_composition(XH2, 1.0)
+        t_run = min(max(100.0 * ref["tau0"][i], 5e-3), 50.0)
+        try:
+            ts_r[i] = steady_state_temperature(gas, T, P, comp, t_run,
+                                               n_extend=2)
+        except Exception:
+            ts_r[i] = np.nan
+    cpu_time = time.perf_counter() - t_start
+
+    # f_tau / f_Ts
+    valid_tau = np.isfinite(ref["tau0"]) & (ref["tau0"] > 0)
+
+    f_tau_terms = np.where(
+        np.isfinite(tau_r) & valid_tau,
+        np.log(1.0 + SIGMA_TAU * np.abs(tau_r - ref["tau0"]) / ref["tau0"]),
+        MISSING_PENALTY)
+    f_tau = float(np.mean(f_tau_terms[valid_tau]))
+
+    dT0 = ref["ts0"] - np.array([c[2] for c in conds], dtype=float)
+    ok_ts = valid_tau & (dT0 > 100.0) & np.isfinite(ref["ts0"])
+    if np.any(np.isfinite(ts_r[ok_ts])):
+        ts_terms = np.where(
+            np.isfinite(ts_r) & ok_ts,
+            np.log(1.0 + SIGMA_TS * np.abs(ts_r - ref["ts0"]) / dT0),
+            MISSING_PENALTY)
+        f_ts = float(np.mean(ts_terms[ok_ts]))
+    else:
+        f_ts = MISSING_PENALTY
+
+    # f_N / f_CPU
+    NR = ref["NR"]
+    f_N = 1.0 / (1.0 + np.exp(SIGMA_N * (1.0 - n_kept / (LAMBDA_N * NR))))
+    t0 = max(ref["t0_cpu"], 1e-6)
+    f_CPU = 1.0 / (1.0 + np.exp(SIGMA_CPU * (1.0 - cpu_time / (LAMBDA_CPU * t0))))
+
+    fitness = f_tau + f_ts + f_N + f_CPU
+    if not np.isfinite(fitness):
+        fitness = BROKEN_FITNESS
+    return fitness, n_kept, cpu_time, (f_tau, f_ts, f_N, f_CPU)
 
 
-def compute_steady_state_temp(mech_path, T, P_atm, fuel_H2_frac=0.0, phi=1.0, t_end=1.0):
-    """计算恒压反应器稳态温度"""
+def _worker_eval(args):
+    gene, ref = args
+    return _evaluate_gene(gene, ref)
+
+def eval_batch_resilient(ex, jobs, keys, cache, conds, args):
+    """批量评估; 进程池崩溃时逐个定位段错误基因并拉黑, 重建池"""
+    from concurrent.futures.process import BrokenProcessPool
     try:
-        gas = ct.Solution(str(mech_path))
-        fuel = {"NH3": 1.0 - fuel_H2_frac}
-        if fuel_H2_frac > 0:
-            fuel["H2"] = fuel_H2_frac
-        X = oxidizer_for_phi(fuel, phi)
-        gas.TPX = T, P_atm * ct.one_atm, X
-
-        reactor = ct.IdealGasConstPressureReactor(gas)
-        net = ct.ReactorNet([reactor])
-
-        t = 0.0
-        T_steady = T
-        while t < t_end:
-            t = net.step()
-            T_steady = reactor.T
-            if abs(reactor.T - T_steady) < 0.1 and t > 0.01:
-                break
-
-        return T_steady
-    except Exception:
-        return np.nan
-
-
-def create_sub_mechanism_yaml(full_mech_path, gene, output_path):
-    """根据基因编码创建子机理 YAML 文件"""
-    with open(full_mech_path, 'r') as f:
-        mech_data = yaml.safe_load(f)
-
-    # 保留基因值为1的反应
-    reactions = mech_data.get('reactions', [])
-    kept_reactions = [r for i, r in enumerate(reactions) if i < len(gene) and gene[i] == 1]
-
-    mech_data['reactions'] = kept_reactions
-
-    with open(output_path, 'w') as f:
-        yaml.dump(mech_data, f, default_flow_style=False, allow_unicode=True)
-
-    return len(kept_reactions)
+        results = list(ex.map(_worker_eval, jobs))
+        for k, r in zip(keys, results):
+            cache[k] = r
+        return ex
+    except (BrokenProcessPool, OSError, SystemError) as e:
+        print(f"  [池崩溃: {type(e).__name__}] 逐个重评估定位崩溃基因...",
+              flush=True)
+        try:
+            ex.shutdown(wait=False, cancel_futures=True)
+        except Exception:
+            pass
+        ex1 = ProcessPoolExecutor(max_workers=1, initializer=_init_worker,
+                                  initargs=(conds,))
+        bad = 0
+        for job, k in zip(jobs, keys):
+            if k in cache:
+                continue
+            try:
+                r = ex1.submit(_worker_eval, job).result(timeout=900)
+                cache[k] = r
+            except Exception:
+                n = int(np.frombuffer(k, dtype=np.int8).sum())
+                cache[k] = (BROKEN_FITNESS, n, 0.0,
+                            (np.nan, np.nan, np.nan, np.nan))
+                bad += 1
+        ex1.shutdown(wait=False)
+        print(f"  [定位完成] 崩溃基因 {bad} 个已拉黑, 重建进程池", flush=True)
+        return ProcessPoolExecutor(max_workers=args.workers,
+                                   initializer=_init_worker,
+                                   initargs=(conds,))
 
 
-def evaluate_individual(args):
-    """评估单个个体的适应度"""
-    gene, full_mech_path, ref_idt, ref_ts, ref_cpu_time, n_full_reactions = args
 
-    # 检查至少保留一定数量的反应
-    n_kept = np.sum(gene)
-    if n_kept < 10:
-        return float('inf')
 
-    # 创建临时子机理文件
-    temp_path = RESULTS_DIR / "_temp_sub_mech.yaml"
+# ---------------- 主进程 GA ----------------
+def tournament(population, fitness, rng, size=TOURNAMENT_SIZE):
+    idx = rng.integers(0, len(population), size=size)
+    best = idx[np.argmin(fitness[idx])]
+    return population[best]
+
+
+def crossover(p1, p2, rng):
+    if rng.random() < CROSSOVER_RATE:
+        pt = rng.integers(1, len(p1) - 1)
+        c1 = np.concatenate([p1[:pt], p2[pt:]])
+        c2 = np.concatenate([p2[:pt], p1[pt:]])
+        return c1, c2
+    return p1.copy(), p2.copy()
+
+
+def mutate(gene, rng):
+    mask = rng.random(len(gene)) < MUTATION_RATE
+    gene[mask] = 1 - gene[mask]
+    return gene
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--gens", type=int, default=N_GENERATIONS)
+    ap.add_argument("--pop", type=int, default=POP_SIZE)
+    ap.add_argument("--workers", type=int, default=16)
+    ap.add_argument("--resume", action="store_true")
+    ap.add_argument("--seed", type=int, default=42)
+    args = ap.parse_args()
+
+    state_path = RESULTS_DIR / "ga_reduction_state.pkl"
+    builder = MechBuilder(FULL_MECH)
+    n_rxn = builder.n_reactions
+    conds, labels = flatten_conditions()
+
+    rng = np.random.default_rng(args.seed)
+    cache = {}
+
+    if args.resume and state_path.exists():
+        with open(state_path, "rb") as f:
+            state = pickle.load(f)
+        population = state["population"]
+        history = state["history"]
+        start_gen = state["generation"] + 1
+        cache = state.get("cache", {})
+        rng = state.get("rng", rng)
+        _gh = RESULTS_DIR / "ga_reduction_genes.npy"
+        genes_history = (list(np.load(_gh)) if _gh.exists() else [])
+        print(f"恢复 GA 状态: 从第 {start_gen} 代继续, 缓存 {len(cache)} 条")
+    else:
+        # 初始种群: 全部基因 = 1 (论文)
+        population = [np.ones(n_rxn, dtype=np.int8) for _ in range(args.pop)]
+        history = {"generation": [], "best": [], "worst": [], "avg": [],
+                   "n_reactions": [], "f_tau": [], "f_ts": [], "f_N": [],
+                   "f_CPU": []}
+        start_gen = 0
+
+    # ---- 参考值: 完整机理 IDT + Ts (主进程计算一次) ----
+    import cantera as ct
+    print("计算完整机理参考值 (IDT + 稳态温度)...")
+    t0 = time.perf_counter()
+    gas0 = ct.Solution(str(FULL_MECH))
+    tau0 = np.zeros(len(conds))
+    ts0 = np.zeros(len(conds))
+    for i, (XH2, P, T) in enumerate(conds):
+        comp = chen_composition(XH2, 1.0)
+        tau = ignition_delay(gas0, T, P, comp,
+                             t_end=10.0 if T < 1300 else 1.0)
+        tau = ignition_delay(gas0, T, P, comp, min(max(50 * tau, 1e-5), 20))
+        tau0[i] = tau
+        ts0[i] = steady_state_temperature(gas0, T, P, comp,
+                                          min(max(100 * tau, 5e-3), 50),
+                                          n_extend=2)
+        print(f"  Case{labels[i][0]} XH2={XH2} P={P}atm T={T}K: "
+              f"tau={tau*1000:.4f} ms, Ts={ts0[i]:.1f} K")
+    ref_cpu = time.perf_counter() - t0
+    ref = {"tau0": tau0, "ts0": ts0, "t0_cpu": ref_cpu, "NR": n_rxn}
+    print(f"参考评估耗时 {ref_cpu:.2f} s (作为 t_CPU 基准)")
+
+    best_gene = None
+    best_fitness = np.inf
+    if 'genes_history' not in locals():   # resume 分支已加载
+        genes_history = []      # 每代最优个体基因 (Fig. 5)
+    t_ga = time.perf_counter()
+
+    ex = ProcessPoolExecutor(max_workers=args.workers,
+                             initializer=_init_worker,
+                             initargs=(conds,))
     try:
-        n_reactions = create_sub_mechanism_yaml(full_mech_path, gene, temp_path)
+        for gen in range(start_gen, args.gens):
+            # 评估 (带缓存)
+            jobs, keys = [], []
+            for g in population:
+                k = g.tobytes()
+                if k not in cache:
+                    jobs.append((g, ref))
+                    keys.append(k)
+            if jobs:
+                ex = eval_batch_resilient(ex, jobs, keys, cache,
+                                         conds, args)
+            fitness = np.array([cache[g.tobytes()][0] for g in population])
 
-        # 计算子机理的 IDT 和稳态温度
-        t_start = time.time()
-        sub_idt = {}
-        sub_ts = {}
-        for cond in REDUCTION_CONDITIONS:
-            XH2 = cond["XH2"]
-            P = cond["P_atm"]
-            for T in cond["T_range"]:
-                key = (XH2, P, T)
-                t_end = 10.0 if T < 1200 else (1.0 if T < 1500 else 0.1)
-                sub_idt[key] = compute_idt(temp_path, T, P, fuel_H2_frac=XH2, t_end=t_end)
-                sub_ts[key] = compute_steady_state_temp(temp_path, T, P, fuel_H2_frac=XH2, t_end=t_end * 10)
-        cpu_time = time.time() - t_start
+            valid = fitness[fitness < BROKEN_FITNESS]
+            best_idx = int(np.argmin(fitness))
+            best_f = float(fitness[best_idx])
+            best_gene = population[best_idx].copy()
+            best_fitness = best_f
+            f_tau, f_ts, f_N, f_CPU = cache[best_gene.tobytes()][3]
+            hist = {
+                "generation": gen,
+                "best": best_f,
+                "worst": float(np.max(valid)) if len(valid) else np.nan,
+                "avg": float(np.mean(valid)) if len(valid) else np.nan,
+                "n_reactions": int(np.sum(best_gene)),
+                "f_tau": f_tau, "f_ts": f_ts, "f_N": f_N, "f_CPU": f_CPU,
+            }
+            for kk, vv in hist.items():
+                history[kk].append(vv)
+            genes_history.append(best_gene.astype(np.int8))
 
-        # 计算目标函数各项
-        f_tau = 0.0
-        f_ts = 0.0
-        n_valid = 0
-        for key in ref_idt:
-            if key not in sub_idt:
-                continue
-            tau_r = sub_idt[key]
-            tau_0 = ref_idt[key]
-            ts_r = sub_ts.get(key, np.nan)
-            ts_0 = ref_ts.get(key, np.nan)
+            if gen % 10 == 0 or gen == args.gens - 1:
+                el = time.perf_counter() - t_ga
+                print(f"  Gen {gen:4d}: best={best_f:.5f} "
+                      f"avg={hist['avg']:.5f} Nr={hist['n_reactions']} "
+                      f"fN={f_N:.4f} fCPU={f_CPU:.4f} "
+                      f"[{el:.0f}s, cache={len(cache)}]", flush=True)
 
-            if np.isnan(tau_r) or np.isnan(tau_0) or tau_0 <= 0:
-                continue
+            # 进化操作: 精英 + 锦标赛 + 交叉 + 变异
+            new_pop = [best_gene.copy()]
+            while len(new_pop) < args.pop:
+                p1 = tournament(population, fitness, rng)
+                p2 = tournament(population, fitness, rng)
+                c1, c2 = crossover(p1, p2, rng)
+                new_pop.append(mutate(c1, rng))
+                if len(new_pop) < args.pop:
+                    new_pop.append(mutate(c2, rng))
+            population = new_pop
 
-            # f_tau (公式1)
-            f_tau += np.log(1 + SIGMA_TAU * abs((tau_r - tau_0) / tau_0))
+            # 检查点
+            if (gen + 1) % 10 == 0 or gen == args.gens - 1:
+                with open(state_path, "wb") as f:
+                    pickle.dump({"population": population, "history": history,
+                                 "generation": gen, "cache": cache,
+                                 "rng": rng}, f)
+                pd.DataFrame(history).to_csv(
+                    RESULTS_DIR / "ga_reduction_history.csv", index=False)
+                np.save(RESULTS_DIR / "ga_reduction_genes.npy",
+                        np.array(genes_history))
 
-            # f_Ts (公式2)
-            if not np.isnan(ts_r) and not np.isnan(ts_0):
-                T_in = key[2]  # 初始温度
-                if ts_0 - T_in > 0:
-                    f_ts += np.log(1 + SIGMA_TS * abs((ts_r - ts_0) / (ts_0 - T_in)))
-
-            n_valid += 1
-
-        if n_valid > 0:
-            f_tau /= n_valid
-            f_ts /= n_valid
-
-        # f_N (公式3) - 机理规模
-        f_N = 1.0 / (1.0 + np.exp(SIGMA_N * (1 - n_reactions / (LAMBDA_N * n_full_reactions))))
-
-        # f_CPU (公式4) - 计算代价
-        if ref_cpu_time > 0:
-            f_CPU = 1.0 / (1.0 + np.exp(SIGMA_CPU * (1 - cpu_time / (LAMBDA_CPU * ref_cpu_time))))
-        else:
-            f_CPU = 0.0
-
-        f_objective = f_tau + f_ts + f_N + f_CPU
-        return f_objective
-
-    except Exception as e:
-        return float('inf')
     finally:
-        if temp_path.exists():
-            temp_path.unlink()
+        ex.shutdown(wait=False)
 
+    # ---- 输出最优个体 (取进化过程中记录的精英) ----
+    best_gene = best_gene if best_gene is not None else population[0]
+    best_f = best_fitness
+    nr = int(np.sum(best_gene))
+    print(f"\n=== GA 简化完成: 最优适应度 {best_f:.5f}, "
+          f"保留 {nr}/{n_rxn} 反应 ===")
 
-def tournament_selection(population, fitness, tournament_size=TOURNAMENT_SIZE):
-    """锦标赛选择"""
-    indices = np.random.choice(len(population), tournament_size, replace=False)
-    best_idx = indices[np.argmin([fitness[i] for i in indices])]
-    return population[best_idx].copy()
+    # 保存项目 GA 结果；论文官方 Mechanism 1 保存在 Reduced mechanism.yaml，勿覆盖。
+    pruned_yaml = builder.build_pruned(best_gene)
+    out = MECH_DIR / "GA_Reduced_mechanism.yaml"
+    out.write_text(pruned_yaml)
+    g = ct.Solution(str(out))
+    print(f"项目 GA 简化机理: {g.n_species} 组分, {g.n_reactions} 反应 -> {out}")
 
+    # 保留/删除反应清单
+    rows = []
+    gas_full = ct.Solution(str(FULL_MECH))
+    for i in range(n_rxn):
+        rows.append({"index": i,
+                     "equation": gas_full.reaction(i).equation,
+                     "kept": bool(best_gene[i])})
+    pd.DataFrame(rows).to_csv(
+        RESULTS_DIR / "ga_reduction_reactions.csv", index=False)
 
-def single_point_crossover(parent1, parent2):
-    """单点交叉"""
-    if np.random.random() < CROSSOVER_RATE:
-        point = np.random.randint(1, len(parent1) - 1)
-        child1 = np.concatenate([parent1[:point], parent2[point:]])
-        child2 = np.concatenate([parent2[:point], parent1[point:]])
-        return child1, child2
-    return parent1.copy(), parent2.copy()
-
-
-def bidirectional_mutation(gene):
-    """双向变异: 基因可以从0变1也可以从1变0"""
-    mutated = gene.copy()
-    for i in range(len(mutated)):
-        if np.random.random() < MUTATION_RATE:
-            mutated[i] = 1 - mutated[i]  # 翻转
-    return mutated
-
-
-def run_ga_reduction():
-    """运行 GA 机理简化"""
-    full_mech_path = MECH_DIR / "Full mechanism.yaml"
-    gas = ct.Solution(str(full_mech_path))
-    n_reactions = gas.n_reactions
-    print(f"Full mechanism: {gas.n_species} species, {n_reactions} reactions")
-
-    # Step 1: 计算完整机理的参考值
-    print("Computing reference values from full mechanism...")
-    ref_idt = {}
-    ref_ts = {}
-    for cond in REDUCTION_CONDITIONS:
-        XH2 = cond["XH2"]
-        P = cond["P_atm"]
-        for T in cond["T_range"]:
-            key = (XH2, P, T)
-            t_end = 10.0 if T < 1200 else (1.0 if T < 1500 else 0.1)
-            ref_idt[key] = compute_idt(str(full_mech_path), T, P, fuel_H2_frac=XH2, t_end=t_end)
-            ref_ts[key] = compute_steady_state_temp(str(full_mech_path), T, P, fuel_H2_frac=XH2, t_end=t_end * 10)
-            print(f"  XH2={XH2}, P={P} atm, T={T} K: IDT={ref_idt[key]*1000:.3f} ms, Ts={ref_ts[key]:.1f} K")
-
-    # 计算参考 CPU 时间
-    t_start = time.time()
-    for cond in REDUCTION_CONDITIONS[:2]:  # 只用部分条件估计
-        XH2 = cond["XH2"]
-        P = cond["P_atm"]
-        for T in cond["T_range"]:
-            compute_idt(str(full_mech_path), T, P, fuel_H2_frac=XH2)
-    ref_cpu_time = time.time() - t_start
-    print(f"Reference CPU time: {ref_cpu_time:.3f} s")
-
-    # Step 2: 初始化种群 (全部基因设为1)
-    print(f"\nInitializing population: {POP_SIZE} individuals, {n_reactions} genes each")
-    population = [np.ones(n_reactions, dtype=int) for _ in range(POP_SIZE)]
-
-    # 对部分个体添加随机扰动以增加多样性
-    for i in range(1, POP_SIZE):
-        # 随机删除 10-30% 的反应
-        n_remove = np.random.randint(int(0.1 * n_reactions), int(0.3 * n_reactions))
-        remove_idx = np.random.choice(n_reactions, n_remove, replace=False)
-        population[i][remove_idx] = 0
-
-    # 记录进化过程
-    history = {
-        "generation": [],
-        "best_fitness": [],
-        "worst_fitness": [],
-        "avg_fitness": [],
-        "best_n_reactions": [],
-    }
-
-    # Step 3: GA 主循环
-    print(f"\nStarting GA reduction: {N_GENERATIONS} generations")
-    for gen in range(N_GENERATIONS):
-        # 评估适应度
-        fitness = []
-        for i, gene in enumerate(population):
-            f = evaluate_individual((
-                gene, str(full_mech_path), ref_idt, ref_ts, ref_cpu_time, n_reactions
-            ))
-            fitness.append(f)
-
-        fitness = np.array(fitness)
-
-        # 记录统计
-        valid_fitness = fitness[fitness < float('inf')]
-        if len(valid_fitness) > 0:
-            best_idx = np.argmin(fitness)
-            best_gene = population[best_idx]
-            best_f = fitness[best_idx]
-            worst_f = np.max(valid_fitness)
-            avg_f = np.mean(valid_fitness)
-            best_n = np.sum(best_gene)
-        else:
-            best_f = worst_f = avg_f = float('inf')
-            best_n = n_reactions
-
-        history["generation"].append(gen)
-        history["best_fitness"].append(best_f)
-        history["worst_fitness"].append(worst_f)
-        history["avg_fitness"].append(avg_f)
-        history["best_n_reactions"].append(best_n)
-
-        if gen % 50 == 0 or gen == N_GENERATIONS - 1:
-            print(f"  Gen {gen:4d}: best={best_f:.5f}, avg={avg_f:.5f}, "
-                  f"worst={worst_f:.5f}, n_reactions={best_n}")
-
-        # 选择 + 交叉 + 变异
-        new_population = []
-
-        # 精英保留
-        if ELITISM:
-            best_idx = np.argmin(fitness)
-            new_population.append(population[best_idx].copy())
-
-        while len(new_population) < POP_SIZE:
-            parent1 = tournament_selection(population, fitness)
-            parent2 = tournament_selection(population, fitness)
-            child1, child2 = single_point_crossover(parent1, parent2)
-            child1 = bidirectional_mutation(child1)
-            child2 = bidirectional_mutation(child2)
-            new_population.append(child1)
-            if len(new_population) < POP_SIZE:
-                new_population.append(child2)
-
-        population = new_population[:POP_SIZE]
-
-    # Step 4: 输出最优个体
-    best_idx = np.argmin(fitness)
-    best_gene = population[best_idx]
-    best_n_reactions = np.sum(best_gene)
-
-    print(f"\n=== GA Reduction Complete ===")
-    print(f"Best fitness: {fitness[best_idx]:.5f}")
-    print(f"Number of reactions: {best_n_reactions}")
-
-    # 保存简化机理
-    output_path = MECH_DIR / "GA_Reduced_mechanism.yaml"
-    n_kept = create_sub_mechanism_yaml(full_mech_path, best_gene, output_path)
-    print(f"Reduced mechanism saved to: {output_path}")
-    print(f"Kept {n_kept} reactions out of {n_reactions}")
-
-    # 验证简化机理
-    gas_reduced = ct.Solution(str(output_path))
-    print(f"Reduced mechanism: {gas_reduced.n_species} species, {gas_reduced.n_reactions} reactions")
-
-    # 保存进化历史
-    history_df = pd.DataFrame(history)
-    history_df.to_csv(RESULTS_DIR / "ga_reduction_history.csv", index=False)
-    print(f"Evolution history saved to: {RESULTS_DIR / 'ga_reduction_history.csv'}")
-
-    # 保存被保留/删除的反应列表
-    gas_full = ct.Solution(str(full_mech_path))
-    reaction_status = []
-    for i in range(n_reactions):
-        reaction_status.append({
-            "index": i,
-            "equation": gas_full.reaction(i).equation,
-            "kept": bool(best_gene[i]),
-        })
-    reaction_df = pd.DataFrame(reaction_status)
-    reaction_df.to_csv(RESULTS_DIR / "ga_reduction_reactions.csv", index=False)
-
-    return best_gene, fitness[best_idx]
+    with open(state_path, "wb") as f:
+        pickle.dump({"population": population, "history": history,
+                     "generation": args.gens - 1, "cache": cache,
+                     "rng": rng}, f)
+    pd.DataFrame(history).to_csv(
+        RESULTS_DIR / "ga_reduction_history.csv", index=False)
+    np.save(RESULTS_DIR / "ga_reduction_genes.npy",
+            np.array(genes_history))
+    print("进化历史 -> results/ga_reduction_history.csv")
 
 
 if __name__ == "__main__":
-    run_ga_reduction()
+    main()
