@@ -1,4 +1,4 @@
-# NH3/H2 机理 GA 简化、优化与验证（Cantera 复现版）
+# NH3/H2 机理 GA 简化、优化与验证
 
 > [!IMPORTANT]
 > **复现范围说明（2026-10-26）**
@@ -18,8 +18,6 @@
 >   推断；当前 Fig.16 JSR 工况仍与论文图示工况不同。
 > - **HCCI**：Fig.19 的三维网格未复现；Fig.20 使用 Cantera 0D 变容积反应器替代
 >   CONVERGE 3D CFD，只能视为降阶近似。
->
-> 因此，本项目的准确定位是：**官方成品机理归档 + 可运行的部分复现 + 替代实现**。
 
 ## 相对 GitHub 初版的主要更新
 
@@ -85,7 +83,8 @@ https://doi.org/10.1016/j.energy.2023.126927
 │   ├── *.csv                         # 仿真数据
 │   └── *_log.txt                     # 运行日志
 ├── mech_sources/                     # 机理来源原始文件 (Zhang 2023 等)
-├── word/                             # 论文 PDF 与文本提取稿
+├── Liu 等 - 2023 - Development of reduced and optimized mechanism for ammonia hydrogen mixture based on genetic algori.pdf
+│                                     # 论文 PDF
 ├── requirements.txt                  # 已验证的 Python 依赖版本
 └── LICENSE                           # CC0 1.0（继承自 GitHub 初版）
 ```
@@ -252,7 +251,7 @@ M1/M2 与数字化实验点的吻合度验证）。
 ## 9. 许可证与第三方材料
 
 本仓库延续 GitHub 初版的 CC0 1.0 许可证；该许可仅适用于仓库作者有权许可的
-项目代码、说明和自生成数据。`word/`、`mech_sources/` 及部分 `mechanisms/`
+项目代码、说明和自生成数据。根目录论文 PDF、`mech_sources/` 及部分 `mechanisms/`
 内容来自论文作者、出版社或其他研究机构，其著作权和再分发条件仍归原权利人
 所有。保留这些文件是为了研究可追溯性，不代表将第三方材料重新许可为 CC0；
 使用或再分发前请自行核对对应来源的许可条件。
